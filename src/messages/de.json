@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "title": "Kairo — Dein persönliches System der Entwicklung",
+    "description": "Ein ruhiger Mentor, ein Dōjō der Übungen, ein Garten der Reflexionen und ein Wochenbrief. Ein tragfähiger Rhythmus — ohne Hype, ohne Lärm.",
+    "ogAlt": "Kairo — persönliches System der Entwicklung"
+  },
+  "nav": {
+    "mentor": "Mentor",
+    "dojo": "Dōjō",
+    "jardim": "Garten",
+    "carta": "Brief",
+    "premium": "Premium",
+    "faq": "Fragen",
+    "download": "Laden"
+  },
+  "hero": {
+    "eyebrow": "回路 · DER INNERE WEG",
+    "title1": "Dein System der",
+    "title2": "persönlichen Entwicklung.",
+    "subtitle": "Ein ruhiger Mentor, ein Garten der Reflexionen, ein Dōjō der Übungen und ein Wochenbrief. Ein Rhythmus, der sich trägt — ohne Hype, ohne Lärm.",
+    "appStore": "App Store",
+    "playStore": "Google Play",
+    "available": "Verfügbar für iOS und Android",
+    "metricUsers": "erscheinen jeden Tag",
+    "metricPractices": "gepflegte Übungen",
+    "metricLetters": "vom Mentor geschriebene Briefe",
+    "scrollHint": "scrolle, um zu entdecken"
+  },
+  "intro": {
+    "kicker": "WAS IST KAIRO",
+    "title": "Keine weitere Produktivitäts-App.",
+    "body": "Kairo ist der rechte Augenblick — der Moment, in dem etwas entschieden wird. Ein Raum, dich täglich in Stille zu treffen und den zu bauen, der du werden willst."
+  },
+  "pilares": {
+    "kicker": "VIER SÄULEN",
+    "title": "Alles, was einen wahren Rhythmus trägt.",
+    "subtitle": "Nichts hier ist frei von Sinn. Jeder Teil von Kairo dient einer einzigen Sache: deiner Präsenz.",
+    "mentor": {
+      "n": "01",
+      "tag": "MENTOR",
+      "title": "Ein Mentor, der zuhört.",
+      "body": "Gespräche mit Claude — der weisesten KI von Anthropic. Ruhiger Ton, ohne Hype, ohne Markdown. Er drängt dich nicht. Er erinnert dich an den, der du sein wolltest.",
+      "highlight": "Claude Haiku im Gratisplan · Sonnet bei Premium."
+    },
+    "dojo": {
+      "n": "02",
+      "tag": "DŌJŌ",
+      "title": "Fünf Übungen. Nicht mehr.",
+      "body": "Das Dōjō ist der Ort deiner täglichen Übungen. Höchstens fünf — denn mehr ist Zerstreuung. Sieh deine 7-Tage-Serie und pflege Rhythmus, keine Eile.",
+      "highlight": "Fünf Übungen sind das Limit. Mehr ist Zerstreuung."
+    },
+    "jardim": {
+      "n": "03",
+      "tag": "GARTEN",
+      "title": "Drei Fragen am Tag.",
+      "body": "Morgens, mittags und abends — eine geführte Frage pro Periode. Du schreibst ohne Eile, in deinem Tempo. Der Garten ist das stille Protokoll dessen, was du wirst.",
+      "highlight": "Geführte Reflexionen, nie eine leere Seite."
+    },
+    "carta": {
+      "n": "04",
+      "tag": "BRIEF",
+      "title": "Sonntag, 21 Uhr.",
+      "body": "Jede Woche schreibt dir der Mentor einen Brief — erkannte Muster, stille Erfolge und eine Frage für die nächsten sieben Tage. Er trifft sonntags um 21 Uhr ein.",
+      "highlight": "Bei Premium ist der Brief garantiert — auch in vollen Wochen."
+    }
+  },
+  "silencio": {
+    "kicker": "STILLE-MODUS",
+    "title": "Vier Formen der Pause.",
+    "subtitle": "Wenn der Lärm wächst, schaltet Kairo die Welt für dich ab — aktiviert Nicht stören und hält den Raum.",
+    "items": [
+      { "title": "Tiefer Fokus", "body": "Arbeiten ohne Ablenkung." },
+      { "title": "Meditation", "body": "In Stille sitzen. Nur Präsenz." },
+      { "title": "Strategische Pause", "body": "Zehn Minuten mit einer einzigen Frage." },
+      { "title": "Emotionaler Reset", "body": "Geführte Atmung, vier Minuten." }
+    ]
+  },
+  "como": {
+    "kicker": "SO FUNKTIONIERT'S",
+    "title": "Vier Schritte. Sieben Tage.",
+    "passos": [
+      {
+        "n": "01",
+        "title": "Du beantwortest vier Fragen.",
+        "body": "Wer du werden willst. Was dich aus dem Gleichgewicht bringt. Welchen Bereich neu zu ordnen. In welchem Tempo. Das konfiguriert den Mentor."
+      },
+      {
+        "n": "02",
+        "title": "Du erhältst deine erste Übung.",
+        "body": "Fünf Minuten Stille beim Aufwachen. Sieben Tage lang. Einfach — aber genug für den Anfang."
+      },
+      {
+        "n": "03",
+        "title": "Du sprichst mit dem Mentor.",
+        "body": "Wann immer du willst. Worüber du willst. Er hört, was du in den Reflexionen und im letzten Brief geschrieben hast."
+      },
+      {
+        "n": "04",
+        "title": "Du erhältst den Sonntagsbrief.",
+        "body": "21 Uhr. Muster, Erfolge und eine Frage für die nächsten sieben Tage. Der Zyklus trägt sich."
+      }
+    ]
+  },
+  "depoimentos": {
+    "kicker": "WER ÜBT",
+    "title": "Keine Gewohnheits-App. Eine Form zu sein.",
+    "items": [
+      { "quote": "Ich fühle mich nicht gedrängt. Ich fühle mich erinnert.", "author": "Marina", "role": "Illustratorin" },
+      { "quote": "Zum ersten Mal halte ich fünf Übungen, ohne donnerstags aufzugeben.", "author": "Pedro", "role": "Anwalt" },
+      { "quote": "Der Sonntagsbrief ist der Moment, auf den ich am meisten warte.", "author": "Ana", "role": "Designerin" },
+      { "quote": "Der Mentor erinnert mich daran, wer ich werden wollte. Ohne Urteil.", "author": "Lucas", "role": "Ingenieur" },
+      { "quote": "Die einzige App, nach der ich stiller bin als zuvor.", "author": "Sofia", "role": "Lehrerin" },
+      { "quote": "Ich verließ TikTok, um Kairo zu öffnen. Das hätte ich nicht erwartet.", "author": "Rafael", "role": "Student" }
+    ]
+  },
+  "comparar": {
+    "kicker": "FREI × PREMIUM",
+    "title": "Fang kostenlos an. Vertiefe, wenn du willst.",
+    "subtitle": "Kein Trick. Keine aggressive Probezeit. Du entscheidest, wann der Mentor tiefer geht.",
+    "linhas": [
+      { "label": "Modell des Mentors", "free": "Claude Haiku", "premium": "Claude Sonnet" },
+      { "label": "Gespräche mit dem Mentor", "free": "Tageslimit", "premium": "Erweiterte Grenzen" },
+      { "label": "Übungen im Dōjō", "free": "Bis 5", "premium": "Bis 5" },
+      { "label": "Reflexionen im Garten", "free": "Unbegrenzt", "premium": "Unbegrenzt" },
+      { "label": "Wochenbrief", "free": "Wenn Platz ist", "premium": "Garantiert" },
+      { "label": "Stille-Modus", "free": "Alle Varianten", "premium": "Alle Varianten" },
+      { "label": "Bibliothek", "free": "Vollständig", "premium": "Vollständig" }
+    ]
+  },
+  "pricing": {
+    "kicker": "PREISE",
+    "title": "Ein Preis. Wenn du willst.",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "yearlyHint": "−20% jährlich",
+    "free": {
+      "name": "Kostenlos",
+      "price": "0 €",
+      "period": "für immer",
+      "description": "Ganz Kairo, mit sanften Grenzen beim Mentor.",
+      "features": [
+        "Mentor mit Claude Haiku",
+        "Bis 5 Übungen im Dōjō",
+        "Unbegrenzte Reflexionen im Garten",
+        "Wochenbrief (wenn Platz ist)",
+        "Vollständiger Stille-Modus",
+        "Vollständige Bibliothek"
+      ],
+      "cta": "Kostenlos laden"
+    },
+    "premium": {
+      "name": "Kairo Premium",
+      "priceMonthly": "6 €",
+      "priceYearly": "56 €",
+      "periodMonthly": "/Monat",
+      "periodYearly": "/Jahr",
+      "yearlySaving": "spare 16 € im Jahr",
+      "description": "Der tiefere Mentor. Der garantierte Brief. Keine Obergrenze.",
+      "features": [
+        "Mentor mit Claude Sonnet — das weiseste Modell",
+        "Erweiterte Gesprächsgrenzen",
+        "Wochenbrief garantiert, jede Woche",
+        "Direkter Support vom Macher",
+        "Früher Zugang zu neuen Übungen",
+        "Jederzeit kündbar"
+      ],
+      "cta": "Premium starten",
+      "badge": "EMPFOHLEN"
+    }
+  },
+  "faq": {
+    "kicker": "FRAGEN",
+    "title": "Was du wissen möchtest.",
+    "items": [
+      {
+        "q": "Ist Kairo wirklich kostenlos?",
+        "a": "Ja. Ganz Kairo läuft im Gratisplan — Mentor, Dōjō, Garten, Wochenbrief und Stille-Modus. Premium ist nur eine Form, einen tieferen Mentor (Claude Sonnet) und den Brief immer garantiert zu bekommen."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen Claude Haiku und Sonnet?",
+        "a": "Haiku ist schnell und direkt. Sonnet hört tiefer hin, verknüpft Muster aus deinen Reflexionen und antwortet nuancierter. Gleiche Modellfamilie von Anthropic — nur die Tiefe variiert."
+      },
+      {
+        "q": "Kann ich jederzeit kündigen?",
+        "a": "Ja, ohne Gebühr und ohne Reibung. Du kündigst direkt über die per E-Mail zugesandte Stripe-Quittung. Der Zugang bleibt bis zum Ende der bezahlten Periode."
+      },
+      {
+        "q": "Wo liegen meine Daten?",
+        "a": "Auf Supabase-Servern mit Row Level Security — jeder Nutzer liest und bearbeitet nur die eigenen Zeilen. Gespräche mit dem Mentor trainieren kein Anthropic-Modell."
+      },
+      {
+        "q": "In wie vielen Sprachen gibt es Kairo?",
+        "a": "Portugiesisch, Englisch, Spanisch und Deutsch. Du wählst beim ersten Öffnen und kannst jederzeit wechseln."
+      },
+      {
+        "q": "Warum sind fünf Übungen das Limit?",
+        "a": "Weil mehr Zerstreuung ist. Kairo zieht fünf gehaltene Übungen zwanzig angefangenen vor."
+      },
+      {
+        "q": "Funktioniert der Wochenbrief auch, wenn ich wenig geübt habe?",
+        "a": "Ja. Der Mentor schreibt über das, was war — auch über die Stille. Auch der Brief einer dünnen Woche hat etwas zu sagen."
+      },
+      {
+        "q": "Gibt es eine Web-Version oder nur mobil?",
+        "a": "Vorerst nur iOS und Android. Kairo wurde für das Gerät gedacht, das nah ist, wenn der Lärm kommt."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "kicker": "回路",
+    "title": "Beginne in Stille.",
+    "subtitle": "Sieben Tage. Eine Übung. Ein Brief. Sieh, wohin der Rhythmus dich führt.",
+    "primary": "Für iOS laden",
+    "secondary": "Für Android laden"
+  },
+  "footer": {
+    "tagline": "Kairo — der rechte Augenblick.",
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "language": "Sprache",
+    "links": {
+      "mentor": "Mentor",
+      "dojo": "Dōjō",
+      "jardim": "Garten",
+      "carta": "Wochenbrief",
+      "silencio": "Stille-Modus",
+      "premium": "Premium",
+      "sobre": "Über",
+      "blog": "Blog",
+      "contato": "Kontakt",
+      "termos": "Nutzungsbedingungen",
+      "privacidade": "Datenschutz",
+      "cookies": "Cookies"
+    },
+    "rights": "Alle Rechte vorbehalten.",
+    "crafted": "Mit Präsenz gemacht."
+  }
+}

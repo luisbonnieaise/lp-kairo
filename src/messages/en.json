@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "title": "Kairo — Your personal system of evolution",
+    "description": "A calm Mentor, a dojo of practices, a garden of reflections, and a weekly letter. A sustainable rhythm — no hype, no noise.",
+    "ogAlt": "Kairo — personal system of evolution"
+  },
+  "nav": {
+    "mentor": "Mentor",
+    "dojo": "Dojo",
+    "jardim": "Garden",
+    "carta": "Letter",
+    "premium": "Premium",
+    "faq": "FAQ",
+    "download": "Download"
+  },
+  "hero": {
+    "eyebrow": "回路 · THE INWARD PATH",
+    "title1": "Your system of",
+    "title2": "personal evolution.",
+    "subtitle": "A calm Mentor, a garden of reflections, a dojo of practices and a weekly letter. A rhythm that sustains itself — no hype, no noise.",
+    "appStore": "App Store",
+    "playStore": "Google Play",
+    "available": "Available on iOS and Android",
+    "metricUsers": "show up every day",
+    "metricPractices": "practices cultivated",
+    "metricLetters": "letters written by the Mentor",
+    "scrollHint": "scroll to discover"
+  },
+  "intro": {
+    "kicker": "WHAT IS KAIRO",
+    "title": "Not another productivity app.",
+    "body": "Kairo is the right time — the instant something is decided. A space to meet yourself every day, in silence, and build who you want to become."
+  },
+  "pilares": {
+    "kicker": "FOUR PILLARS",
+    "title": "Everything that sustains a real rhythm.",
+    "subtitle": "Nothing here is free of purpose. Each part of Kairo exists to sustain one thing: your presence.",
+    "mentor": {
+      "n": "01",
+      "tag": "MENTOR",
+      "title": "A mentor that listens.",
+      "body": "Conversations with Claude — Anthropic's wisest AI. Calm tone, no hype, no markdown. He doesn't push you. He reminds you who you said you wanted to be.",
+      "highlight": "Claude Haiku on the free plan · Sonnet on Premium."
+    },
+    "dojo": {
+      "n": "02",
+      "tag": "DOJO",
+      "title": "Five practices. Nothing more.",
+      "body": "The Dojo is the place of your daily practices. Five at most — because more than that is dispersion. See your seven-day streak and cultivate rhythm, not rush.",
+      "highlight": "Five practices is the limit. More than that is dispersion."
+    },
+    "jardim": {
+      "n": "03",
+      "tag": "GARDEN",
+      "title": "Three questions a day.",
+      "body": "Morning, afternoon and night — one guided question per period. You write without rushing, in your own time. The Garden is the quiet record of who you're becoming.",
+      "highlight": "Guided reflections, never an empty prompt."
+    },
+    "carta": {
+      "n": "04",
+      "tag": "LETTER",
+      "title": "Sunday, 9 PM.",
+      "body": "Every week the Mentor writes you a letter — patterns detected, silent achievements and a question for the next seven days. It arrives on Sunday at 9 PM.",
+      "highlight": "On Premium, the letter is guaranteed — even in the busiest weeks."
+    }
+  },
+  "silencio": {
+    "kicker": "SILENT MODE",
+    "title": "Four shapes of pause.",
+    "subtitle": "When the noise grows, Kairo turns off the world for you — it enables Do Not Disturb and holds the space.",
+    "items": [
+      { "title": "Deep focus", "body": "To work without distractions." },
+      { "title": "Meditation", "body": "Sit in silence. Just presence." },
+      { "title": "Strategic pause", "body": "Ten minutes with a single question." },
+      { "title": "Emotional reset", "body": "Four-minute guided breathing." }
+    ]
+  },
+  "como": {
+    "kicker": "HOW IT WORKS",
+    "title": "Four steps. Seven days.",
+    "passos": [
+      {
+        "n": "01",
+        "title": "You answer four questions.",
+        "body": "Who you want to become. What throws you off balance. Which area to reorder. At what pace. That configures the Mentor."
+      },
+      {
+        "n": "02",
+        "title": "You receive your first practice.",
+        "body": "Five minutes of silence on waking. For seven days. Simple — but enough to begin."
+      },
+      {
+        "n": "03",
+        "title": "You talk to the Mentor.",
+        "body": "When you need it. About what you need. He listens to what you wrote in your reflections and last week's letter."
+      },
+      {
+        "n": "04",
+        "title": "You receive Sunday's letter.",
+        "body": "9 PM. Patterns, achievements and a question for the next seven days. The cycle sustains itself."
+      }
+    ]
+  },
+  "depoimentos": {
+    "kicker": "WHO PRACTICES",
+    "title": "Not a habit app. A way of being.",
+    "items": [
+      { "quote": "I don't feel pressured. I feel reminded.", "author": "Marina", "role": "illustrator" },
+      { "quote": "For the first time I can keep five practices without quitting on Thursday.", "author": "Pedro", "role": "lawyer" },
+      { "quote": "Sunday's letter has become the moment I look forward to most.", "author": "Ana", "role": "designer" },
+      { "quote": "The Mentor reminds me of who I said I wanted to be. Without judgment.", "author": "Lucas", "role": "engineer" },
+      { "quote": "It's the only app that leaves me quieter after I open it.", "author": "Sofia", "role": "teacher" },
+      { "quote": "I left TikTok to open Kairo. I didn't expect that.", "author": "Rafael", "role": "student" }
+    ]
+  },
+  "comparar": {
+    "kicker": "FREE × PREMIUM",
+    "title": "Start free. Go deeper when you want.",
+    "subtitle": "No tricks. No aggressive trial. You decide when the Mentor goes deeper.",
+    "linhas": [
+      { "label": "Mentor's model", "free": "Claude Haiku", "premium": "Claude Sonnet" },
+      { "label": "Conversations with the Mentor", "free": "Daily limit", "premium": "Expanded limits" },
+      { "label": "Dojo practices", "free": "Up to 5", "premium": "Up to 5" },
+      { "label": "Garden reflections", "free": "Unlimited", "premium": "Unlimited" },
+      { "label": "Weekly letter", "free": "When there's room", "premium": "Guaranteed" },
+      { "label": "Silent Mode", "free": "All variants", "premium": "All variants" },
+      { "label": "Library", "free": "Complete", "premium": "Complete" }
+    ]
+  },
+  "pricing": {
+    "kicker": "PRICING",
+    "title": "One price. For when you want it.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyHint": "−20% yearly",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "The whole of Kairo, with soft limits on the Mentor.",
+      "features": [
+        "Mentor with Claude Haiku",
+        "Up to 5 practices in the Dojo",
+        "Unlimited reflections in the Garden",
+        "Weekly letter (when there's room)",
+        "Complete Silent Mode",
+        "Complete Library"
+      ],
+      "cta": "Download free"
+    },
+    "premium": {
+      "name": "Kairo Premium",
+      "priceMonthly": "$6",
+      "priceYearly": "$56",
+      "periodMonthly": "/month",
+      "periodYearly": "/year",
+      "yearlySaving": "save $16 yearly",
+      "description": "The deeper Mentor. The guaranteed letter. No ceiling.",
+      "features": [
+        "Mentor with Claude Sonnet — the wisest model",
+        "Expanded conversation limits",
+        "Weekly letter guaranteed, every week",
+        "Direct support from the maker",
+        "Early access to new practices",
+        "Cancel anytime"
+      ],
+      "cta": "Start Premium",
+      "badge": "RECOMMENDED"
+    }
+  },
+  "faq": {
+    "kicker": "QUESTIONS",
+    "title": "What you might want to know.",
+    "items": [
+      {
+        "q": "Is Kairo really free?",
+        "a": "Yes. The whole of Kairo works on the free plan — Mentor, Dojo, Garden, weekly Letter and Silent Mode. Premium is only a way to have a deeper Mentor (Claude Sonnet) and the letter always guaranteed."
+      },
+      {
+        "q": "What's the difference between Claude Haiku and Sonnet?",
+        "a": "Haiku is quick and direct. Sonnet listens with more depth, connects patterns across your reflections and replies with more nuance. Same model family from Anthropic — only the depth varies."
+      },
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes, no fee and no friction. You cancel directly via the Stripe receipt sent by email. Access continues until the end of the paid period."
+      },
+      {
+        "q": "Where is my data stored?",
+        "a": "On Supabase servers with Row Level Security — each user only reads and edits their own rows. Conversations with the Mentor do not train any Anthropic model."
+      },
+      {
+        "q": "How many languages does Kairo support?",
+        "a": "Portuguese, English, Spanish and German. You choose on first open and can switch anytime."
+      },
+      {
+        "q": "Why is five practices the limit?",
+        "a": "Because more than that is dispersion. Kairo prefers five things kept to twenty things started."
+      },
+      {
+        "q": "Does the weekly letter work even if I didn't practice much?",
+        "a": "It does. The Mentor writes about what happened — including the silence. A sparse week's letter has something to say too."
+      },
+      {
+        "q": "Is there a web version or only mobile?",
+        "a": "Mobile only for now — iOS and Android. Kairo was designed for the device that's near you when the noise arrives."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "kicker": "回路",
+    "title": "Begin in silence.",
+    "subtitle": "Seven days. One practice. One letter. See where the rhythm takes you.",
+    "primary": "Download for iOS",
+    "secondary": "Download for Android"
+  },
+  "footer": {
+    "tagline": "Kairo — the right time.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "language": "Language",
+    "links": {
+      "mentor": "Mentor",
+      "dojo": "Dojo",
+      "jardim": "Garden",
+      "carta": "Weekly Letter",
+      "silencio": "Silent Mode",
+      "premium": "Premium",
+      "sobre": "About",
+      "blog": "Blog",
+      "contato": "Contact",
+      "termos": "Terms of use",
+      "privacidade": "Privacy",
+      "cookies": "Cookies"
+    },
+    "rights": "All rights reserved.",
+    "crafted": "Crafted with presence."
+  }
+}

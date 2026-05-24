@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* ────────────────────────────────────────────────────────────────────────────
+   KAIRO Design Tokens
+   Light: "Washi Paper & Charcoal"   Dark: "Sumi Ink & Stone"
+   ────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Palette — Light (Washi) */
+  --color-washi: #f7f4eb;
+  --color-washi-card: #efebe0;
+  --color-washi-line: #e5e1d6;
+  --color-charcoal: #1e1e1e;
+  --color-charcoal-soft: #766e65;
+  --color-copper: #c28b63;
+
+  /* Palette — Dark (Sumi) */
+  --color-sumi: #1c1e20;
+  --color-sumi-card: #24272a;
+  --color-sumi-line: #2a2a2a;
+  --color-bone: #e5e3dc;
+  --color-bone-soft: #8a8e93;
+  --color-copper-glow: #d4a373;
+
+  /* Semantic (default = dark — Kairo is a night-mode-first product) */
+  --color-bg: var(--color-sumi);
+  --color-card: var(--color-sumi-card);
+  --color-line: var(--color-sumi-line);
+  --color-fg: var(--color-bone);
+  --color-fg-soft: var(--color-bone-soft);
+  --color-accent: var(--color-copper-glow);
+  --color-danger: #8b2e2e;
+
+  /* Type scale */
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  /* JP: fallbacks de SO antes do `serif` genérico — garante glifo CJK
+     mesmo se a chamada ao Google Fonts demorar/falhar. */
+  --font-jp:
+    "Noto Serif JP",
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    "YuMincho",
+    "MS Mincho",
+    "Songti SC",
+    serif;
+
+  /* Motion */
+  --ease-out-zen: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-zen: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Container */
+  --container-max: 1200px;
+}
+
+/* Light theme override */
+[data-theme="light"] {
+  --color-bg: var(--color-washi);
+  --color-card: var(--color-washi-card);
+  --color-line: var(--color-washi-line);
+  --color-fg: var(--color-charcoal);
+  --color-fg-soft: var(--color-charcoal-soft);
+  --color-accent: var(--color-copper);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Base
+   ────────────────────────────────────────────────────────────────────────── */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  scroll-behavior: auto; /* lenis manages smooth scroll */
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Typography helpers
+   ────────────────────────────────────────────────────────────────────────── */
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+.font-jp { font-family: var(--font-jp); }
+
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Lenis smooth scroll
+   ────────────────────────────────────────────────────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Ambient details — sumi ink wash background, copper gradient text
+   ────────────────────────────────────────────────────────────────────────── */
+.bg-noise {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 110%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent);
+}
+
+.text-copper-gradient {
+  background-image: linear-gradient(
+    135deg,
+    #f0cda6 0%,
+    var(--color-accent) 55%,
+    #b9844d 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* descenders (ç, ã, j) podem ser clipados pelo box em alguns engines —
+     o padding-block-end estende o layout box sem afetar a baseline. */
+  padding-block-end: 0.08em;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Ensō — sacred circle border
+   ────────────────────────────────────────────────────────────────────────── */
+@keyframes ensoSpin {
+  to { transform: rotate(360deg); }
+}
+
+.enso-spin {
+  animation: ensoSpin 24s linear infinite;
+}
+
+@keyframes orbBreath {
+  0%, 100% { transform: scale(1); opacity: 0.55; }
+  50% { transform: scale(1.06); opacity: 0.75; }
+}
+
+.orb-breath {
+  animation: orbBreath 7s var(--ease-in-out-zen) infinite;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Marquee (for testimonials / soft loops)
+   ────────────────────────────────────────────────────────────────────────── */
+@keyframes marqueeX {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee {
+  animation: marqueeX 40s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Misc
+   ────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
