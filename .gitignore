@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# temp folders
+.tmp-screenshots
+
 # Claude Code — local-only overrides (permissions etc.). Project-wide
 # settings.json may be committed if added later.
 .claude/settings.local.json
