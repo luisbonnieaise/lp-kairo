@@ -28,8 +28,8 @@ export function Comparar() {
       </div>
 
       <Reveal delay={0.1}>
-        <div className="mt-16 overflow-hidden rounded-3xl border border-[var(--color-line)]">
-          <div className="grid grid-cols-[1.4fr_1fr_1fr] bg-[var(--color-card)]/40 px-6 py-5 text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--color-fg-soft)] sm:px-8">
+        <div className="mt-12 overflow-hidden rounded-3xl border border-[var(--color-line)] sm:mt-16">
+          <div className="grid grid-cols-[1.6fr_1fr_1fr] bg-[var(--color-card)]/40 px-4 py-4 text-[10px] font-medium uppercase tracking-[0.16em] text-[var(--color-fg-soft)] sm:grid-cols-[1.4fr_1fr_1fr] sm:px-8 sm:py-5 sm:text-[11px] sm:tracking-[0.18em]">
             <div></div>
             <div className="text-center">Gratuito</div>
             <div className="text-center text-[var(--color-accent)]">Premium</div>
@@ -37,15 +37,15 @@ export function Comparar() {
           {linhas.map((l, i) => (
             <div
               key={i}
-              className="grid grid-cols-[1.4fr_1fr_1fr] items-center border-t border-[var(--color-line)] px-6 py-5 text-sm sm:px-8 sm:text-[15px]"
+              className="grid grid-cols-[1.6fr_1fr_1fr] items-center gap-2 border-t border-[var(--color-line)] px-4 py-4 text-[13px] sm:grid-cols-[1.4fr_1fr_1fr] sm:gap-0 sm:px-8 sm:py-5 sm:text-[15px]"
             >
-              <div className="font-medium">{l.label}</div>
-              <div className="text-center text-[var(--color-fg-soft)]">
+              <div className="font-medium leading-tight">{l.label}</div>
+              <div className="text-center text-[12px] leading-tight text-[var(--color-fg-soft)] sm:text-[15px]">
                 {l.free}
               </div>
-              <div className="flex items-center justify-center gap-1.5 text-[var(--color-fg)]">
-                <Check className="h-4 w-4 text-[var(--color-accent)]" />
-                {l.premium}
+              <div className="flex items-center justify-center gap-1.5 text-center text-[12px] leading-tight text-[var(--color-fg)] sm:text-[15px]">
+                <Check className="h-3.5 w-3.5 shrink-0 text-[var(--color-accent)] sm:h-4 sm:w-4" />
+                <span>{l.premium}</span>
               </div>
             </div>
           ))}

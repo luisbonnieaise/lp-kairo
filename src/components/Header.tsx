@@ -43,21 +43,32 @@ export function Header({ locale }: { locale: string }) {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setMenuOpen(false);
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
   return (
     <>
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-40 transition-all duration-500 ease-[var(--ease-out-zen)]",
-          scrolled ? "pt-3" : "pt-5",
+          scrolled
+            ? "pt-[calc(0.5rem+env(safe-area-inset-top))] sm:pt-[calc(0.75rem+env(safe-area-inset-top))]"
+            : "pt-[calc(0.75rem+env(safe-area-inset-top))] sm:pt-[calc(1.25rem+env(safe-area-inset-top))]",
         )}
         data-locale={locale}
       >
-        <div className="mx-auto w-full max-w-[1200px] px-4 md:px-6">
+        <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6">
           <div
             className={cn(
-              "flex items-center justify-between rounded-full border border-transparent px-4 py-2.5 transition-all duration-500 ease-[var(--ease-out-zen)] md:px-6",
+              "flex items-center justify-between rounded-full border border-transparent px-3 py-2 transition-all duration-500 ease-[var(--ease-out-zen)] sm:px-4 sm:py-2.5 md:px-6",
               scrolled
-                ? "border-[var(--color-line)] bg-[var(--color-bg)]/70 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.4)] backdrop-blur-xl"
+                ? "border-[var(--color-line)] bg-[var(--color-bg)]/75 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.4)] backdrop-blur-xl"
                 : "bg-transparent",
             )}
           >
@@ -93,8 +104,9 @@ export function Header({ locale }: { locale: string }) {
               <button
                 type="button"
                 onClick={() => setMenuOpen(true)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-line)] lg:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-line)] text-[var(--color-fg)] transition-colors duration-300 hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] lg:hidden"
                 aria-label="Abrir menu"
+                aria-expanded={menuOpen}
               >
                 <Menu className="h-4 w-4" />
               </button>
@@ -111,21 +123,30 @@ export function Header({ locale }: { locale: string }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-50 bg-[var(--color-bg)]/95 backdrop-blur-2xl lg:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu de navegação"
           >
-            <div className="flex h-dvh flex-col">
-              <div className="flex items-center justify-between px-6 py-5">
+            <div
+              className="flex h-dvh flex-col"
+              style={{
+                paddingTop: "env(safe-area-inset-top)",
+                paddingBottom: "env(safe-area-inset-bottom)",
+              }}
+            >
+              <div className="flex items-center justify-between px-5 py-4 sm:px-6 sm:py-5">
                 <Logo />
                 <button
                   type="button"
                   onClick={() => setMenuOpen(false)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-line)]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-line)] text-[var(--color-fg)] transition-colors duration-300 hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)]"
                   aria-label="Fechar menu"
                 >
                   <X className="h-4 w-4" />
                 </button>
               </div>
 
-              <nav className="flex flex-1 flex-col justify-center gap-2 px-8">
+              <nav className="flex flex-1 flex-col justify-center gap-1 px-5 sm:px-8">
                 {ANCHORS.map((a, i) => (
                   <motion.a
                     key={a.key}
@@ -138,24 +159,30 @@ export function Header({ locale }: { locale: string }) {
                       delay: 0.05 + i * 0.06,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="border-b border-[var(--color-line)] py-5 font-serif text-3xl leading-none"
+                    className="border-b border-[var(--color-line)] py-4 font-serif text-[26px] leading-none transition-colors duration-300 hover:text-[var(--color-accent)] sm:py-5 sm:text-3xl"
                   >
                     {t(a.key)}
                   </motion.a>
                 ))}
               </nav>
 
-              <div className="flex items-center justify-between px-8 pb-10">
-                <LangSwitcher />
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                className="flex items-center justify-between gap-4 px-5 pb-8 pt-6 sm:px-8 sm:pb-10"
+              >
+                <LangSwitcher direction="up" align="start" />
                 <a
                   href={siteConfig.appStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-11 items-center rounded-full bg-[var(--color-fg)] px-6 text-sm font-medium text-[var(--color-bg)]"
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex h-11 items-center rounded-full bg-[var(--color-fg)] px-6 text-sm font-medium text-[var(--color-bg)] transition-colors duration-300 hover:bg-[var(--color-accent)]"
                 >
                   {t("download")}
                 </a>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
