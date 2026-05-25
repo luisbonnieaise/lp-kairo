@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Previews fiéis às telas reais do app Kairo (C:/dev/kairo/lib/telas/*).
  * Cada componente reconstrói em HTML/CSS o layout, tipografia e hierarquia
@@ -7,8 +9,12 @@
  *   sumi    #1C1E20   bone    #E5E3DC
  *   card    #24272A   bone-soft #8A8E93
  *   line    #2A2A2A   accent  #D4A373  (cobre iluminado)
+ *
+ * Os textos vêm de messages/<locale>.json → "previews", então o conteúdo
+ * dentro do iPhone segue o idioma escolhido na landing.
  */
 
+import { useTranslations } from "next-intl";
 import { PhoneStatusBar } from "./PhoneFrame";
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -108,16 +114,20 @@ function TabBar({
   active: TabKey;
   notify?: TabKey[];
 }) {
+  const t = useTranslations("previews.tabs");
   const tabs: { key: TabKey; label: string; icon: React.ReactNode }[] = [
-    { key: "home", label: "Início", icon: <IconHome /> },
-    { key: "mentor", label: "Mentor", icon: <IconChat /> },
-    { key: "dojo", label: "Dôjo", icon: <IconSelf /> },
-    { key: "jardim", label: "Jardim", icon: <IconLeaf /> },
-    { key: "biblioteca", label: "Biblioteca", icon: <IconBook /> },
+    { key: "home", label: t("home"), icon: <IconHome /> },
+    { key: "mentor", label: t("mentor"), icon: <IconChat /> },
+    { key: "dojo", label: t("dojo"), icon: <IconSelf /> },
+    { key: "jardim", label: t("jardim"), icon: <IconLeaf /> },
+    { key: "biblioteca", label: t("biblioteca"), icon: <IconBook /> },
   ];
 
   return (
-    <div className="absolute inset-x-3 bottom-3 z-20">
+    // px-3 pb-3 = margem interna que reproduz o gap da barra flutuante
+    // sem usar position:absolute (evita overflow no iOS quando o conteúdo
+    // expande além da altura do PhoneFrame).
+    <div className="shrink-0 px-3 pb-3 pt-2">
       <div
         className="rounded-[22px] border border-white/[0.06] px-1 py-1.5 backdrop-blur-xl"
         style={{
@@ -126,12 +136,12 @@ function TabBar({
         }}
       >
         <div className="flex items-center">
-          {tabs.map((t) => {
-            const isActive = t.key === active;
-            const hasDot = notify.includes(t.key);
+          {tabs.map((tab) => {
+            const isActive = tab.key === active;
+            const hasDot = notify.includes(tab.key);
             return (
               <div
-                key={t.key}
+                key={tab.key}
                 className="flex flex-1 flex-col items-center gap-[3px] py-[3px]"
               >
                 <div
@@ -148,19 +158,19 @@ function TabBar({
                       color: isActive ? "#D4A373" : "rgba(138,142,147,0.7)",
                     }}
                   >
-                    {t.icon}
+                    {tab.icon}
                   </div>
                   {hasDot && (
                     <span className="absolute -right-1 -top-0.5 h-1.5 w-1.5 rounded-full bg-[#E53935]" />
                   )}
                 </div>
                 <div
-                  className="text-[7px] font-medium leading-none tracking-[0.05em]"
+                  className="max-w-full truncate text-[7px] font-medium leading-none tracking-[0.05em]"
                   style={{
                     color: isActive ? "#D4A373" : "rgba(138,142,147,0.7)",
                   }}
                 >
-                  {t.label}
+                  {tab.label}
                 </div>
               </div>
             );
@@ -240,36 +250,47 @@ function IconBook() {
   );
 }
 
+/* Wrapper comum: garante h-full, overflow-hidden e a coluna flex que
+   mantém StatusBar / Header / Body / TabBar sempre dentro do PhoneFrame. */
+function ScreenShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative flex h-full w-full flex-col overflow-hidden bg-[var(--color-sumi)]">
+      {children}
+    </div>
+  );
+}
+
 /* ────────────────────────────────────────────────────────────────────────────
    1) MENTOR — tela de chat sem balões.
    Replica lib/telas/mentor.dart: mensagens do mentor em cobre à esquerda,
    do usuário em texto normal à direita, campo de entrada arredondado.
    ────────────────────────────────────────────────────────────────────────── */
 export function MentorPreview() {
+  const t = useTranslations("previews.mentor");
+
   return (
-    <div className="relative flex h-full w-full flex-col bg-[var(--color-sumi)]">
+    <ScreenShell>
       <PhoneStatusBar time="21:04" />
       <ScreenHeader
-        title="Mentor"
-        caption="Onde estamos hoje?"
+        title={t("title")}
+        caption={t("caption")}
         withEnso
       />
 
-      <div className="flex-1 overflow-hidden px-5 pt-4">
-        {/* Saudação do Mentor — italic, cor cobre, sem balão */}
+      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">
         <p className="font-serif text-[11px] italic leading-[1.55] text-[#D4A373]">
-          Bem-vindo de volta. O que merece atenção agora?
+          {t("greeting")}
         </p>
 
         <div className="mt-5 flex justify-end">
           <p className="max-w-[70%] text-right text-[10.5px] leading-[1.55] text-[var(--color-bone)]">
-            Hoje custou começar. Acordei tarde.
+            {t("user")}
           </p>
         </div>
 
         <div className="mt-5">
           <p className="max-w-[78%] font-serif text-[11px] italic leading-[1.55] text-[#D4A373]">
-            O atraso de hoje não apaga o ritmo da semana. Comece do silêncio — só isso.
+            {t("reply")}
           </p>
         </div>
 
@@ -283,11 +304,10 @@ export function MentorPreview() {
         </div>
       </div>
 
-      {/* Campo de entrada — fino, com seta para enviar */}
-      <div className="px-5 pb-[68px]">
+      <div className="shrink-0 px-5 pb-2">
         <div className="flex items-center justify-between rounded-full border border-[var(--color-sumi-line)] bg-[var(--color-sumi-card)] px-3.5 py-2">
           <span className="text-[10px] text-[var(--color-bone-soft)]">
-            Escreva...
+            {t("input")}
           </span>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path
@@ -302,7 +322,7 @@ export function MentorPreview() {
       </div>
 
       <TabBar active="mentor" notify={["jardim", "biblioteca"]} />
-    </div>
+    </ScreenShell>
   );
 }
 
@@ -312,46 +332,34 @@ export function MentorPreview() {
    row de 7 pontos com dia da semana, e card "Escolher prática" no fim.
    ────────────────────────────────────────────────────────────────────────── */
 export function DojoPreview() {
-  const praticas = [
-    {
-      cat: "MENTE",
-      nome: "Cinco minutos de silêncio",
-      dur: "5 min",
-      dias: [true, true, false, true, true, true, true],
-    },
-    {
-      cat: "CORPO",
-      nome: "Caminhada após o almoço",
-      dur: "15 min",
-      dias: [false, true, true, false, true, true, true],
-    },
-    {
-      cat: "DISCIPLINA",
-      nome: "Diário antes de dormir",
-      dur: "",
-      dias: [true, false, true, true, false, true, true],
-    },
+  const tp = useTranslations("previews");
+  const t = useTranslations("previews.dojo");
+  const items = t.raw("items") as { cat: string; name: string; duration: string }[];
+  const dias = tp.raw("weekDays") as string[];
+
+  const padroes: boolean[][] = [
+    [true, true, false, true, true, true, true],
+    [false, true, true, false, true, true, true],
+    [true, false, true, true, false, true, true],
   ];
 
-  const dias = ["S", "T", "Q", "Q", "S", "S", "D"];
-
   return (
-    <div className="relative flex h-full w-full flex-col bg-[var(--color-sumi)]">
+    <ScreenShell>
       <PhoneStatusBar time="07:42" />
 
       <div className="px-5 pt-5">
-        <GradientTitle>Dôjo</GradientTitle>
+        <GradientTitle>{t("title")}</GradientTitle>
         <div className="mt-1 text-[9px] text-[var(--color-bone-soft)]">
-          3 práticas ativas
+          {t("caption")}
         </div>
         <div className="mt-4">
           <Divider />
         </div>
       </div>
 
-      <div className="flex-1 overflow-hidden px-5 pt-4">
+      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">
         <div className="space-y-3">
-          {praticas.map((p, i) => (
+          {items.map((p, i) => (
             <div key={i} className="pb-3">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -359,19 +367,15 @@ export function DojoPreview() {
                     {p.cat}
                   </div>
                   <div className="mt-0.5 text-[10.5px] leading-tight text-[var(--color-bone)]">
-                    {p.nome}
+                    {p.name}
                   </div>
-                  {p.dur && (
+                  {p.duration && (
                     <div className="text-[8px] text-[var(--color-bone-soft)]">
-                      {p.dur}
+                      {p.duration}
                     </div>
                   )}
                 </div>
-                <button
-                  type="button"
-                  className="text-[var(--color-bone-soft)]"
-                  aria-hidden
-                >
+                <span className="text-[var(--color-bone-soft)]" aria-hidden>
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M6 6l12 12M18 6L6 18"
@@ -380,15 +384,15 @@ export function DojoPreview() {
                       strokeLinecap="round"
                     />
                   </svg>
-                </button>
+                </span>
               </div>
 
               <div className="mt-2">
                 <div className="text-[7px] font-medium tracking-[0.18em] text-[var(--color-bone-soft)]">
-                  ÚLTIMOS 7 DIAS
+                  {t("last7")}
                 </div>
                 <div className="mt-1.5 flex gap-2">
-                  {p.dias.map((feito, j) => {
+                  {padroes[i].map((feito, j) => {
                     const eHoje = j === 6;
                     return (
                       <div key={j} className="flex flex-col items-center">
@@ -413,14 +417,13 @@ export function DojoPreview() {
                 </div>
               </div>
 
-              {i < praticas.length - 1 && (
+              {i < items.length - 1 && (
                 <div className="mt-3 h-px bg-[var(--color-sumi-line)]" />
               )}
             </div>
           ))}
         </div>
 
-        {/* Card "Adicionar prática" */}
         <div className="mt-3 flex items-center gap-2.5 rounded-2xl border border-[var(--color-sumi-line)] bg-[var(--color-sumi-card)] px-3 py-2.5">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
             <path
@@ -432,13 +435,13 @@ export function DojoPreview() {
             />
           </svg>
           <span className="text-[10px] text-[var(--color-bone)]">
-            Escolher uma prática
+            {t("choose")}
           </span>
         </div>
       </div>
 
       <TabBar active="dojo" notify={["jardim", "biblioteca"]} />
-    </div>
+    </ScreenShell>
   );
 }
 
@@ -448,29 +451,36 @@ export function DojoPreview() {
    card com ícone de edit e CTA "Escrever".
    ────────────────────────────────────────────────────────────────────────── */
 export function JardimPreview() {
+  const t = useTranslations("previews.jardim");
+  const reflexoes = t.raw("reflections") as {
+    moment: string;
+    date: string;
+    q: string;
+    a: string;
+  }[];
+
   return (
-    <div className="relative flex h-full w-full flex-col bg-[var(--color-sumi)]">
+    <ScreenShell>
       <PhoneStatusBar time="15:18" />
 
       <div className="px-5 pt-5">
-        <GradientTitle>Jardim</GradientTitle>
+        <GradientTitle>{t("title")}</GradientTitle>
         <div className="mt-1 text-[9px] text-[var(--color-bone-soft)]">
-          Reflexão guiada
+          {t("caption")}
         </div>
         <div className="mt-4">
           <Divider />
         </div>
       </div>
 
-      <div className="flex-1 overflow-hidden px-5 pt-4">
+      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">
         <div className="text-[7.5px] font-medium tracking-[0.18em] text-[#D4A373]">
-          TARDE
+          {t("period")}
         </div>
         <p className="mt-2.5 font-serif text-[12px] leading-[1.5] text-[var(--color-bone)]">
-          O que merece sua atenção até o fim do dia?
+          {t("question")}
         </p>
 
-        {/* Card "Escrever" */}
         <div className="mt-4 flex items-center gap-3 rounded-2xl border border-[var(--color-sumi-line)] bg-[var(--color-sumi-card)] px-3.5 py-3">
           <div
             className="flex h-7 w-7 items-center justify-center rounded-full"
@@ -487,32 +497,29 @@ export function JardimPreview() {
             </svg>
           </div>
           <span className="text-[10.5px] text-[var(--color-bone)]">
-            Escrever
+            {t("write")}
           </span>
         </div>
 
         <div className="mt-7 text-[7.5px] font-medium tracking-[0.18em] text-[var(--color-bone-soft)]">
-          REFLEXÕES ANTERIORES
+          {t("previous")}
         </div>
 
         <div className="mt-3 space-y-3">
-          <ReflexaoItem
-            momento="MANHÃ"
-            data="HOJE"
-            pergunta="Por onde começar com presença?"
-            resposta="Pelo café feito devagar — antes do telefone."
-          />
-          <ReflexaoItem
-            momento="NOITE"
-            data="ONTEM"
-            pergunta="O que foi suficiente hoje?"
-            resposta="Ter dito não duas vezes sem culpa."
-          />
+          {reflexoes.map((r, i) => (
+            <ReflexaoItem
+              key={i}
+              momento={r.moment}
+              data={r.date}
+              pergunta={r.q}
+              resposta={r.a}
+            />
+          ))}
         </div>
       </div>
 
       <TabBar active="jardim" notify={["biblioteca"]} />
-    </div>
+    </ScreenShell>
   );
 }
 
@@ -554,26 +561,28 @@ function ReflexaoItem({
    métricas grandes em serif e sequências de cada prática.
    ────────────────────────────────────────────────────────────────────────── */
 export function CartaPreview() {
+  const t = useTranslations("previews.biblioteca");
+  const sequencias = t.raw("sequences") as { name: string; streak: string }[];
+
   return (
-    <div className="relative flex h-full w-full flex-col bg-[var(--color-sumi)]">
+    <ScreenShell>
       <PhoneStatusBar time="21:08" />
 
       <div className="px-5 pt-5">
-        <GradientTitle>Biblioteca</GradientTitle>
+        <GradientTitle>{t("title")}</GradientTitle>
         <div className="mt-1 text-[9px] text-[var(--color-bone-soft)]">
-          Estudo de si mesmo
+          {t("caption")}
         </div>
         <div className="mt-4">
           <Divider />
         </div>
       </div>
 
-      <div className="flex-1 overflow-hidden px-5 pt-4">
+      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">
         <div className="text-[7.5px] font-medium tracking-[0.18em] text-[#D4A373]">
-          CARTA DO MENTOR
+          {t("letterLabel")}
         </div>
 
-        {/* Card da carta — borda cobre, glow se "NOVA" */}
         <div
           className="mt-2.5 rounded-xl border p-3"
           style={{
@@ -587,7 +596,7 @@ export function CartaPreview() {
             <div className="flex items-center gap-2">
               <MiniEnso size={14} />
               <span className="text-[7px] font-medium tracking-[0.18em] text-[#D4A373]">
-                SEMANA DE 17 → 23 NOV
+                {t("weekRange")}
               </span>
             </div>
             <span
@@ -597,17 +606,16 @@ export function CartaPreview() {
                 color: "#D4A373",
               }}
             >
-              NOVA
+              {t("new")}
             </span>
           </div>
 
           <p className="mt-2 font-serif text-[10.5px] leading-[1.5] text-[var(--color-bone)]">
-            Esta semana, três conquistas silenciosas — e um padrão que
-            merece atenção...
+            {t("excerpt")}
           </p>
 
           <div className="mt-2 flex items-center gap-1 text-[8px] text-[#D4A373]">
-            Ler carta
+            {t("readLetter")}
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
               <path
                 d="M5 12h14M13 6l6 6-6 6"
@@ -624,43 +632,51 @@ export function CartaPreview() {
           <Divider />
         </div>
 
-        {/* Estatísticas — números grandes em serif */}
         <div className="mt-3 text-[7.5px] font-medium tracking-[0.18em] text-[var(--color-bone-soft)]">
-          ESTA SEMANA
+          {t("thisWeek")}
         </div>
         <div className="mt-1.5 flex items-baseline gap-2">
           <span className="font-serif text-[22px] leading-none text-[var(--color-bone)]">
-            12
+            {t("statValue")}
           </span>
           <span className="font-serif text-[10px] text-[var(--color-bone-soft)]">
-            práticas cumpridas
+            {t("statLabel")}
           </span>
         </div>
 
         <div className="mt-4 h-px bg-[var(--color-sumi-line)]" />
 
         <div className="mt-3 text-[7.5px] font-medium tracking-[0.18em] text-[var(--color-bone-soft)]">
-          SEQUÊNCIAS
+          {t("streaks")}
         </div>
         <div className="mt-1.5 space-y-1">
-          <Seq nome="Cinco minutos de silêncio" streak={7} />
-          <Seq nome="Caminhada após o almoço" streak={4} />
+          {sequencias.map((s, i) => (
+            <Seq key={i} nome={s.name} streak={s.streak} daysLabel={t("daysLabel")} />
+          ))}
         </div>
       </div>
 
       <TabBar active="biblioteca" notify={["jardim"]} />
-    </div>
+    </ScreenShell>
   );
 }
 
-function Seq({ nome, streak }: { nome: string; streak: number }) {
+function Seq({
+  nome,
+  streak,
+  daysLabel,
+}: {
+  nome: string;
+  streak: string;
+  daysLabel: string;
+}) {
   return (
-    <div className="flex items-baseline justify-between">
-      <span className="text-[9.5px] text-[var(--color-bone)]">{nome}</span>
-      <span className="text-[9.5px] text-[#D4A373]">
+    <div className="flex items-baseline justify-between gap-2">
+      <span className="truncate text-[9.5px] text-[var(--color-bone)]">{nome}</span>
+      <span className="shrink-0 text-[9.5px] text-[#D4A373]">
         {streak}
         <span className="ml-0.5 text-[7px] text-[var(--color-bone-soft)]">
-          dias
+          {daysLabel}
         </span>
       </span>
     </div>

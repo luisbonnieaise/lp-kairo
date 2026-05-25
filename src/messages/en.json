@@ -64,6 +64,65 @@
       "highlight": "On Premium, the letter is guaranteed — even in the busiest weeks."
     }
   },
+  "previews": {
+    "weekDays": ["M", "T", "W", "T", "F", "S", "S"],
+    "tabs": {
+      "home": "Home",
+      "mentor": "Mentor",
+      "dojo": "Dojo",
+      "jardim": "Garden",
+      "biblioteca": "Library"
+    },
+    "mentor": {
+      "title": "Mentor",
+      "caption": "Where are we today?",
+      "greeting": "Welcome back. What deserves your attention now?",
+      "user": "Today was hard to start. Woke up late.",
+      "reply": "Today's delay doesn't erase the week's rhythm. Begin from silence — just that.",
+      "input": "Write..."
+    },
+    "dojo": {
+      "title": "Dojo",
+      "caption": "3 active practices",
+      "last7": "LAST 7 DAYS",
+      "choose": "Choose a practice",
+      "items": [
+        { "cat": "MIND", "name": "Five minutes of silence", "duration": "5 min" },
+        { "cat": "BODY", "name": "Walk after lunch", "duration": "15 min" },
+        { "cat": "DISCIPLINE", "name": "Journal before sleep", "duration": "" }
+      ]
+    },
+    "jardim": {
+      "title": "Garden",
+      "caption": "Guided reflection",
+      "period": "AFTERNOON",
+      "question": "What deserves your attention until the end of the day?",
+      "write": "Write",
+      "previous": "PREVIOUS REFLECTIONS",
+      "reflections": [
+        { "moment": "MORNING", "date": "TODAY", "q": "Where to begin with presence?", "a": "With coffee made slowly — before the phone." },
+        { "moment": "NIGHT", "date": "YESTERDAY", "q": "What was enough today?", "a": "Having said no twice without guilt." }
+      ]
+    },
+    "biblioteca": {
+      "title": "Library",
+      "caption": "A study of yourself",
+      "letterLabel": "MENTOR'S LETTER",
+      "weekRange": "WEEK OF NOV 17 → 23",
+      "new": "NEW",
+      "excerpt": "This week, three silent achievements — and a pattern that deserves attention...",
+      "readLetter": "Read letter",
+      "thisWeek": "THIS WEEK",
+      "streaks": "STREAKS",
+      "statValue": "12",
+      "statLabel": "practices completed",
+      "daysLabel": "days",
+      "sequences": [
+        { "name": "Five minutes of silence", "streak": "7" },
+        { "name": "Walk after lunch", "streak": "4" }
+      ]
+    }
+  },
   "silencio": {
     "kicker": "SILENT MODE",
     "title": "Four shapes of pause.",

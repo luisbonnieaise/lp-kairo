@@ -64,6 +64,65 @@
       "highlight": "No Premium, a carta é garantida — mesmo nas semanas cheias."
     }
   },
+  "previews": {
+    "weekDays": ["S", "T", "Q", "Q", "S", "S", "D"],
+    "tabs": {
+      "home": "Início",
+      "mentor": "Mentor",
+      "dojo": "Dôjo",
+      "jardim": "Jardim",
+      "biblioteca": "Biblioteca"
+    },
+    "mentor": {
+      "title": "Mentor",
+      "caption": "Onde estamos hoje?",
+      "greeting": "Bem-vindo de volta. O que merece atenção agora?",
+      "user": "Hoje custou começar. Acordei tarde.",
+      "reply": "O atraso de hoje não apaga o ritmo da semana. Comece do silêncio — só isso.",
+      "input": "Escreva..."
+    },
+    "dojo": {
+      "title": "Dôjo",
+      "caption": "3 práticas ativas",
+      "last7": "ÚLTIMOS 7 DIAS",
+      "choose": "Escolher uma prática",
+      "items": [
+        { "cat": "MENTE", "name": "Cinco minutos de silêncio", "duration": "5 min" },
+        { "cat": "CORPO", "name": "Caminhada após o almoço", "duration": "15 min" },
+        { "cat": "DISCIPLINA", "name": "Diário antes de dormir", "duration": "" }
+      ]
+    },
+    "jardim": {
+      "title": "Jardim",
+      "caption": "Reflexão guiada",
+      "period": "TARDE",
+      "question": "O que merece sua atenção até o fim do dia?",
+      "write": "Escrever",
+      "previous": "REFLEXÕES ANTERIORES",
+      "reflections": [
+        { "moment": "MANHÃ", "date": "HOJE", "q": "Por onde começar com presença?", "a": "Pelo café feito devagar — antes do telefone." },
+        { "moment": "NOITE", "date": "ONTEM", "q": "O que foi suficiente hoje?", "a": "Ter dito não duas vezes sem culpa." }
+      ]
+    },
+    "biblioteca": {
+      "title": "Biblioteca",
+      "caption": "Estudo de si mesmo",
+      "letterLabel": "CARTA DO MENTOR",
+      "weekRange": "SEMANA DE 17 → 23 NOV",
+      "new": "NOVA",
+      "excerpt": "Esta semana, três conquistas silenciosas — e um padrão que merece atenção...",
+      "readLetter": "Ler carta",
+      "thisWeek": "ESTA SEMANA",
+      "streaks": "SEQUÊNCIAS",
+      "statValue": "12",
+      "statLabel": "práticas cumpridas",
+      "daysLabel": "dias",
+      "sequences": [
+        { "name": "Cinco minutos de silêncio", "streak": "7" },
+        { "name": "Caminhada após o almoço", "streak": "4" }
+      ]
+    }
+  },
   "silencio": {
     "kicker": "MODO SILÊNCIO",
     "title": "Quatro formas de pausa.",

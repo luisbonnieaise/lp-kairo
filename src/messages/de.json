@@ -64,6 +64,65 @@
       "highlight": "Bei Premium ist der Brief garantiert — auch in vollen Wochen."
     }
   },
+  "previews": {
+    "weekDays": ["M", "D", "M", "D", "F", "S", "S"],
+    "tabs": {
+      "home": "Start",
+      "mentor": "Mentor",
+      "dojo": "Dōjō",
+      "jardim": "Garten",
+      "biblioteca": "Bibliothek"
+    },
+    "mentor": {
+      "title": "Mentor",
+      "caption": "Wo stehen wir heute?",
+      "greeting": "Willkommen zurück. Was verdient gerade deine Aufmerksamkeit?",
+      "user": "Heute fiel es schwer anzufangen. Bin spät aufgewacht.",
+      "reply": "Der heutige Aufschub löscht den Wochenrhythmus nicht. Beginne aus der Stille — nur das.",
+      "input": "Schreiben..."
+    },
+    "dojo": {
+      "title": "Dōjō",
+      "caption": "3 aktive Praktiken",
+      "last7": "LETZTE 7 TAGE",
+      "choose": "Praxis wählen",
+      "items": [
+        { "cat": "GEIST", "name": "Fünf Minuten Stille", "duration": "5 Min" },
+        { "cat": "KÖRPER", "name": "Spaziergang nach dem Essen", "duration": "15 Min" },
+        { "cat": "DISZIPLIN", "name": "Tagebuch vor dem Schlafen", "duration": "" }
+      ]
+    },
+    "jardim": {
+      "title": "Garten",
+      "caption": "Geführte Reflexion",
+      "period": "NACHMITTAG",
+      "question": "Was verdient deine Aufmerksamkeit bis zum Tagesende?",
+      "write": "Schreiben",
+      "previous": "FRÜHERE REFLEXIONEN",
+      "reflections": [
+        { "moment": "MORGEN", "date": "HEUTE", "q": "Wo beginne ich mit Präsenz?", "a": "Beim Kaffee, langsam gemacht — vor dem Telefon." },
+        { "moment": "NACHT", "date": "GESTERN", "q": "Was war heute genug?", "a": "Zweimal Nein gesagt zu haben, ohne Schuldgefühl." }
+      ]
+    },
+    "biblioteca": {
+      "title": "Bibliothek",
+      "caption": "Studium des Selbst",
+      "letterLabel": "BRIEF DES MENTORS",
+      "weekRange": "WOCHE VOM 17. → 23. NOV",
+      "new": "NEU",
+      "excerpt": "Diese Woche, drei stille Erfolge — und ein Muster, das Aufmerksamkeit verdient...",
+      "readLetter": "Brief lesen",
+      "thisWeek": "DIESE WOCHE",
+      "streaks": "SERIEN",
+      "statValue": "12",
+      "statLabel": "erfüllte Praktiken",
+      "daysLabel": "Tage",
+      "sequences": [
+        { "name": "Fünf Minuten Stille", "streak": "7" },
+        { "name": "Spaziergang nach dem Essen", "streak": "4" }
+      ]
+    }
+  },
   "silencio": {
     "kicker": "STILLE-MODUS",
     "title": "Vier Formen der Pause.",

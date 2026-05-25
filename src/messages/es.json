@@ -64,6 +64,65 @@
       "highlight": "En Premium, la carta está garantizada — incluso en semanas llenas."
     }
   },
+  "previews": {
+    "weekDays": ["L", "M", "X", "J", "V", "S", "D"],
+    "tabs": {
+      "home": "Inicio",
+      "mentor": "Mentor",
+      "dojo": "Dōjō",
+      "jardim": "Jardín",
+      "biblioteca": "Biblioteca"
+    },
+    "mentor": {
+      "title": "Mentor",
+      "caption": "¿Dónde estamos hoy?",
+      "greeting": "Bienvenido de vuelta. ¿Qué merece tu atención ahora?",
+      "user": "Hoy costó empezar. Me desperté tarde.",
+      "reply": "El retraso de hoy no borra el ritmo de la semana. Empieza desde el silencio — sólo eso.",
+      "input": "Escribe..."
+    },
+    "dojo": {
+      "title": "Dōjō",
+      "caption": "3 prácticas activas",
+      "last7": "ÚLTIMOS 7 DÍAS",
+      "choose": "Elegir una práctica",
+      "items": [
+        { "cat": "MENTE", "name": "Cinco minutos de silencio", "duration": "5 min" },
+        { "cat": "CUERPO", "name": "Caminar después de comer", "duration": "15 min" },
+        { "cat": "DISCIPLINA", "name": "Diario antes de dormir", "duration": "" }
+      ]
+    },
+    "jardim": {
+      "title": "Jardín",
+      "caption": "Reflexión guiada",
+      "period": "TARDE",
+      "question": "¿Qué merece tu atención hasta el fin del día?",
+      "write": "Escribir",
+      "previous": "REFLEXIONES ANTERIORES",
+      "reflections": [
+        { "moment": "MAÑANA", "date": "HOY", "q": "¿Por dónde empezar con presencia?", "a": "Por el café hecho despacio — antes del teléfono." },
+        { "moment": "NOCHE", "date": "AYER", "q": "¿Qué fue suficiente hoy?", "a": "Haber dicho no dos veces sin culpa." }
+      ]
+    },
+    "biblioteca": {
+      "title": "Biblioteca",
+      "caption": "Estudio de uno mismo",
+      "letterLabel": "CARTA DEL MENTOR",
+      "weekRange": "SEMANA DEL 17 → 23 NOV",
+      "new": "NUEVA",
+      "excerpt": "Esta semana, tres logros silenciosos — y un patrón que merece atención...",
+      "readLetter": "Leer carta",
+      "thisWeek": "ESTA SEMANA",
+      "streaks": "RACHAS",
+      "statValue": "12",
+      "statLabel": "prácticas cumplidas",
+      "daysLabel": "días",
+      "sequences": [
+        { "name": "Cinco minutos de silencio", "streak": "7" },
+        { "name": "Caminar después de comer", "streak": "4" }
+      ]
+    }
+  },
   "silencio": {
     "kicker": "MODO SILENCIO",
     "title": "Cuatro formas de pausa.",
