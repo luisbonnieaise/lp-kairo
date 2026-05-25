@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Check } from "lucide-react";
 import { Section, Kicker, H2, Lead } from "../Section";
 import { Reveal } from "../Reveal";
 
@@ -9,8 +8,8 @@ export function Comparar() {
   const t = useTranslations("comparar");
   const linhas = t.raw("linhas") as {
     label: string;
-    free: string;
-    premium: string;
+    trial: string;
+    paid: string;
   }[];
 
   return (
@@ -31,8 +30,8 @@ export function Comparar() {
         <div className="mt-12 overflow-hidden rounded-3xl border border-[var(--color-line)] sm:mt-16">
           <div className="grid grid-cols-[1.6fr_1fr_1fr] bg-[var(--color-card)]/40 px-4 py-4 text-[10px] font-medium uppercase tracking-[0.16em] text-[var(--color-fg-soft)] sm:grid-cols-[1.4fr_1fr_1fr] sm:px-8 sm:py-5 sm:text-[11px] sm:tracking-[0.18em]">
             <div></div>
-            <div className="text-center">Gratuito</div>
-            <div className="text-center text-[var(--color-accent)]">Premium</div>
+            <div className="text-center">{t("trialHeader")}</div>
+            <div className="text-center text-[var(--color-accent)]">{t("paidHeader")}</div>
           </div>
           {linhas.map((l, i) => (
             <div
@@ -41,11 +40,10 @@ export function Comparar() {
             >
               <div className="font-medium leading-tight">{l.label}</div>
               <div className="text-center text-[12px] leading-tight text-[var(--color-fg-soft)] sm:text-[15px]">
-                {l.free}
+                {l.trial}
               </div>
-              <div className="flex items-center justify-center gap-1.5 text-center text-[12px] leading-tight text-[var(--color-fg)] sm:text-[15px]">
-                <Check className="h-3.5 w-3.5 shrink-0 text-[var(--color-accent)] sm:h-4 sm:w-4" />
-                <span>{l.premium}</span>
+              <div className="text-center text-[12px] leading-tight text-[var(--color-fg)] sm:text-[15px]">
+                {l.paid}
               </div>
             </div>
           ))}

@@ -9,7 +9,7 @@
     "dojo": "Dōjō",
     "jardim": "Garten",
     "carta": "Brief",
-    "premium": "Premium",
+    "premium": "Abonnieren",
     "faq": "Fragen",
     "download": "Laden"
   },
@@ -39,8 +39,8 @@
       "n": "01",
       "tag": "MENTOR",
       "title": "Ein Mentor, der zuhört.",
-      "body": "Gespräche mit Claude — der weisesten KI von Anthropic. Ruhiger Ton, ohne Hype, ohne Markdown. Er drängt dich nicht. Er erinnert dich an den, der du sein wolltest.",
-      "highlight": "Claude Haiku im Gratisplan · Sonnet bei Premium."
+      "body": "Ein ruhiges Gegenüber, jederzeit erreichbar. Ruhiger Ton, ohne Hype, ohne Markdown. Er drängt dich nicht. Er erinnert dich an den, der du sein wolltest.",
+      "highlight": "Stete Präsenz. Ohne Urteil, ohne Eile."
     },
     "dojo": {
       "n": "02",
@@ -61,7 +61,7 @@
       "tag": "BRIEF",
       "title": "Sonntag, 21 Uhr.",
       "body": "Jede Woche schreibt dir der Mentor einen Brief — erkannte Muster, stille Erfolge und eine Frage für die nächsten sieben Tage. Er trifft sonntags um 21 Uhr ein.",
-      "highlight": "Bei Premium ist der Brief garantiert — auch in vollen Wochen."
+      "highlight": "Der Brief ist garantiert — auch in vollen Wochen."
     }
   },
   "previews": {
@@ -173,79 +173,67 @@
     ]
   },
   "comparar": {
-    "kicker": "FREI × PREMIUM",
-    "title": "Fang kostenlos an. Vertiefe, wenn du willst.",
-    "subtitle": "Kein Trick. Keine aggressive Probezeit. Du entscheidest, wann der Mentor tiefer geht.",
+    "kicker": "TESTPHASE × ABO",
+    "title": "Sieben volle Tage. Danach trägt der Rhythmus weiter.",
+    "subtitle": "Die Testphase ist keine abgespeckte Version. Es ist ganz Kairo für eine Woche — ohne Karte zum Start.",
+    "trialHeader": "Testphase · 7 Tage",
+    "paidHeader": "Abo",
     "linhas": [
-      { "label": "Modell des Mentors", "free": "Claude Haiku", "premium": "Claude Sonnet" },
-      { "label": "Gespräche mit dem Mentor", "free": "Tageslimit", "premium": "Erweiterte Grenzen" },
-      { "label": "Übungen im Dōjō", "free": "Bis 5", "premium": "Bis 5" },
-      { "label": "Reflexionen im Garten", "free": "Unbegrenzt", "premium": "Unbegrenzt" },
-      { "label": "Wochenbrief", "free": "Wenn Platz ist", "premium": "Garantiert" },
-      { "label": "Stille-Modus", "free": "Alle Varianten", "premium": "Alle Varianten" },
-      { "label": "Bibliothek", "free": "Vollständig", "premium": "Vollständig" }
+      { "label": "Ruhiger Mentor", "trial": "Vollständig", "paid": "Vollständig" },
+      { "label": "Übungen im Dōjō", "trial": "Bis 5", "paid": "Bis 5" },
+      { "label": "Reflexionen im Garten", "trial": "Unbegrenzt", "paid": "Unbegrenzt" },
+      { "label": "Wochenbrief", "trial": "Garantiert", "paid": "Garantiert" },
+      { "label": "Stille-Modus", "trial": "Alle Varianten", "paid": "Alle Varianten" },
+      { "label": "Bibliothek", "trial": "Vollständig", "paid": "Vollständig" },
+      { "label": "Früher Zugang zu neuen Übungen", "trial": "—", "paid": "Inklusive" },
+      { "label": "Laufzeit", "trial": "7 Tage", "paid": "Wiederkehrend" }
     ]
   },
   "pricing": {
-    "kicker": "PREISE",
-    "title": "Ein Preis. Wenn du willst.",
+    "kicker": "ABO",
+    "title": "Sieben Tage zum Spüren. Danach entscheidest du.",
     "monthly": "Monatlich",
     "yearly": "Jährlich",
-    "yearlyHint": "−20% jährlich",
-    "free": {
-      "name": "Kostenlos",
-      "price": "0 €",
-      "period": "für immer",
-      "description": "Ganz Kairo, mit sanften Grenzen beim Mentor.",
-      "features": [
-        "Mentor mit Claude Haiku",
-        "Bis 5 Übungen im Dōjō",
-        "Unbegrenzte Reflexionen im Garten",
-        "Wochenbrief (wenn Platz ist)",
-        "Vollständiger Stille-Modus",
-        "Vollständige Bibliothek"
-      ],
-      "cta": "Kostenlos laden"
-    },
-    "premium": {
-      "name": "Kairo Premium",
-      "priceMonthly": "6 €",
-      "priceYearly": "56 €",
-      "periodMonthly": "/Monat",
-      "periodYearly": "/Jahr",
-      "yearlySaving": "spare 16 € im Jahr",
-      "description": "Der tiefere Mentor. Der garantierte Brief. Keine Obergrenze.",
-      "features": [
-        "Mentor mit Claude Sonnet — das weiseste Modell",
-        "Erweiterte Gesprächsgrenzen",
-        "Wochenbrief garantiert, jede Woche",
-        "Direkter Support vom Macher",
-        "Früher Zugang zu neuen Übungen",
-        "Jederzeit kündbar"
-      ],
-      "cta": "Premium starten",
-      "badge": "EMPFOHLEN"
-    }
+    "yearlyHint": "−40%",
+    "name": "Kairo",
+    "trialBadge": "7 TAGE GRATIS",
+    "priceMonthly": "10,90 €",
+    "priceYearly": "77,90 €",
+    "periodMonthly": "/Monat",
+    "periodYearly": "/Jahr",
+    "yearlySaving": "spare 52,90 € im Jahr",
+    "description": "Ganz Kairo. Sieben Tage zum Ausprobieren — danach 10,90 €/Monat oder 77,90 €/Jahr.",
+    "features": [
+      "Ruhiger Mentor, jederzeit erreichbar",
+      "Bis 5 Übungen im Dōjō",
+      "Unbegrenzte Reflexionen im Garten",
+      "Wochenbrief jeden Sonntag",
+      "Vollständiger Stille-Modus",
+      "Vollständige Bibliothek",
+      "Jederzeit kündbar"
+    ],
+    "cta": "7 Tage gratis starten",
+    "ctaNote": "Keine Belastung in den ersten 7 Tagen."
   },
   "faq": {
     "kicker": "FRAGEN",
     "title": "Was du wissen möchtest.",
     "items": [
       {
-        "q": "Ist Kairo wirklich kostenlos?",
-        "a": "Ja. Ganz Kairo läuft im Gratisplan — Mentor, Dōjō, Garten, Wochenbrief und Stille-Modus. Premium ist nur eine Form, einen tieferen Mentor (Claude Sonnet) und den Brief immer garantiert zu bekommen."
+        "q": "Wie funktioniert die 7-tägige Testphase?",
+        "a": "Du nutzt ganz Kairo für sieben Tage — Mentor, Dōjō, Garten, Wochenbrief und Stille-Modus, alles offen. Am Ende der Testphase wählst du Monats- oder Jahresabo, um weiterzumachen."
       },
       {
-        "q": "Was ist der Unterschied zwischen Claude Haiku und Sonnet?",
-        "a": "Haiku ist schnell und direkt. Sonnet hört tiefer hin, verknüpft Muster aus deinen Reflexionen und antwortet nuancierter. Gleiche Modellfamilie von Anthropic — nur die Tiefe variiert."
+        "q": "Was passiert, wenn ich nach 7 Tagen nicht abonniere?",
+        "a": "Der Zugang pausiert still. Deine Reflexionen und Übungs-Serien bleiben gespeichert — wenn du zurückkommst und abonnierst, knüpft der Rhythmus dort an, wo er war."
       },
       {
         "q": "Kann ich jederzeit kündigen?",
-        "a": "Ja, ohne Gebühr und ohne Reibung. Du kündigst direkt über die per E-Mail zugesandte Stripe-Quittung. Der Zugang bleibt bis zum Ende der bezahlten Periode."
+        "a": "Ja, ohne Gebühr und ohne Reibung. Du kündigst direkt über die per E-Mail zugesandte Quittung. Der Zugang bleibt bis zum Ende der bezahlten Periode."
       },
       {
         "q": "Wo liegen meine Daten?",
-        "a": "Auf Supabase-Servern mit Row Level Security — jeder Nutzer liest und bearbeitet nur die eigenen Zeilen. Gespräche mit dem Mentor trainieren kein Anthropic-Modell."
+        "a": "Auf Supabase-Servern mit Row Level Security — jeder Nutzer liest und bearbeitet nur die eigenen Zeilen. Gespräche mit dem Mentor trainieren kein KI-Modell."
       },
       {
         "q": "In wie vielen Sprachen gibt es Kairo?",
@@ -284,7 +272,7 @@
       "jardim": "Garten",
       "carta": "Wochenbrief",
       "silencio": "Stille-Modus",
-      "premium": "Premium",
+      "premium": "Abo",
       "sobre": "Über",
       "blog": "Blog",
       "contato": "Kontakt",
