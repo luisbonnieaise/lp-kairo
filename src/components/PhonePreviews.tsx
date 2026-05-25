@@ -337,10 +337,13 @@ export function DojoPreview() {
   const items = t.raw("items") as { cat: string; name: string; duration: string }[];
   const dias = tp.raw("weekDays") as string[];
 
+  // Mostra 2 práticas: o app real comporta até 5, mas o preview vive
+  // num celular de ~280px — priorizar respiração > densidade preserva
+  // a mesma estética do Mentor e do Jardim.
+  const visiveis = items.slice(0, 2);
   const padroes: boolean[][] = [
     [true, true, false, true, true, true, true],
     [false, true, true, false, true, true, true],
-    [true, false, true, true, false, true, true],
   ];
 
   return (
@@ -357,84 +360,95 @@ export function DojoPreview() {
         </div>
       </div>
 
-      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">
-        <div className="space-y-3">
-          {items.map((p, i) => (
-            <div key={i} className="pb-3">
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="text-[7px] font-medium tracking-[0.18em] text-[var(--color-bone-soft)]">
-                    {p.cat}
+      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-5">
+        {visiveis.map((p, i) => (
+          <div key={i}>
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
+                <div className="text-[7.5px] font-medium tracking-[0.2em] text-[#D4A373]/85">
+                  {p.cat}
+                </div>
+                <div className="mt-1 text-[11px] leading-[1.3] text-[var(--color-bone)]">
+                  {p.name}
+                </div>
+                {p.duration && (
+                  <div className="mt-1 text-[8.5px] text-[var(--color-bone-soft)]">
+                    {p.duration}
                   </div>
-                  <div className="mt-0.5 text-[10.5px] leading-tight text-[var(--color-bone)]">
-                    {p.name}
-                  </div>
-                  {p.duration && (
-                    <div className="text-[8px] text-[var(--color-bone-soft)]">
-                      {p.duration}
-                    </div>
-                  )}
-                </div>
-                <span className="text-[var(--color-bone-soft)]" aria-hidden>
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 6l12 12M18 6L6 18"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
+                )}
               </div>
-
-              <div className="mt-2">
-                <div className="text-[7px] font-medium tracking-[0.18em] text-[var(--color-bone-soft)]">
-                  {t("last7")}
-                </div>
-                <div className="mt-1.5 flex gap-2">
-                  {padroes[i].map((feito, j) => {
-                    const eHoje = j === 6;
-                    return (
-                      <div key={j} className="flex flex-col items-center">
-                        <div
-                          className="text-[7px] font-medium tracking-wide"
-                          style={{
-                            color: eHoje ? "#D4A373" : "rgba(138,142,147,0.8)",
-                          }}
-                        >
-                          {dias[j]}
-                        </div>
-                        <div
-                          className="mt-0.5 h-[7px] w-[7px] rounded-full border"
-                          style={{
-                            background: feito ? "#D4A373" : "transparent",
-                            borderColor: feito ? "#D4A373" : "#2A2A2A",
-                          }}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {i < items.length - 1 && (
-                <div className="mt-3 h-px bg-[var(--color-sumi-line)]" />
-              )}
+              <span
+                className="mt-1 shrink-0 text-[var(--color-bone-soft)]/60"
+                aria-hidden
+              >
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6 6l12 12M18 6L6 18"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-3 flex items-center gap-2.5 rounded-2xl border border-[var(--color-sumi-line)] bg-[var(--color-sumi-card)] px-3 py-2.5">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12 5v14M5 12h14"
-              stroke="#D4A373"
-              strokeOpacity="0.6"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="text-[10px] text-[var(--color-bone)]">
+            {/* Linha de 7 dias — mais ampla e arejada que antes, com o dia
+                de hoje em cobre e os anteriores em cinza suave. */}
+            <div className="mt-4 flex items-end justify-between">
+              {padroes[i].map((feito, j) => {
+                const eHoje = j === 6;
+                return (
+                  <div key={j} className="flex flex-col items-center gap-1.5">
+                    <span
+                      className="text-[8px] font-medium leading-none tracking-[0.05em]"
+                      style={{
+                        color: eHoje
+                          ? "#D4A373"
+                          : "rgba(138,142,147,0.55)",
+                      }}
+                    >
+                      {dias[j]}
+                    </span>
+                    <span
+                      className="block h-[7px] w-[7px] rounded-full"
+                      style={{
+                        background: feito ? "#D4A373" : "transparent",
+                        border: feito
+                          ? "none"
+                          : "1px solid rgba(138,142,147,0.35)",
+                      }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+
+            {i < visiveis.length - 1 && (
+              <div className="my-6">
+                <Divider />
+              </div>
+            )}
+          </div>
+        ))}
+
+        {/* Card "Escolher prática" — mesmo padrão do "Escrever" do Jardim
+            (ícone circular cobre + label) para a família ficar coerente. */}
+        <div className="mt-7 flex items-center gap-3 rounded-2xl border border-[var(--color-sumi-line)] bg-[var(--color-sumi-card)] px-3.5 py-3">
+          <div
+            className="flex h-7 w-7 items-center justify-center rounded-full"
+            style={{ background: "rgba(212,163,115,0.10)" }}
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 5v14M5 12h14"
+                stroke="#D4A373"
+                strokeOpacity="0.85"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+              />
+            </svg>
+          </div>
+          <span className="text-[10.5px] text-[var(--color-bone)]">
             {t("choose")}
           </span>
         </div>
