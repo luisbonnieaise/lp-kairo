@@ -2,6 +2,20 @@
 
 Landing page do **Kairo** — sistema pessoal de evolução. Funil de vendas de produção, pronto para deploy na Vercel.
 
+## Billing & identidade (Fase 07)
+
+A assinatura Stripe é vendida **aqui na web** (taxa menor): o CTA de preços exige
+**login Supabase** antes do checkout (`src/components/sections/AssinarCta.tsx`) e
+cria a Checkout Session server-side em `src/app/api/checkout/route.ts` (com
+`trial_period_days: 7` e moeda pelo locale). A entitlement converge no Postgres
+via webhooks no Supabase (ver `kairo/docs/07-billing-multiplataforma.md`).
+
+> **Identidade única (obrigatório):** o usuário que assina na web tem de ser o
+> **mesmo `auth.users`** do app Flutter. Habilite os **mesmos providers** de
+> auth (Email/OTP e, se usado, Google) no Supabase para a LP e para o app. Sem
+> isso, a compra web não aparece como Premium no app. A `lp-kairo` usa apenas
+> chaves **públicas** (URL + anon key) — a service role nunca entra aqui.
+
 ## Stack
 
 | Camada | Tecnologia |

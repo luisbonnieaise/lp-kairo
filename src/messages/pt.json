@@ -65,7 +65,15 @@
     }
   },
   "previews": {
-    "weekDays": ["S", "T", "Q", "Q", "S", "S", "D"],
+    "weekDays": [
+      "S",
+      "T",
+      "Q",
+      "Q",
+      "S",
+      "S",
+      "D"
+    ],
     "tabs": {
       "home": "Início",
       "mentor": "Mentor",
@@ -87,9 +95,21 @@
       "last7": "ÚLTIMOS 7 DIAS",
       "choose": "Escolher uma prática",
       "items": [
-        { "cat": "MENTE", "name": "Cinco minutos de silêncio", "duration": "5 min" },
-        { "cat": "CORPO", "name": "Caminhada após o almoço", "duration": "15 min" },
-        { "cat": "DISCIPLINA", "name": "Diário antes de dormir", "duration": "" }
+        {
+          "cat": "MENTE",
+          "name": "Cinco minutos de silêncio",
+          "duration": "5 min"
+        },
+        {
+          "cat": "CORPO",
+          "name": "Caminhada após o almoço",
+          "duration": "15 min"
+        },
+        {
+          "cat": "DISCIPLINA",
+          "name": "Diário antes de dormir",
+          "duration": ""
+        }
       ]
     },
     "jardim": {
@@ -100,8 +120,18 @@
       "write": "Escrever",
       "previous": "REFLEXÕES ANTERIORES",
       "reflections": [
-        { "moment": "MANHÃ", "date": "HOJE", "q": "Por onde começar com presença?", "a": "Pelo café feito devagar — antes do telefone." },
-        { "moment": "NOITE", "date": "ONTEM", "q": "O que foi suficiente hoje?", "a": "Ter dito não duas vezes sem culpa." }
+        {
+          "moment": "MANHÃ",
+          "date": "HOJE",
+          "q": "Por onde começar com presença?",
+          "a": "Pelo café feito devagar — antes do telefone."
+        },
+        {
+          "moment": "NOITE",
+          "date": "ONTEM",
+          "q": "O que foi suficiente hoje?",
+          "a": "Ter dito não duas vezes sem culpa."
+        }
       ]
     },
     "biblioteca": {
@@ -118,8 +148,14 @@
       "statLabel": "práticas cumpridas",
       "daysLabel": "dias",
       "sequences": [
-        { "name": "Cinco minutos de silêncio", "streak": "7" },
-        { "name": "Caminhada após o almoço", "streak": "4" }
+        {
+          "name": "Cinco minutos de silêncio",
+          "streak": "7"
+        },
+        {
+          "name": "Caminhada após o almoço",
+          "streak": "4"
+        }
       ]
     }
   },
@@ -128,10 +164,22 @@
     "title": "Quatro formas de pausa.",
     "subtitle": "Quando o ruído cresce, o Kairo desliga o mundo por você — ativa o Não Perturbe do aparelho e sustenta o espaço.",
     "items": [
-      { "title": "Foco profundo", "body": "Para trabalhar sem distrações." },
-      { "title": "Meditação", "body": "Sentar em silêncio. Apenas presença." },
-      { "title": "Pausa estratégica", "body": "Dez minutos com uma única pergunta." },
-      { "title": "Reset emocional", "body": "Respiração guiada de quatro minutos." }
+      {
+        "title": "Foco profundo",
+        "body": "Para trabalhar sem distrações."
+      },
+      {
+        "title": "Meditação",
+        "body": "Sentar em silêncio. Apenas presença."
+      },
+      {
+        "title": "Pausa estratégica",
+        "body": "Dez minutos com uma única pergunta."
+      },
+      {
+        "title": "Reset emocional",
+        "body": "Respiração guiada de quatro minutos."
+      }
     ]
   },
   "como": {
@@ -164,12 +212,36 @@
     "kicker": "QUEM PRATICA",
     "title": "Não é app de hábito. É uma forma de estar.",
     "items": [
-      { "quote": "Não me sinto cobrado. Sinto-me lembrado.", "author": "Marina", "role": "ilustradora" },
-      { "quote": "Pela primeira vez consigo manter cinco práticas sem largar tudo na quinta-feira.", "author": "Pedro", "role": "advogado" },
-      { "quote": "A carta de domingo virou meu momento mais aguardado da semana.", "author": "Ana", "role": "designer" },
-      { "quote": "O Mentor me lembra de quem eu disse que queria ser. Sem julgar.", "author": "Lucas", "role": "engenheiro" },
-      { "quote": "É o único app que me faz sentir mais quieto depois de abrir.", "author": "Sofia", "role": "professora" },
-      { "quote": "Saí do TikTok pra abrir o Kairo. Não esperava isso.", "author": "Rafael", "role": "estudante" }
+      {
+        "quote": "Não me sinto cobrado. Sinto-me lembrado.",
+        "author": "Marina",
+        "role": "ilustradora"
+      },
+      {
+        "quote": "Pela primeira vez consigo manter cinco práticas sem largar tudo na quinta-feira.",
+        "author": "Pedro",
+        "role": "advogado"
+      },
+      {
+        "quote": "A carta de domingo virou meu momento mais aguardado da semana.",
+        "author": "Ana",
+        "role": "designer"
+      },
+      {
+        "quote": "O Mentor me lembra de quem eu disse que queria ser. Sem julgar.",
+        "author": "Lucas",
+        "role": "engenheiro"
+      },
+      {
+        "quote": "É o único app que me faz sentir mais quieto depois de abrir.",
+        "author": "Sofia",
+        "role": "professora"
+      },
+      {
+        "quote": "Saí do TikTok pra abrir o Kairo. Não esperava isso.",
+        "author": "Rafael",
+        "role": "estudante"
+      }
     ]
   },
   "comparar": {
@@ -179,14 +251,46 @@
     "trialHeader": "Trial · 7 dias",
     "paidHeader": "Assinatura",
     "linhas": [
-      { "label": "Mentor sereno", "trial": "Completo", "paid": "Completo" },
-      { "label": "Práticas no Dôjo", "trial": "Até 5", "paid": "Até 5" },
-      { "label": "Reflexões no Jardim", "trial": "Ilimitadas", "paid": "Ilimitadas" },
-      { "label": "Carta semanal", "trial": "Garantida", "paid": "Garantida" },
-      { "label": "Modo Silêncio", "trial": "Todas as variantes", "paid": "Todas as variantes" },
-      { "label": "Biblioteca", "trial": "Completa", "paid": "Completa" },
-      { "label": "Acesso antecipado a novas práticas", "trial": "—", "paid": "Incluído" },
-      { "label": "Duração", "trial": "7 dias", "paid": "Recorrente" }
+      {
+        "label": "Mentor sereno",
+        "trial": "Completo",
+        "paid": "Completo"
+      },
+      {
+        "label": "Práticas no Dôjo",
+        "trial": "Até 5",
+        "paid": "Até 5"
+      },
+      {
+        "label": "Reflexões no Jardim",
+        "trial": "Ilimitadas",
+        "paid": "Ilimitadas"
+      },
+      {
+        "label": "Carta semanal",
+        "trial": "Garantida",
+        "paid": "Garantida"
+      },
+      {
+        "label": "Modo Silêncio",
+        "trial": "Todas as variantes",
+        "paid": "Todas as variantes"
+      },
+      {
+        "label": "Biblioteca",
+        "trial": "Completa",
+        "paid": "Completa"
+      },
+      {
+        "label": "Acesso antecipado a novas práticas",
+        "trial": "—",
+        "paid": "Incluído"
+      },
+      {
+        "label": "Duração",
+        "trial": "7 dias",
+        "paid": "Recorrente"
+      }
     ]
   },
   "pricing": {
@@ -282,5 +386,17 @@
     },
     "rights": "Todos os direitos reservados.",
     "crafted": "Construído com presença."
+  },
+  "auth": {
+    "entrar": "Entrar para assinar",
+    "explicacao": "Use o mesmo e-mail do app Kairo. Enviaremos um link de acesso.",
+    "emailLabel": "Seu e-mail",
+    "enviarLink": "Receber link de acesso",
+    "linkEnviado": "Link enviado. Confira seu e-mail e volte para continuar.",
+    "ou": "ou",
+    "google": "Continuar com Google",
+    "erroLogin": "Não foi possível enviar o link. Tente novamente.",
+    "erroCheckout": "Não foi possível abrir o pagamento. Tente novamente.",
+    "fechar": "Fechar"
   }
 }

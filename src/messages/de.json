@@ -65,7 +65,15 @@
     }
   },
   "previews": {
-    "weekDays": ["M", "D", "M", "D", "F", "S", "S"],
+    "weekDays": [
+      "M",
+      "D",
+      "M",
+      "D",
+      "F",
+      "S",
+      "S"
+    ],
     "tabs": {
       "home": "Start",
       "mentor": "Mentor",
@@ -87,9 +95,21 @@
       "last7": "LETZTE 7 TAGE",
       "choose": "Praxis wählen",
       "items": [
-        { "cat": "GEIST", "name": "Fünf Minuten Stille", "duration": "5 Min" },
-        { "cat": "KÖRPER", "name": "Spaziergang nach dem Essen", "duration": "15 Min" },
-        { "cat": "DISZIPLIN", "name": "Tagebuch vor dem Schlafen", "duration": "" }
+        {
+          "cat": "GEIST",
+          "name": "Fünf Minuten Stille",
+          "duration": "5 Min"
+        },
+        {
+          "cat": "KÖRPER",
+          "name": "Spaziergang nach dem Essen",
+          "duration": "15 Min"
+        },
+        {
+          "cat": "DISZIPLIN",
+          "name": "Tagebuch vor dem Schlafen",
+          "duration": ""
+        }
       ]
     },
     "jardim": {
@@ -100,8 +120,18 @@
       "write": "Schreiben",
       "previous": "FRÜHERE REFLEXIONEN",
       "reflections": [
-        { "moment": "MORGEN", "date": "HEUTE", "q": "Wo beginne ich mit Präsenz?", "a": "Beim Kaffee, langsam gemacht — vor dem Telefon." },
-        { "moment": "NACHT", "date": "GESTERN", "q": "Was war heute genug?", "a": "Zweimal Nein gesagt zu haben, ohne Schuldgefühl." }
+        {
+          "moment": "MORGEN",
+          "date": "HEUTE",
+          "q": "Wo beginne ich mit Präsenz?",
+          "a": "Beim Kaffee, langsam gemacht — vor dem Telefon."
+        },
+        {
+          "moment": "NACHT",
+          "date": "GESTERN",
+          "q": "Was war heute genug?",
+          "a": "Zweimal Nein gesagt zu haben, ohne Schuldgefühl."
+        }
       ]
     },
     "biblioteca": {
@@ -118,8 +148,14 @@
       "statLabel": "erfüllte Praktiken",
       "daysLabel": "Tage",
       "sequences": [
-        { "name": "Fünf Minuten Stille", "streak": "7" },
-        { "name": "Spaziergang nach dem Essen", "streak": "4" }
+        {
+          "name": "Fünf Minuten Stille",
+          "streak": "7"
+        },
+        {
+          "name": "Spaziergang nach dem Essen",
+          "streak": "4"
+        }
       ]
     }
   },
@@ -128,10 +164,22 @@
     "title": "Vier Formen der Pause.",
     "subtitle": "Wenn der Lärm wächst, schaltet Kairo die Welt für dich ab — aktiviert Nicht stören und hält den Raum.",
     "items": [
-      { "title": "Tiefer Fokus", "body": "Arbeiten ohne Ablenkung." },
-      { "title": "Meditation", "body": "In Stille sitzen. Nur Präsenz." },
-      { "title": "Strategische Pause", "body": "Zehn Minuten mit einer einzigen Frage." },
-      { "title": "Emotionaler Reset", "body": "Geführte Atmung, vier Minuten." }
+      {
+        "title": "Tiefer Fokus",
+        "body": "Arbeiten ohne Ablenkung."
+      },
+      {
+        "title": "Meditation",
+        "body": "In Stille sitzen. Nur Präsenz."
+      },
+      {
+        "title": "Strategische Pause",
+        "body": "Zehn Minuten mit einer einzigen Frage."
+      },
+      {
+        "title": "Emotionaler Reset",
+        "body": "Geführte Atmung, vier Minuten."
+      }
     ]
   },
   "como": {
@@ -164,12 +212,36 @@
     "kicker": "WER ÜBT",
     "title": "Keine Gewohnheits-App. Eine Form zu sein.",
     "items": [
-      { "quote": "Ich fühle mich nicht gedrängt. Ich fühle mich erinnert.", "author": "Marina", "role": "Illustratorin" },
-      { "quote": "Zum ersten Mal halte ich fünf Übungen, ohne donnerstags aufzugeben.", "author": "Pedro", "role": "Anwalt" },
-      { "quote": "Der Sonntagsbrief ist der Moment, auf den ich am meisten warte.", "author": "Ana", "role": "Designerin" },
-      { "quote": "Der Mentor erinnert mich daran, wer ich werden wollte. Ohne Urteil.", "author": "Lucas", "role": "Ingenieur" },
-      { "quote": "Die einzige App, nach der ich stiller bin als zuvor.", "author": "Sofia", "role": "Lehrerin" },
-      { "quote": "Ich verließ TikTok, um Kairo zu öffnen. Das hätte ich nicht erwartet.", "author": "Rafael", "role": "Student" }
+      {
+        "quote": "Ich fühle mich nicht gedrängt. Ich fühle mich erinnert.",
+        "author": "Marina",
+        "role": "Illustratorin"
+      },
+      {
+        "quote": "Zum ersten Mal halte ich fünf Übungen, ohne donnerstags aufzugeben.",
+        "author": "Pedro",
+        "role": "Anwalt"
+      },
+      {
+        "quote": "Der Sonntagsbrief ist der Moment, auf den ich am meisten warte.",
+        "author": "Ana",
+        "role": "Designerin"
+      },
+      {
+        "quote": "Der Mentor erinnert mich daran, wer ich werden wollte. Ohne Urteil.",
+        "author": "Lucas",
+        "role": "Ingenieur"
+      },
+      {
+        "quote": "Die einzige App, nach der ich stiller bin als zuvor.",
+        "author": "Sofia",
+        "role": "Lehrerin"
+      },
+      {
+        "quote": "Ich verließ TikTok, um Kairo zu öffnen. Das hätte ich nicht erwartet.",
+        "author": "Rafael",
+        "role": "Student"
+      }
     ]
   },
   "comparar": {
@@ -179,14 +251,46 @@
     "trialHeader": "Testphase · 7 Tage",
     "paidHeader": "Abo",
     "linhas": [
-      { "label": "Ruhiger Mentor", "trial": "Vollständig", "paid": "Vollständig" },
-      { "label": "Übungen im Dōjō", "trial": "Bis 5", "paid": "Bis 5" },
-      { "label": "Reflexionen im Garten", "trial": "Unbegrenzt", "paid": "Unbegrenzt" },
-      { "label": "Wochenbrief", "trial": "Garantiert", "paid": "Garantiert" },
-      { "label": "Stille-Modus", "trial": "Alle Varianten", "paid": "Alle Varianten" },
-      { "label": "Bibliothek", "trial": "Vollständig", "paid": "Vollständig" },
-      { "label": "Früher Zugang zu neuen Übungen", "trial": "—", "paid": "Inklusive" },
-      { "label": "Laufzeit", "trial": "7 Tage", "paid": "Wiederkehrend" }
+      {
+        "label": "Ruhiger Mentor",
+        "trial": "Vollständig",
+        "paid": "Vollständig"
+      },
+      {
+        "label": "Übungen im Dōjō",
+        "trial": "Bis 5",
+        "paid": "Bis 5"
+      },
+      {
+        "label": "Reflexionen im Garten",
+        "trial": "Unbegrenzt",
+        "paid": "Unbegrenzt"
+      },
+      {
+        "label": "Wochenbrief",
+        "trial": "Garantiert",
+        "paid": "Garantiert"
+      },
+      {
+        "label": "Stille-Modus",
+        "trial": "Alle Varianten",
+        "paid": "Alle Varianten"
+      },
+      {
+        "label": "Bibliothek",
+        "trial": "Vollständig",
+        "paid": "Vollständig"
+      },
+      {
+        "label": "Früher Zugang zu neuen Übungen",
+        "trial": "—",
+        "paid": "Inklusive"
+      },
+      {
+        "label": "Laufzeit",
+        "trial": "7 Tage",
+        "paid": "Wiederkehrend"
+      }
     ]
   },
   "pricing": {
@@ -282,5 +386,17 @@
     },
     "rights": "Alle Rechte vorbehalten.",
     "crafted": "Mit Präsenz gemacht."
+  },
+  "auth": {
+    "entrar": "Anmelden zum Abonnieren",
+    "explicacao": "Verwende dieselbe E-Mail wie in der Kairo-App. Wir senden dir einen Anmeldelink.",
+    "emailLabel": "Deine E-Mail",
+    "enviarLink": "Anmeldelink senden",
+    "linkEnviado": "Link gesendet. Prüfe deine E-Mail und komm zurück, um fortzufahren.",
+    "ou": "oder",
+    "google": "Mit Google fortfahren",
+    "erroLogin": "Link konnte nicht gesendet werden. Versuche es erneut.",
+    "erroCheckout": "Zahlung konnte nicht geöffnet werden. Versuche es erneut.",
+    "fechar": "Schließen"
   }
 }

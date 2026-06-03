@@ -65,7 +65,15 @@
     }
   },
   "previews": {
-    "weekDays": ["M", "T", "W", "T", "F", "S", "S"],
+    "weekDays": [
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S",
+      "S"
+    ],
     "tabs": {
       "home": "Home",
       "mentor": "Mentor",
@@ -87,9 +95,21 @@
       "last7": "LAST 7 DAYS",
       "choose": "Choose a practice",
       "items": [
-        { "cat": "MIND", "name": "Five minutes of silence", "duration": "5 min" },
-        { "cat": "BODY", "name": "Walk after lunch", "duration": "15 min" },
-        { "cat": "DISCIPLINE", "name": "Journal before sleep", "duration": "" }
+        {
+          "cat": "MIND",
+          "name": "Five minutes of silence",
+          "duration": "5 min"
+        },
+        {
+          "cat": "BODY",
+          "name": "Walk after lunch",
+          "duration": "15 min"
+        },
+        {
+          "cat": "DISCIPLINE",
+          "name": "Journal before sleep",
+          "duration": ""
+        }
       ]
     },
     "jardim": {
@@ -100,8 +120,18 @@
       "write": "Write",
       "previous": "PREVIOUS REFLECTIONS",
       "reflections": [
-        { "moment": "MORNING", "date": "TODAY", "q": "Where to begin with presence?", "a": "With coffee made slowly — before the phone." },
-        { "moment": "NIGHT", "date": "YESTERDAY", "q": "What was enough today?", "a": "Having said no twice without guilt." }
+        {
+          "moment": "MORNING",
+          "date": "TODAY",
+          "q": "Where to begin with presence?",
+          "a": "With coffee made slowly — before the phone."
+        },
+        {
+          "moment": "NIGHT",
+          "date": "YESTERDAY",
+          "q": "What was enough today?",
+          "a": "Having said no twice without guilt."
+        }
       ]
     },
     "biblioteca": {
@@ -118,8 +148,14 @@
       "statLabel": "practices completed",
       "daysLabel": "days",
       "sequences": [
-        { "name": "Five minutes of silence", "streak": "7" },
-        { "name": "Walk after lunch", "streak": "4" }
+        {
+          "name": "Five minutes of silence",
+          "streak": "7"
+        },
+        {
+          "name": "Walk after lunch",
+          "streak": "4"
+        }
       ]
     }
   },
@@ -128,10 +164,22 @@
     "title": "Four shapes of pause.",
     "subtitle": "When the noise grows, Kairo turns off the world for you — it enables Do Not Disturb and holds the space.",
     "items": [
-      { "title": "Deep focus", "body": "To work without distractions." },
-      { "title": "Meditation", "body": "Sit in silence. Just presence." },
-      { "title": "Strategic pause", "body": "Ten minutes with a single question." },
-      { "title": "Emotional reset", "body": "Four-minute guided breathing." }
+      {
+        "title": "Deep focus",
+        "body": "To work without distractions."
+      },
+      {
+        "title": "Meditation",
+        "body": "Sit in silence. Just presence."
+      },
+      {
+        "title": "Strategic pause",
+        "body": "Ten minutes with a single question."
+      },
+      {
+        "title": "Emotional reset",
+        "body": "Four-minute guided breathing."
+      }
     ]
   },
   "como": {
@@ -164,12 +212,36 @@
     "kicker": "WHO PRACTICES",
     "title": "Not a habit app. A way of being.",
     "items": [
-      { "quote": "I don't feel pressured. I feel reminded.", "author": "Marina", "role": "illustrator" },
-      { "quote": "For the first time I can keep five practices without quitting on Thursday.", "author": "Pedro", "role": "lawyer" },
-      { "quote": "Sunday's letter has become the moment I look forward to most.", "author": "Ana", "role": "designer" },
-      { "quote": "The Mentor reminds me of who I said I wanted to be. Without judgment.", "author": "Lucas", "role": "engineer" },
-      { "quote": "It's the only app that leaves me quieter after I open it.", "author": "Sofia", "role": "teacher" },
-      { "quote": "I left TikTok to open Kairo. I didn't expect that.", "author": "Rafael", "role": "student" }
+      {
+        "quote": "I don't feel pressured. I feel reminded.",
+        "author": "Marina",
+        "role": "illustrator"
+      },
+      {
+        "quote": "For the first time I can keep five practices without quitting on Thursday.",
+        "author": "Pedro",
+        "role": "lawyer"
+      },
+      {
+        "quote": "Sunday's letter has become the moment I look forward to most.",
+        "author": "Ana",
+        "role": "designer"
+      },
+      {
+        "quote": "The Mentor reminds me of who I said I wanted to be. Without judgment.",
+        "author": "Lucas",
+        "role": "engineer"
+      },
+      {
+        "quote": "It's the only app that leaves me quieter after I open it.",
+        "author": "Sofia",
+        "role": "teacher"
+      },
+      {
+        "quote": "I left TikTok to open Kairo. I didn't expect that.",
+        "author": "Rafael",
+        "role": "student"
+      }
     ]
   },
   "comparar": {
@@ -179,14 +251,46 @@
     "trialHeader": "Trial · 7 days",
     "paidHeader": "Subscription",
     "linhas": [
-      { "label": "Serene Mentor", "trial": "Complete", "paid": "Complete" },
-      { "label": "Dojo practices", "trial": "Up to 5", "paid": "Up to 5" },
-      { "label": "Garden reflections", "trial": "Unlimited", "paid": "Unlimited" },
-      { "label": "Weekly letter", "trial": "Guaranteed", "paid": "Guaranteed" },
-      { "label": "Silent Mode", "trial": "All variants", "paid": "All variants" },
-      { "label": "Library", "trial": "Complete", "paid": "Complete" },
-      { "label": "Early access to new practices", "trial": "—", "paid": "Included" },
-      { "label": "Duration", "trial": "7 days", "paid": "Recurring" }
+      {
+        "label": "Serene Mentor",
+        "trial": "Complete",
+        "paid": "Complete"
+      },
+      {
+        "label": "Dojo practices",
+        "trial": "Up to 5",
+        "paid": "Up to 5"
+      },
+      {
+        "label": "Garden reflections",
+        "trial": "Unlimited",
+        "paid": "Unlimited"
+      },
+      {
+        "label": "Weekly letter",
+        "trial": "Guaranteed",
+        "paid": "Guaranteed"
+      },
+      {
+        "label": "Silent Mode",
+        "trial": "All variants",
+        "paid": "All variants"
+      },
+      {
+        "label": "Library",
+        "trial": "Complete",
+        "paid": "Complete"
+      },
+      {
+        "label": "Early access to new practices",
+        "trial": "—",
+        "paid": "Included"
+      },
+      {
+        "label": "Duration",
+        "trial": "7 days",
+        "paid": "Recurring"
+      }
     ]
   },
   "pricing": {
@@ -282,5 +386,17 @@
     },
     "rights": "All rights reserved.",
     "crafted": "Crafted with presence."
+  },
+  "auth": {
+    "entrar": "Sign in to subscribe",
+    "explicacao": "Use the same email as the Kairo app. We'll send you a sign-in link.",
+    "emailLabel": "Your email",
+    "enviarLink": "Send sign-in link",
+    "linkEnviado": "Link sent. Check your email and come back to continue.",
+    "ou": "or",
+    "google": "Continue with Google",
+    "erroLogin": "Couldn't send the link. Try again.",
+    "erroCheckout": "Couldn't open payment. Try again.",
+    "fechar": "Close"
   }
 }
