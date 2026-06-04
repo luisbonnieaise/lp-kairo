@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { LangSwitcher } from "./LangSwitcher";
 import { AppStoreButtons } from "./AppStoreButtons";
@@ -27,9 +28,8 @@ const COLS = [
   {
     head: "legal",
     items: [
-      { key: "termos", href: "#" },
-      { key: "privacidade", href: "#" },
-      { key: "cookies", href: "#" },
+      { key: "termos", href: "/termos", internal: true },
+      { key: "privacidade", href: "/privacidade", internal: true },
     ],
   },
 ] as const;
@@ -62,16 +62,24 @@ export function Footer({ locale }: { locale: string }) {
                   {t(col.head)}
                 </h4>
                 <ul className="mt-4 space-y-3">
-                  {col.items.map((item) => (
-                    <li key={item.key}>
-                      <a
-                        href={item.href}
-                        className="text-[13px] text-[var(--color-fg-soft)] transition-colors duration-300 hover:text-[var(--color-fg)] sm:text-sm"
-                      >
-                        {t(`links.${item.key}`)}
-                      </a>
-                    </li>
-                  ))}
+                  {col.items.map((item) => {
+                    const linkClass =
+                      "text-[13px] text-[var(--color-fg-soft)] transition-colors duration-300 hover:text-[var(--color-fg)] sm:text-sm";
+                    const isInternal = "internal" in item && item.internal;
+                    return (
+                      <li key={item.key}>
+                        {isInternal ? (
+                          <Link href={item.href} className={linkClass}>
+                            {t(`links.${item.key}`)}
+                          </Link>
+                        ) : (
+                          <a href={item.href} className={linkClass}>
+                            {t(`links.${item.key}`)}
+                          </a>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
