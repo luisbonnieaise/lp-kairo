@@ -282,5 +282,28 @@
     },
     "rights": "Alle Rechte vorbehalten.",
     "crafted": "Mit Präsenz gemacht."
+  },
+  "auth": {
+    "kicker": "DEIN KONTO",
+    "title": "Anmelden, um fortzufahren",
+    "subtitle": "Nutze dieselbe E-Mail wie in der App — dein Abo wird mit diesem Konto verknüpft. Wir senden dir einen Zugangscode, ganz ohne Passwort.",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "du@beispiel.com",
+    "sendCode": "Code senden",
+    "codeSent": "Wir haben einen 6-stelligen Code an {email} gesendet. Prüfe auch deinen Spam-Ordner.",
+    "codeLabel": "Bestätigungscode",
+    "verify": "Bestätigen und fortfahren",
+    "back": "E-Mail ändern",
+    "resend": "Code erneut senden",
+    "errorSend": "Der Code konnte nicht gesendet werden. Bitte versuche es gleich noch einmal.",
+    "errorVerify": "Ungültiger oder abgelaufener Code. Bitte versuche es erneut.",
+    "errorCheckout": "Der Checkout konnte nicht gestartet werden. Bitte versuche es erneut.",
+    "close": "Schließen"
+  },
+  "sucesso": {
+    "kicker": "ABO BESTÄTIGT",
+    "title": "Willkommen bei Kairo.",
+    "body": "Deine 7 Tage Testzeit haben begonnen. Lade die App herunter und melde dich mit derselben E-Mail an — Premium ist auf deinem Konto bereits freigeschaltet.",
+    "back": "Zurück zur Startseite"
   }
 }

@@ -282,5 +282,28 @@
     },
     "rights": "Todos los derechos reservados.",
     "crafted": "Hecho con presencia."
+  },
+  "auth": {
+    "kicker": "TU CUENTA",
+    "title": "Inicia sesión para continuar",
+    "subtitle": "Usa el mismo correo de tu cuenta en la app — la suscripción quedará vinculada a ella. Te enviaremos un código de acceso, sin contraseña.",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "sendCode": "Enviar código",
+    "codeSent": "Enviamos un código de 6 dígitos a {email}. Revisa también el spam.",
+    "codeLabel": "Código de verificación",
+    "verify": "Confirmar y continuar",
+    "back": "Cambiar correo",
+    "resend": "Reenviar código",
+    "errorSend": "No pudimos enviar el código. Inténtalo de nuevo en unos instantes.",
+    "errorVerify": "Código inválido o caducado. Inténtalo de nuevo.",
+    "errorCheckout": "No pudimos iniciar el pago. Inténtalo de nuevo.",
+    "close": "Cerrar"
+  },
+  "sucesso": {
+    "kicker": "SUSCRIPCIÓN CONFIRMADA",
+    "title": "Bienvenido a Kairo.",
+    "body": "Tus 7 días de prueba han comenzado. Descarga la app e inicia sesión con el mismo correo que acabas de usar — Premium ya estará activo en tu cuenta.",
+    "back": "Volver al inicio"
   }
 }

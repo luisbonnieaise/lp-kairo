@@ -12,6 +12,8 @@ Landing page do **Kairo** — sistema pessoal de evolução. Funil de vendas de 
 | Smooth scroll | Lenis |
 | i18n | next-intl (pt / en / es / de) |
 | Fontes | Lora (serif), Inter (sans), Noto Serif JP (kanji) — via `next/font` |
+| Auth | Supabase (`@supabase/ssr`) — gate de login pré-checkout, OTP por e-mail |
+| Checkout | Stripe Checkout Session via rota server-side `/api/checkout` |
 | Analytics | `@vercel/analytics` + `@vercel/speed-insights` |
 | Deploy | Vercel |
 
@@ -43,9 +45,12 @@ src/
 │  ├─ sitemap.ts              # sitemap multi-locale
 │  ├─ robots.ts
 │  ├─ opengraph-image.tsx     # OG dinâmica em edge runtime
+│  ├─ api/checkout/route.ts   # cria a Stripe Checkout Session (server-side)
 │  └─ [locale]/
 │     ├─ layout.tsx           # provider next-intl + JSON-LD
 │     ├─ page.tsx             # composição das seções
+│     ├─ sucesso/             # retorno do checkout (noindex)
+│     ├─ termos/ · privacidade/
 │     └─ not-found.tsx
 ├─ components/
 │  ├─ Header.tsx              # nav sticky com blur, menu mobile
@@ -58,6 +63,7 @@ src/
 │  ├─ Enso.tsx                # círculo ensō animado
 │  ├─ PhoneFrame.tsx          # mockup de iPhone
 │  ├─ PhonePreviews.tsx       # mini-réplicas das telas do app
+│  ├─ CheckoutButton.tsx      # CTA "Assinar" + modal de login OTP
 │  ├─ AppStoreButtons.tsx
 │  └─ sections/
 │     ├─ Hero.tsx             # 回路 + wordmark + dual CTA + métricas
@@ -80,7 +86,9 @@ src/
 │  ├─ es.json
 │  └─ de.json
 ├─ middleware.ts              # next-intl middleware
-└─ lib/utils.ts
+└─ lib/
+   ├─ utils.ts                # cn, siteConfig, localeCurrency
+   └─ supabase/               # clients @supabase/ssr (browser + server)
 ```
 
 ## Design system
@@ -107,13 +115,35 @@ Locales: `pt` (default, sem prefixo de URL), `en`, `es`, `de`. Strings ficam em 
 
 Hreflang/alternates configurados em `[locale]/layout.tsx > generateMetadata`.
 
+## Checkout & Auth (doc 07 do kairos)
+
+Fluxo: CTA "Assinar" → sem sessão Supabase, abre login por **código OTP no
+e-mail** → `POST /api/checkout` cria a Checkout Session (trial de 7 dias,
+moeda do locale) → Stripe → `/sucesso`. O desbloqueio do premium acontece no
+Edge Function `stripe-webhook` (repo `kairos`), que resolve o usuário via
+`customer.metadata.supabase_user_id` gravado aqui no checkout.
+
+**Identidade**: quem assina na web é o **mesmo `auth.users`** do app Flutter
+(provider `email`). O app usa e-mail+senha; a LP usa OTP do mesmo provider —
+a conta é uma só. Requisitos no Supabase Dashboard:
+
+- **Auth → Email** habilitado (já é, por causa do app).
+- **Email Templates → Magic Link**: incluir `{{ .Token }}` no corpo para o
+  e-mail trazer o código de 6 dígitos que `verifyOtp(type: 'email')` espera.
+
+Price IDs e `STRIPE_SECRET_KEY` são **server-side** (sem `NEXT_PUBLIC`),
+resolvidos em `src/app/api/checkout/route.ts`. Setup completo dos consoles
+(produto, 6 prices, webhook): `kairos/docs/08-guia-consoles-luis.md`.
+
 ## Deploy (Vercel)
 
 1. `vercel link` (ou conecte o repo no dashboard)
-2. Defina em **Environment Variables**:
+2. Defina em **Environment Variables** (ver `.env.example`):
    - `NEXT_PUBLIC_SITE_URL=https://kairoapp.com`
    - `NEXT_PUBLIC_APP_STORE_URL=...` (link real quando publicado)
    - `NEXT_PUBLIC_PLAY_STORE_URL=...`
+   - `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `STRIPE_SECRET_KEY` + 6 × `STRIPE_PRICE_<MOEDA>_<PERÍODO>`
 3. `vercel --prod` — ou push no branch principal.
 
 OG image é gerada em edge runtime (`/opengraph-image`); analytics e speed insights ligam automaticamente.
@@ -122,8 +152,10 @@ OG image é gerada em edge runtime (`/opengraph-image`); analytics e speed insig
 
 - [ ] Substituir `siteConfig.appStoreUrl` / `playStoreUrl` em `src/lib/utils.ts` ou via env
 - [ ] Definir `NEXT_PUBLIC_SITE_URL` em produção
-- [ ] Conectar páginas reais de Termos / Privacidade / Cookies (hoje `href="#"`)
-- [ ] Trocar `metricUsers / metricPractices / metricLetters` no `messages/*.json` por números reais
+- [ ] Criar produto + 6 prices no Stripe e preencher `STRIPE_*` na Vercel
+- [ ] Setar `NEXT_PUBLIC_SUPABASE_ANON_KEY` na Vercel e `{{ .Token }}` no template Magic Link
+- [ ] Trocar `metricUsers / metricPractices / metricLetters` por números reais (hoje hardcoded em `Hero.tsx`)
 - [ ] Trocar depoimentos placeholder por reais (com consentimento)
-- [ ] Revisar preços em USD/EUR/BRL nos 4 arquivos de mensagens
-- [ ] Conectar Stripe (se quiser CTA → Checkout em vez de loja)
+- [ ] Revisar preços em USD/EUR nos arquivos de mensagens (BRL definido: 37,90/299)
+- [x] Conectar Stripe — checkout server-side com identidade Supabase (PROMPTs 7.2/7.3)
+- [x] Páginas de Termos / Privacidade no ar (`/termos`, `/privacidade`)

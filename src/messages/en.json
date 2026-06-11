@@ -282,5 +282,28 @@
     },
     "rights": "All rights reserved.",
     "crafted": "Crafted with presence."
+  },
+  "auth": {
+    "kicker": "YOUR ACCOUNT",
+    "title": "Sign in to continue",
+    "subtitle": "Use the same email as your account in the app — your subscription will be linked to it. We'll send you an access code, no password needed.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "sendCode": "Send code",
+    "codeSent": "We sent a 6-digit code to {email}. Check your spam folder too.",
+    "codeLabel": "Verification code",
+    "verify": "Confirm and continue",
+    "back": "Change email",
+    "resend": "Resend code",
+    "errorSend": "We couldn't send the code. Please try again in a moment.",
+    "errorVerify": "Invalid or expired code. Please try again.",
+    "errorCheckout": "We couldn't start the checkout. Please try again.",
+    "close": "Close"
+  },
+  "sucesso": {
+    "kicker": "SUBSCRIPTION CONFIRMED",
+    "title": "Welcome to Kairo.",
+    "body": "Your 7-day trial has started. Download the app and sign in with the same email you just used — Premium will already be unlocked on your account.",
+    "back": "Back to home"
   }
 }

@@ -1,17 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
 import { Section, Kicker, H2 } from "../Section";
 import { Reveal } from "../Reveal";
-import { ButtonLink } from "../Button";
-import { cn, getCheckoutUrl } from "@/lib/utils";
+import { CheckoutButton } from "../CheckoutButton";
+import { cn } from "@/lib/utils";
 
 export function Pricing() {
   const t = useTranslations("pricing");
-  const locale = useLocale();
   const [yearly, setYearly] = useState(false);
 
   const plan = {
@@ -25,8 +24,6 @@ export function Pricing() {
     trialBadge: t("trialBadge"),
     saving: t("yearlySaving"),
   };
-
-  const checkoutUrl = getCheckoutUrl(locale, yearly ? "yearly" : "monthly");
 
   return (
     <Section id="pricing" className="scroll-mt-32 border-t border-[var(--color-line)]">
@@ -145,15 +142,9 @@ export function Pricing() {
               ))}
             </ul>
             <div className="mt-auto pt-10">
-              <ButtonLink
-                href={checkoutUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                size="lg"
-                className="w-full"
-              >
+              <CheckoutButton period={yearly ? "yearly" : "monthly"}>
                 {plan.cta}
-              </ButtonLink>
+              </CheckoutButton>
               <p className="mt-3 text-center text-xs text-[var(--color-fg-soft)]">
                 {plan.ctaNote}
               </p>
