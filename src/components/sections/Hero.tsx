@@ -58,7 +58,7 @@ export function Hero() {
                 bloco. Volta completa em 24s: no porte do hero, o giro de 8s
                 do app pareceria apressado. */}
             <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
-              <Enso size={ensoSize ?? 760} duration={24} className="opacity-80" />
+              <Enso size={ensoSize ?? 760} duration={24} className="opacity-60" />
             </div>
 
             <motion.div
