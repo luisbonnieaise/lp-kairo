@@ -160,16 +160,43 @@ html.lenis body {
 }
 
 .enso-spin {
-  animation: ensoSpin 24s linear infinite;
+  animation: ensoSpin 8s linear infinite;
+  transform-origin: 50% 50%;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .enso-spin { animation: none; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Círculo de respiração — porte do _CirculoRespiracao (silencio.dart).
+   Ritmo do app: inspira em 4s (cresce até 40% do ciclo), expira em 6s
+   (recolhe até 100%). Curva por trecho = Curves.easeInOut do Flutter.
+   ────────────────────────────────────────────────────────────────────────── */
+@keyframes breathCircle {
+  0%   { width: var(--breath-min); height: var(--breath-min); }
+  40%  { width: var(--breath-max); height: var(--breath-max); }
+  100% { width: var(--breath-min); height: var(--breath-min); }
+}
+
+.breath-circle {
+  animation: breathCircle 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-circle { animation: none; }
+}
+
+/* Glow ambiente do hero — respira no MESMO ritmo 4s/6s do círculo,
+   para a luz inspirar e expirar junto com o anel. */
 @keyframes orbBreath {
-  0%, 100% { transform: scale(1); opacity: 0.55; }
-  50% { transform: scale(1.06); opacity: 0.75; }
+  0%   { transform: scale(1); opacity: 0.55; }
+  40%  { transform: scale(1.06); opacity: 0.75; }
+  100% { transform: scale(1); opacity: 0.55; }
 }
 
 .orb-breath {
-  animation: orbBreath 7s var(--ease-in-out-zen) infinite;
+  animation: orbBreath 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 /* ────────────────────────────────────────────────────────────────────────────

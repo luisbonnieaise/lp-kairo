@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Enso } from "../Enso";
+import { CirculoRespiracao } from "../CirculoRespiracao";
 import { AppStoreButtons } from "../AppStoreButtons";
 import { Container } from "../Container";
 
@@ -11,9 +11,10 @@ export function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden pb-20 pt-28 sm:pb-24 sm:pt-44 md:pb-32 md:pt-52">
-      {/* Ambient ensō glow behind kanji */}
+      {/* Círculo de respiração do Modo Silêncio (silencio.dart) — inspira
+          em 4s, expira em 6s, anel cobre de traço fino, igual ao app. */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
-        <Enso size={760} className="opacity-30" />
+        <CirculoRespiracao size={560} />
       </div>
       <div
         className="pointer-events-none absolute left-1/2 top-[28%] -z-10 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full orb-breath sm:h-[420px] sm:w-[420px]"

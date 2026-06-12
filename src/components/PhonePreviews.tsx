@@ -16,6 +16,7 @@
 
 import { useTranslations } from "next-intl";
 import { PhoneStatusBar } from "./PhoneFrame";
+import { Enso } from "./Enso";
 
 /* ────────────────────────────────────────────────────────────────────────────
    Primitivos compartilhados — replicam KT.tituloGradiente, KT.divisor,
@@ -56,26 +57,21 @@ function Divider() {
   );
 }
 
-function MiniEnso({ size = 22, opacity = 0.85 }: { size?: number; opacity?: number }) {
-  const r = size * 0.42;
-  const c = size / 2;
-  return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden>
-      <circle
-        cx={c}
-        cy={c}
-        r={r}
-        fill="none"
-        stroke="#D4A373"
-        strokeOpacity={opacity}
-        strokeWidth={Math.max(1.2, size * 0.06)}
-        strokeLinecap="round"
-        strokeDasharray={`${2 * Math.PI * r * 0.89} ${2 * Math.PI * r}`}
-        strokeDashoffset={2 * Math.PI * r * 0.21}
-        transform={`rotate(-78 ${c} ${c})`}
-      />
-    </svg>
-  );
+/**
+ * Wrapper local — mantém a API antiga (`size`, `opacity`) e delega ao
+ * componente unificado `<Enso>`, garantindo que o mesmo traço calligráfico
+ * do app apareça também dentro das previews do iPhone.
+ */
+function MiniEnso({
+  size = 22,
+  opacity = 0.85,
+  duration = 8,
+}: {
+  size?: number;
+  opacity?: number;
+  duration?: number;
+}) {
+  return <Enso size={size} opacity={opacity} duration={duration} color="#D4A373" />;
 }
 
 /* ── Header padrão das telas (gradient title + caption + divisor) ─────────── */
@@ -91,7 +87,8 @@ function ScreenHeader({
   return (
     <div className="px-5 pt-5">
       <div className="flex items-center gap-3">
-        {withEnso && <MiniEnso size={26} />}
+        {/* mentor.dart: KairoEnso(36, alpha 0.75, 12s) — 26px na escala do preview */}
+        {withEnso && <MiniEnso size={26} opacity={0.75} duration={12} />}
         <GradientTitle>{title}</GradientTitle>
       </div>
       <div className="mt-1 text-[9px] leading-[1.4] text-[var(--color-bone-soft)]">
@@ -608,7 +605,8 @@ export function CartaPreview() {
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <MiniEnso size={14} />
+              {/* biblioteca.dart: KairoEnso(24, KC.acento) — cobre sem alpha */}
+              <MiniEnso size={14} opacity={1} />
               <span className="text-[7px] font-medium tracking-[0.18em] text-[#D4A373]">
                 {t("weekRange")}
               </span>
