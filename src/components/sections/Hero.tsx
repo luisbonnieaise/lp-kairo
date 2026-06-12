@@ -1,22 +1,38 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Enso } from "../Enso";
 import { AppStoreButtons } from "../AppStoreButtons";
 import { Container } from "../Container";
 
+/** Diâmetro visível do ensō = 0.88 × size (raio 0.44, ver Enso.tsx). */
+const ENSO_DIAMETRO = 0.88;
+
 export function Hero() {
   const t = useTranslations("hero");
 
+  // O ensō circunscreve o bloco de texto (kanji → botões): o círculo é
+  // dimensionado pela diagonal do bloco medido em tela, então o conteúdo
+  // cabe dentro dele em qualquer viewport e idioma.
+  const blocoRef = useRef<HTMLDivElement>(null);
+  const [ensoSize, setEnsoSize] = useState<number | null>(null);
+
+  useEffect(() => {
+    const el = blocoRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      const visivel = Math.hypot(width, height) * 0.92;
+      setEnsoSize(Math.round(visivel / ENSO_DIAMETRO));
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   return (
     <section className="relative isolate overflow-hidden pb-20 pt-28 sm:pb-24 sm:pt-44 md:pb-32 md:pt-52">
-      {/* Ensō girante do app (KairoEnso) — pincelada calligráfica com
-          começo fino, barriga grossa e fim afilado. Volta completa em 24s:
-          no porte do hero, o giro de 8s do app pareceria apressado. */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
-        <Enso size={680} duration={24} className="opacity-80" />
-      </div>
       <div
         className="pointer-events-none absolute left-1/2 top-[28%] -z-10 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full orb-breath sm:h-[420px] sm:w-[420px]"
         style={{
@@ -36,47 +52,57 @@ export function Hero() {
             {t("eyebrow")}
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, filter: "blur(12px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 1.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 font-jp text-[84px] font-medium leading-[0.9] tracking-[0.08em] text-[var(--color-accent)] sm:mt-8 sm:text-[160px]"
-            aria-hidden
-          >
-            回路
-          </motion.div>
+          <div ref={blocoRef} className="relative flex flex-col items-center">
+            {/* Ensō girante do app (KairoEnso) — pincelada calligráfica com
+                começo fino, barriga grossa e fim afilado, circunscrevendo o
+                bloco. Volta completa em 24s: no porte do hero, o giro de 8s
+                do app pareceria apressado. */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
+              <Enso size={ensoSize ?? 760} duration={24} className="opacity-80" />
+            </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 max-w-[18ch] text-balance font-serif text-[34px] leading-[1.08] tracking-[-0.015em] sm:mt-10 sm:max-w-[14ch] sm:text-5xl md:text-6xl lg:text-7xl"
-          >
-            {t("title1")}
-            <br />
-            <span className="text-copper-gradient italic">{t("title2")}</span>
-          </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, filter: "blur(12px)" }}
+              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              transition={{ duration: 1.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-6 font-jp text-[84px] font-medium leading-[0.9] tracking-[0.08em] text-[var(--color-accent)] sm:mt-8 sm:text-[160px]"
+              aria-hidden
+            >
+              回路
+            </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 max-w-2xl text-pretty text-[15px] leading-[1.65] text-[var(--color-fg-soft)] sm:mt-7 sm:text-lg sm:leading-[1.7]"
-          >
-            {t("subtitle")}
-          </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-8 max-w-[18ch] text-balance font-serif text-[34px] leading-[1.08] tracking-[-0.015em] sm:mt-10 sm:max-w-[14ch] sm:text-5xl md:text-6xl lg:text-7xl"
+            >
+              {t("title1")}
+              <br />
+              <span className="text-copper-gradient italic">{t("title2")}</span>
+            </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 flex flex-col items-center gap-3 sm:mt-10"
-          >
-            <AppStoreButtons className="justify-center" />
-            <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-[var(--color-fg-soft)] sm:text-xs sm:tracking-[0.18em]">
-              {t("available")}
-            </p>
-          </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-6 max-w-2xl text-pretty text-[15px] leading-[1.65] text-[var(--color-fg-soft)] sm:mt-7 sm:text-lg sm:leading-[1.7]"
+            >
+              {t("subtitle")}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-8 flex flex-col items-center gap-3 sm:mt-10"
+            >
+              <AppStoreButtons className="justify-center" />
+              <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-[var(--color-fg-soft)] sm:text-xs sm:tracking-[0.18em]">
+                {t("available")}
+              </p>
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
