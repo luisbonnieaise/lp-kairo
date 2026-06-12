@@ -12,9 +12,10 @@ export function Hero() {
   return (
     <section className="relative isolate overflow-hidden pb-20 pt-28 sm:pb-24 sm:pt-44 md:pb-32 md:pt-52">
       {/* Ensō girante do app (KairoEnso) — pincelada calligráfica com
-          começo fino, barriga grossa e fim afilado, uma volta a cada 8s. */}
+          começo fino, barriga grossa e fim afilado. Volta completa em 24s:
+          no porte do hero, o giro de 8s do app pareceria apressado. */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
-        <Enso size={680} className="opacity-80" />
+        <Enso size={680} duration={24} className="opacity-80" />
       </div>
       <div
         className="pointer-events-none absolute left-1/2 top-[28%] -z-10 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full orb-breath sm:h-[420px] sm:w-[420px]"

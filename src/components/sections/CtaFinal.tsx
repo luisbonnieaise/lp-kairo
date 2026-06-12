@@ -23,7 +23,7 @@ export function CtaFinal() {
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 opacity-40"
       >
-        <Enso size={520} />
+        <Enso size={520} duration={24} />
       </div>
 
       <Container>

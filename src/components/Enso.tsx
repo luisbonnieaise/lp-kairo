@@ -1,20 +1,23 @@
+import { useId } from "react";
 import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * Ensō — porte fiel do widget KairoEnso do app Flutter
- * (lib/core/kairo_tema.dart → _EnsoPainterFino).
+ * Ensō — a pincelada calligráfica do app (KairoEnso / _EnsoPainterFino,
+ * lib/core/kairo_tema.dart), com o mesmo perfil de espessura: começo fino,
+ * barriga grossa em 30% do arco, fim afilado, abertura no topo.
  *
- * O traço é montado em 80 sub-arcos pequenos. Em cada um, a largura e a
- * opacidade seguem uma curva de "pico" (cresce até 30% do arco, depois
- * decresce) — é isso que dá o sentido de pincelada calligráfica de tinta
- * sumi, com começo fino, barriga grossa e fim afilado.
+ * Em vez dos 80 sub-arcos translúcidos do painter Flutter (que, ampliados,
+ * mostram "contas" onde as pontas arredondadas se sobrepõem), o traço aqui
+ * é um ÚNICO contorno preenchido: as bordas externa e interna seguem
+ * r ± w(t)/2 e as pontas terminam em bico suave de pincel. A variação de
+ * tinta (alpha 0.45 → 1.0 ao longo do arco, como no app) vira um degradê
+ * linear contínuo — sem emendas, sem pontos.
  *
  * A geometria é calculada no espaço lógico do app (≤ 120px, o maior
- * tamanho em que o KairoEnso é renderizado — o círculo do Modo Silêncio,
- * silencio.dart) e escalada vetorialmente pelo viewBox. Sem isso, o clamp
- * de 5px do painter achataria a pincelada num fio uniforme nos tamanhos
- * decorativos grandes da landing (520–760px), que o app nunca usa.
+ * tamanho em que o KairoEnso é renderizado) e escalada vetorialmente
+ * pelo viewBox, preservando as proporções da pincelada em qualquer
+ * tamanho decorativo.
  *
  * Rotação contínua (classe `.enso-spin` em globals.css), horária e linear
  * como o Transform.rotate do app. Padrão 8s = `duracao` padrão do widget.
@@ -29,9 +32,9 @@ type EnsoProps = {
   spin?: boolean;
   /** Duração de uma volta completa, em segundos. Padrão: 8 (igual ao app). */
   duration?: number;
-  /** Multiplicador de opacidade global aplicado a todos os sub-arcos. */
+  /** Opacidade global do traço. */
   opacity?: number;
-  /** Nº de segmentos do arco. Padrão: 80 (igual ao app). */
+  /** Nº de amostras do contorno. Padrão: 160. */
   steps?: number;
 };
 
@@ -52,8 +55,10 @@ export function Enso({
   spin = true,
   duration = 8,
   opacity = 1,
-  steps = 80,
+  steps = 160,
 }: EnsoProps) {
+  const gradId = useId();
+
   // Espaço de desenho: idêntico ao app até 120px; acima disso a geometria
   // de 120px é ampliada pelo SVG, preservando as proporções da pincelada.
   const ref = Math.min(size, APP_MAX_SIZE);
@@ -62,28 +67,38 @@ export function Enso({
   const r = ref * 0.44; // (ref/2) - ref*0.06, igual ao app
   const fator = Math.sqrt(ref / 48); // escala suave do traço (sqrt)
 
-  const arcs: { d: string; w: number; a: number }[] = [];
-  for (let i = 0; i < steps; i++) {
-    const t = i / steps;
-    const t2 = (i + 1) / steps;
+  const px = (a: number, rad: number) => (cx + rad * Math.cos(a)).toFixed(3);
+  const py = (a: number, rad: number) => (cy + rad * Math.sin(a)).toFixed(3);
 
+  const outer: string[] = [];
+  const inner: string[] = [];
+  let wStart = 0;
+  let wEnd = 0;
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
     const pico = t < 0.3 ? t / 0.3 : 1 - (t - 0.3) / 0.7;
     const w = clamp(fator * (0.6 + pico * 1.6), 0.4, 5.0);
-    const a = clamp(0.45 + pico * 0.55, 0, 1) * opacity;
+    if (i === 0) wStart = w;
+    if (i === steps) wEnd = w;
 
-    const a0 = ARC_START + ARC_SWEEP * t;
-    const a1 = ARC_START + ARC_SWEEP * t2;
-    const x0 = cx + r * Math.cos(a0);
-    const y0 = cy + r * Math.sin(a0);
-    const x1 = cx + r * Math.cos(a1);
-    const y1 = cy + r * Math.sin(a1);
-
-    arcs.push({
-      d: `M ${x0.toFixed(3)} ${y0.toFixed(3)} A ${r.toFixed(3)} ${r.toFixed(3)} 0 0 1 ${x1.toFixed(3)} ${y1.toFixed(3)}`,
-      w,
-      a,
-    });
+    const a = ARC_START + ARC_SWEEP * t;
+    outer.push(`${px(a, r + w / 2)} ${py(a, r + w / 2)}`);
+    inner.push(`${px(a, r - w / 2)} ${py(a, r - w / 2)}`);
   }
+
+  // Pontas em bico de pincel: a curva de fechamento passa por um ponto
+  // sobre o círculo, um pouco além do fim do arco — o traço "levanta"
+  // do papel em vez de terminar num corte reto.
+  const aEnd = ARC_START + ARC_SWEEP + (wEnd / r) * 1.2;
+  const aStart = ARC_START - (wStart / r) * 1.2;
+  const d = [
+    `M ${outer[0]}`,
+    `L ${outer.slice(1).join(" L ")}`,
+    `Q ${px(aEnd, r)} ${py(aEnd, r)} ${inner[steps]}`,
+    `L ${inner.slice(0, -1).reverse().join(" L ")}`,
+    `Q ${px(aStart, r)} ${py(aStart, r)} ${outer[0]}`,
+    "Z",
+  ].join(" ");
 
   const style: CSSProperties | undefined = spin
     ? { animationDuration: `${duration}s` }
@@ -98,17 +113,17 @@ export function Enso({
       style={style}
       aria-hidden
     >
-      {arcs.map((arc, i) => (
-        <path
-          key={i}
-          d={arc.d}
-          fill="none"
-          stroke={color}
-          strokeOpacity={arc.a}
-          strokeWidth={arc.w}
-          strokeLinecap="round"
-        />
-      ))}
+      <defs>
+        {/* Degradê de tinta — segue o perfil de alpha do app: tênue nas
+            pontas (topo, 0.45), pleno na barriga (direita, 1.0). Definido
+            no espaço do SVG, gira junto com o traço. */}
+        <linearGradient id={gradId} x1="30%" y1="0%" x2="95%" y2="65%">
+          <stop offset="0%" stopColor={color} stopOpacity={0.45} />
+          <stop offset="55%" stopColor={color} stopOpacity={0.8} />
+          <stop offset="100%" stopColor={color} stopOpacity={1} />
+        </linearGradient>
+      </defs>
+      <path d={d} fill={`url(#${gradId})`} opacity={opacity} />
     </svg>
   );
 }
