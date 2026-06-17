@@ -334,13 +334,14 @@ export function DojoPreview() {
   const items = t.raw("items") as { cat: string; name: string; duration: string }[];
   const dias = tp.raw("weekDays") as string[];
 
-  // Mostra 2 práticas: o app real comporta até 5, mas o preview vive
-  // num celular de ~280px — priorizar respiração > densidade preserva
-  // a mesma estética do Mentor e do Jardim.
-  const visiveis = items.slice(0, 2);
+  // Mostra as 3 práticas ativas (coerente com o caption "3 práticas ativas"
+  // de cada idioma). Cabem com folga na altura do PhoneFrame e dão ao Dôjo a
+  // mesma densidade arejada da Biblioteca e do Jardim.
+  const visiveis = items.slice(0, 3);
   const padroes: boolean[][] = [
     [true, true, false, true, true, true, true],
     [false, true, true, false, true, true, true],
+    [true, false, true, true, false, true, true],
   ];
 
   return (
@@ -357,7 +358,7 @@ export function DojoPreview() {
         </div>
       </div>
 
-      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-5">
+      <div className="min-h-0 flex-1 overflow-hidden px-5 pt-4">
         {visiveis.map((p, i) => (
           <div key={i}>
             <div className="flex items-start justify-between gap-3">
@@ -421,7 +422,7 @@ export function DojoPreview() {
             </div>
 
             {i < visiveis.length - 1 && (
-              <div className="my-6">
+              <div className="my-5">
                 <Divider />
               </div>
             )}

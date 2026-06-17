@@ -72,7 +72,7 @@ function Pilar({
             reversed ? "md:justify-start" : "md:justify-end",
           )}
         >
-          <div className="relative">
+          <div className="relative w-full max-w-[300px]">
             <div
               aria-hidden
               className="absolute -inset-12 -z-10 rounded-full blur-3xl"
