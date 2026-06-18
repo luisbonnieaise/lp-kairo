@@ -121,10 +121,12 @@ function TabBar({
   ];
 
   return (
-    // px-3 pb-3 = margem interna que reproduz o gap da barra flutuante
+    // px-2 pb-3 = margem interna que reproduz o gap da barra flutuante
     // sem usar position:absolute (evita overflow no iOS quando o conteúdo
-    // expande além da altura do PhoneFrame).
-    <div className="shrink-0 px-3 pb-3 pt-2">
+    // expande além da altura do PhoneFrame). O padding lateral é enxuto de
+    // propósito: em telas estreitas (iPhone em "Display Zoom", ~320px) o
+    // PhoneFrame encolhe abaixo de 300px e cada folga conta para os 5 rótulos.
+    <div className="shrink-0 px-2 pb-3 pt-2">
       <div
         className="rounded-[22px] border border-white/[0.06] px-1 py-1.5 backdrop-blur-xl"
         style={{
@@ -137,9 +139,14 @@ function TabBar({
             const isActive = tab.key === active;
             const hasDot = notify.includes(tab.key);
             return (
+              // min-w-0 é o que impede a barra de "sair para fora da tela":
+              // sem ele cada coluna flex-1 herda min-width:auto e se recusa a
+              // encolher abaixo da largura do rótulo (truncate força nowrap),
+              // estourando a pill no iOS. Com min-w-0 as colunas dividem o
+              // espaço por igual e o truncate vira rede de segurança.
               <div
                 key={tab.key}
-                className="flex flex-1 flex-col items-center gap-[3px] py-[3px]"
+                className="flex min-w-0 flex-1 flex-col items-center gap-[3px] py-[3px]"
               >
                 <div
                   className="h-[1.5px] rounded-full"
