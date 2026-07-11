@@ -11,7 +11,11 @@
     "carta": "Carta",
     "premium": "Suscribirse",
     "faq": "Preguntas",
-    "download": "Descargar"
+    "download": "Descargar",
+    "language": "Idioma",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "menuLabel": "Menú de navegación"
   },
   "hero": {
     "eyebrow": "回路 · CAMINO INTERIOR",
@@ -21,9 +25,6 @@
     "appStore": "App Store",
     "playStore": "Google Play",
     "available": "Disponible en iOS y Android",
-    "metricUsers": "aparecen cada día",
-    "metricPractices": "prácticas cultivadas",
-    "metricLetters": "cartas escritas por el Mentor",
     "scrollHint": "desplaza para descubrir"
   },
   "intro": {
@@ -305,5 +306,139 @@
     "title": "Bienvenido a Kairo.",
     "body": "Tus 7 días de prueba han comenzado. Descarga la app e inicia sesión con el mismo correo que acabas de usar — Premium ya estará activo en tu cuenta.",
     "back": "Volver al inicio"
+  },
+  "notFound": {
+    "title": "Nada por aquí.",
+    "body": "La página que buscas no existe — o aún no ha sido escrita.",
+    "back": "Volver al inicio"
+  },
+  "legal": {
+    "kicker": "Kairo · Legal",
+    "updatedLabel": "Última actualización:",
+    "backHome": "Volver al inicio",
+    "termos": {
+      "metaTitle": "Términos de Uso · Kairo",
+      "metaDescription": "Términos de Uso de Kairo — suscripción, prueba gratuita, uso aceptable y exenciones de responsabilidad.",
+      "title": "Términos de Uso",
+      "updated": "11 de julio de 2026",
+      "relatedLabel": "Leer la Política de Privacidad",
+      "intro": [
+        { "type": "p", "text": "Bienvenido a **Kairo**. Estos Términos rigen el uso de la app. Al crear una cuenta o suscribirte, los aceptas. Si no estás de acuerdo, no uses Kairo." },
+        { "type": "p", "text": "**Responsable:** Pedro Luiz Chagas 11221073664 (“Kairo”), CNPJ 24.811.306/0001-96." },
+        { "type": "p", "text": "**Contacto:** [contact@thekairo.app](mailto:contact@thekairo.app)." },
+        { "type": "p", "text": "Esta versión en español es una traducción facilitada por conveniencia. En caso de discrepancia, prevalece la versión en portugués de estos Términos." }
+      ],
+      "body": [
+        { "type": "h2", "text": "1. Qué es Kairo" },
+        { "type": "p", "text": "Kairo es una app de evolución personal: un Mentor con IA, un Dôjo de prácticas, un Jardín de reflexiones y cartas semanales. Su contenido tiene un fin **reflexivo y de autoconocimiento**." },
+        { "type": "h2", "text": "2. Cuenta y elegibilidad" },
+        { "type": "p", "text": "Debes tener **18 años** o más y proporcionar datos veraces. Eres responsable de mantener tu contraseña segura y de toda la actividad en tu cuenta." },
+        { "type": "h2", "text": "3. Suscripción, prueba gratuita y cobro" },
+        { "type": "p", "text": "Kairo es un servicio por **suscripción**, con **7 (siete) días de prueba gratuita** para nuevos suscriptores." },
+        { "type": "ul", "items": [
+          "La compra se realiza **dentro de la app**, a través de **Apple App Store** o **Google Play** (o vía Stripe, en la web). El pago utiliza el método registrado en tu cuenta de la tienda.",
+          "**Renovación automática:** al finalizar la prueba, se cobra la suscripción y **se renueva automáticamente** por el período contratado (mensual o anual) hasta que canceles.",
+          "**Cancelación:** puedes cancelar en cualquier momento en los ajustes de suscripción de **Apple/Google** (o en el portal de Stripe, en la web). El acceso se mantiene hasta el final del período ya pagado. Cancela al menos 24h antes de que termine la prueba para no ser cobrado.",
+          "**Precios:** se muestran en la app en tu moneda local antes de confirmar. Podemos cambiar los precios con aviso previo; los cambios no afectan a un ciclo ya pagado.",
+          "**Reembolsos:** siguen las políticas de **Apple**, **Google** o **Stripe**, según el canal de compra."
+        ] },
+        { "type": "h2", "text": "4. Uso aceptable" },
+        { "type": "p", "text": "Aceptas **no**: usar la app con fines ilegales; intentar eludir límites, seguridad o los mecanismos de suscripción; realizar ingeniería inversa; sobrecargar o abusar de la infraestructura; o enviar contenido ilícito." },
+        { "type": "h2", "text": "5. Tu contenido" },
+        { "type": "p", "text": "El contenido que creas (reflexiones, mensajes) es **tuyo**. Nos concedes una licencia limitada para procesarlo y almacenarlo únicamente para operar el servicio (ver la [Política de Privacidad](/privacidade)). Eres responsable de lo que escribes." },
+        { "type": "h2", "text": "6. Inteligencia Artificial — exención importante" },
+        { "type": "p", "text": "El Mentor y las cartas son generados por **IA** y tienen carácter **reflexivo y motivacional**. **Kairo no presta asesoramiento médico, psicológico, terapéutico, jurídico ni financiero**, y **no sustituye** a profesionales cualificados. La IA puede cometer errores; usa tu propio criterio." },
+        { "type": "blockquote", "text": "**Si te encuentras en un sufrimiento emocional grave o en riesgo**, busca ayuda profesional de inmediato. En una emergencia, contacta a los servicios de emergencia locales o a una línea de crisis. En Brasil, el **CVV** atiende en el **188** (24h); en emergencias llama al **192** (SAMU) o al **190**." },
+        { "type": "h2", "text": "7. Propiedad intelectual" },
+        { "type": "p", "text": "La app, la marca “Kairo”, el diseño y el contenido original son nuestros o licenciados. Estos Términos no te transfieren ningún derecho sobre ellos." },
+        { "type": "h2", "text": "8. Exención de garantías y limitación de responsabilidad" },
+        { "type": "p", "text": "Kairo se ofrece **“tal cual”**, sin garantías de disponibilidad ininterrumpida ni de resultados. En la máxima medida permitida por la ley, no nos responsabilizamos por daños indirectos, incidentales o consecuentes derivados del uso (o de la imposibilidad de uso) de la app." },
+        { "type": "h2", "text": "9. Rescisión y eliminación de la cuenta" },
+        { "type": "p", "text": "Puedes **eliminar tu cuenta en cualquier momento dentro de la app** (Perfil → Eliminar cuenta) — la eliminación es inmediata y permanente (ver la [Política de Privacidad](/privacidade)). La eliminación de la cuenta **no cancela** una suscripción activa: cancélala en los ajustes de la tienda (Apple/Google) o, si te suscribiste en la web, vía Stripe. Podemos suspender o cerrar cuentas que infrinjan estos Términos. Las suscripciones activas siguen las reglas de cancelación de la sección 3." },
+        { "type": "h2", "text": "10. Ley aplicable y fuero" },
+        { "type": "p", "text": "Estos Términos se rigen por las leyes de **Brasil**. Se elige el fuero de **Divinópolis/MG**, salvo el derecho del consumidor a demandar en su domicilio." },
+        { "type": "h2", "text": "11. Tiendas de aplicaciones (Apple y Google)" },
+        { "type": "p", "text": "Cuando descargas Kairo desde la **App Store** o **Google Play**, también aceptas los términos de la tienda correspondiente. En concreto:" },
+        { "type": "ul", "items": [
+          "Estos Términos son entre **tú y Kairo**, **no** con Apple/Google.",
+          "**Apple/Google no tienen** obligación de prestar soporte o mantenimiento de la app.",
+          "Si la app no cumple una garantía aplicable, puedes notificar a Apple para el reembolso del precio (cuando lo haya); en el límite de la ley, Apple no tiene otra obligación de garantía.",
+          "**Apple y Google son terceros beneficiarios** de estos Términos y pueden hacerlos cumplir contra ti.",
+          "Declaras no encontrarte en un país bajo embargo ni en ninguna lista de partes prohibidas."
+        ] },
+        { "type": "h2", "text": "12. Cambios" },
+        { "type": "p", "text": "Podemos actualizar estos Términos. Los cambios relevantes se comunicarán en la app o por correo; el uso continuado tras su entrada en vigor implica aceptación. La fecha en la parte superior indica la última revisión." },
+        { "type": "h2", "text": "13. Contacto" },
+        { "type": "p", "text": "Dudas: **[contact@thekairo.app](mailto:contact@thekairo.app)**." }
+      ]
+    },
+    "privacidade": {
+      "metaTitle": "Política de Privacidad · Kairo",
+      "metaDescription": "Cómo Kairo recopila, usa y protege tus datos personales — en cumplimiento de la LGPD y el RGPD.",
+      "title": "Política de Privacidad",
+      "updated": "11 de julio de 2026",
+      "relatedLabel": "Leer los Términos de Uso",
+      "intro": [
+        { "type": "p", "text": "Esta Política describe cómo **Kairo** (“app”, “nosotros”) trata tus datos personales. Al usar Kairo, aceptas las prácticas aquí descritas." },
+        { "type": "p", "text": "**Responsable del tratamiento:** Pedro Luiz Chagas 11221073664 (“Kairo”), CNPJ 24.811.306/0001-96, Divinópolis/MG, Brasil." },
+        { "type": "p", "text": "**Contacto (delegado de protección de datos / DPO):** [contact@thekairo.app](mailto:contact@thekairo.app)." },
+        { "type": "p", "text": "Esta versión en español es una traducción facilitada por conveniencia. En caso de discrepancia, prevalece la versión en portugués de esta Política." }
+      ],
+      "body": [
+        { "type": "h2", "text": "1. Datos que recopilamos" },
+        { "type": "p", "text": "Recopilamos solo lo necesario para que la app funcione:" },
+        { "type": "p", "text": "**Tú proporcionas:**" },
+        { "type": "ul", "items": [
+          "**Cuenta:** correo y contraseña (autenticación), nombre e idioma de preferencia.",
+          "**Perfil:** foto de perfil (avatar), si la subes, y las respuestas del onboarding (la identidad que quieres construir, lo que te saca de tu eje, área de enfoque, ritmo).",
+          "**Contenido que creas:** reflexiones del Jardín, registros de prácticas, mensajes de texto y de voz intercambiados con el Mentor y las cartas semanales generadas a partir de ellos."
+        ] },
+        { "type": "p", "text": "**Generados por el uso:**" },
+        { "type": "ul", "items": [
+          "**Datos de uso de la IA:** registros de cuántas interacciones con la IA has tenido (para aplicar límites de uso).",
+          "**Notificaciones:** preferencias de recordatorio (procesadas en tu dispositivo).",
+          "**Datos técnicos:** registros de error y diagnóstico, identificadores de dispositivo necesarios para la entrega de notificaciones."
+        ] },
+        { "type": "p", "text": "**No recopilamos** datos de tarjeta de crédito: los pagos los procesan **Apple**, **Google** o **Stripe** (en la web) — solo recibimos el **estado de tu suscripción**, nunca los datos de la tarjeta." },
+        { "type": "h2", "text": "2. Cómo usamos tus datos" },
+        { "type": "ul", "items": [
+          "Proporcionar y personalizar la app (Mentor, Dôjo, Jardín, cartas semanales);",
+          "Procesar tus mensajes con la IA para generar respuestas y reflexiones;",
+          "Gestionar tu cuenta y tu suscripción (incluido el período de prueba);",
+          "Enviar los recordatorios y notificaciones que configures;",
+          "Garantizar la seguridad, prevenir el abuso y aplicar límites de uso;",
+          "Cumplir obligaciones legales."
+        ] },
+        { "type": "h2", "text": "3. Base legal (LGPD / RGPD)" },
+        { "type": "p", "text": "Tratamos tus datos sobre la base de: **ejecución del contrato** (prestar el servicio que contratas), **consentimiento** (p. ej. funciones de IA, notificaciones, envío de foto), **interés legítimo** (seguridad, prevención del fraude) y **cumplimiento de una obligación legal**." },
+        { "type": "h2", "text": "4. Compartición con terceros (subencargados)" },
+        { "type": "p", "text": "No vendemos tus datos. Los compartimos con proveedores estrictamente necesarios:" },
+        { "type": "table", "head": ["Proveedor", "Finalidad", "Datos"], "rows": [
+          ["**Supabase**", "Alojamiento, base de datos, autenticación y almacenamiento", "Cuenta, perfil, contenido"],
+          ["**Anthropic (Claude)**", "Procesar los mensajes del Mentor y generar las cartas", "Texto de tus mensajes/reflexiones, estadísticas de prácticas (para la carta semanal) y datos de tu perfil (nombre, identidad, lo que te saca de tu eje, enfoque, ritmo)"],
+          ["**Groq (Whisper)**", "Transcribir los mensajes de voz del Mentor", "Audio de los mensajes de voz"],
+          ["**Apple / Google**", "Distribución de la app y procesamiento de pagos", "Estado de compra/suscripción"],
+          ["**Stripe**", "Pago de la suscripción **en la web**", "Estado del pago (la tarjeta queda en Stripe)"]
+        ] },
+        { "type": "p", "text": "Cada proveedor trata los datos bajo contratos de procesamiento de datos (DPA) y ofrece una protección equivalente a la de esta Política." },
+        { "type": "h2", "text": "5. Inteligencia Artificial" },
+        { "type": "p", "text": "El Mentor y las cartas semanales usan modelos de **Anthropic (Claude)**: el texto de tus mensajes, las reflexiones del Jardín y las estadísticas de prácticas (usadas en la carta semanal) y los datos de tu perfil (nombre, identidad, lo que te saca de tu eje, enfoque y ritmo) se procesan para generar las respuestas. Los mensajes de voz se transcriben con modelos de **Groq (Whisper)**: el audio se envía únicamente para su transcripción. Tu contenido personal **no se usa para entrenar modelos de IA** — ni por nosotros, ni por Anthropic o Groq (APIs comerciales, bajo contratos de tratamiento de datos que prohíben ese uso)." },
+        { "type": "p", "text": "La app **pide tu consentimiento antes del primer uso** de estas funciones; sin tu aceptación, ningún dato tuyo se envía a los proveedores de IA. Las respuestas de la IA se generan automáticamente y tienen carácter reflexivo — consulta la exención en los [Términos de Uso](/termos)." },
+        { "type": "h2", "text": "6. Transferencia internacional" },
+        { "type": "p", "text": "Algunos proveedores (Supabase, Anthropic, Groq, Apple, Google, Stripe) procesan datos **fuera de Brasil**, incluso en los Estados Unidos. Al usar Kairo, aceptas esa transferencia, realizada con salvaguardas contractuales adecuadas." },
+        { "type": "h2", "text": "7. Conservación y eliminación" },
+        { "type": "p", "text": "Conservamos tus datos mientras exista tu cuenta. Puedes **eliminar tu cuenta en cualquier momento dentro de la app** (Perfil → Eliminar cuenta) — la eliminación es inmediata y permanente, y borra el perfil, las conversaciones con el Mentor (texto y audio), las reflexiones, las prácticas y el progreso, las cartas semanales y los archivos subidos. También atendemos solicitudes en [contact@thekairo.app](mailto:contact@thekairo.app). Conservamos únicamente lo que la ley exija. La eliminación de la cuenta **no cancela** una suscripción activa en la App Store/Google Play — cancélala en los ajustes de la tienda." },
+        { "type": "h2", "text": "8. Tus derechos" },
+        { "type": "p", "text": "Conforme a la LGPD (y al RGPD, si aplica), puedes: confirmar el tratamiento, acceder, corregir, anonimizar, portar o **eliminar** tus datos, revocar el consentimiento y oponerte a tratamientos. Para ejercerlos, escribe a [contact@thekairo.app](mailto:contact@thekairo.app)." },
+        { "type": "h2", "text": "9. Seguridad" },
+        { "type": "p", "text": "Adoptamos medidas técnicas y organizativas: cifrado en tránsito, control de acceso por fila (RLS) en la base de datos, y segregación de credenciales. Ningún sistema es 100% seguro, pero trabajamos para proteger tus datos." },
+        { "type": "h2", "text": "10. Menores" },
+        { "type": "p", "text": "Kairo **no está dirigido a menores de 18 años**. No recopilamos intencionadamente datos de menores; si los identificamos, los eliminamos." },
+        { "type": "h2", "text": "11. Cambios" },
+        { "type": "p", "text": "Podemos actualizar esta Política. Los cambios relevantes se comunicarán en la app o por correo. La fecha en la parte superior indica la última revisión." },
+        { "type": "h2", "text": "12. Contacto" },
+        { "type": "p", "text": "Dudas o solicitudes sobre privacidad: **[contact@thekairo.app](mailto:contact@thekairo.app)**." }
+      ]
+    }
   }
 }

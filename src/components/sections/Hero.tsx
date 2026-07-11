@@ -104,22 +104,11 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-16 grid w-full max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-line)] sm:mt-20 sm:grid-cols-3"
-          >
-            <Stat n="95%" label={t("metricUsers")} />
-            <Stat n="1.2M+" label={t("metricPractices")} />
-            <Stat n="48k+" label={t("metricLetters")} />
-          </motion.div>
-
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.6, delay: 1.4 }}
-            className="mt-12 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-[var(--color-fg-soft)] sm:mt-16 sm:text-[11px] sm:tracking-[0.32em]"
+            transition={{ duration: 1.6, delay: 1.2 }}
+            className="mt-14 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-[var(--color-fg-soft)] sm:mt-20 sm:text-[11px] sm:tracking-[0.32em]"
           >
             <span className="block h-px w-6 bg-[var(--color-fg-soft)]/40 sm:w-8" />
             {t("scrollHint")}
@@ -128,18 +117,5 @@ export function Hero() {
         </div>
       </Container>
     </section>
-  );
-}
-
-function Stat({ n, label }: { n: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center gap-1 bg-[var(--color-bg)] px-6 py-6 sm:py-7">
-      <div className="font-serif text-[28px] leading-none text-copper-gradient sm:text-4xl">
-        {n}
-      </div>
-      <div className="text-pretty text-center text-[12px] leading-[1.5] text-[var(--color-fg-soft)] sm:text-[13px]">
-        {label}
-      </div>
-    </div>
   );
 }

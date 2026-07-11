@@ -22,7 +22,7 @@ const COLS = [
     items: [
       { key: "sobre", href: "#" },
       { key: "blog", href: "#" },
-      { key: "contato", href: "mailto:ola@kairoapp.com" },
+      { key: "contato", href: "mailto:contact@thekairo.app" },
     ],
   },
   {

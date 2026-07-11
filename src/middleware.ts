@@ -4,7 +4,13 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  // /api fica FORA do middleware de i18n: sem a exclusão, /api/checkout era
-  // reescrito para /<locale>/api/checkout (rota inexistente) e respondia 404.
-  matcher: ["/", "/(pt|en|es|de)/:path*", "/((?!api|_next|_vercel|.*\\..*).*)"],
+  // /api e /og ficam FORA do middleware de i18n. Sem a exclusão de /api, o
+  // /api/checkout era reescrito para /<locale>/api/checkout (404). Já o /og é
+  // o card OpenGraph (route handler que recebe o locale por query ?l=); deixá-lo
+  // no matcher faria o redirect "as-needed" mandar /pt/og → /og e quebrar.
+  matcher: [
+    "/",
+    "/(pt|en|es|de)/:path*",
+    "/((?!api|og|_next|_vercel|.*\\..*).*)",
+  ],
 };

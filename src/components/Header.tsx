@@ -105,7 +105,7 @@ export function Header({ locale }: { locale: string }) {
                 type="button"
                 onClick={() => setMenuOpen(true)}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-line)] text-[var(--color-fg)] transition-colors duration-300 hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] lg:hidden"
-                aria-label="Abrir menu"
+                aria-label={t("openMenu")}
                 aria-expanded={menuOpen}
               >
                 <Menu className="h-4 w-4" />
@@ -125,7 +125,7 @@ export function Header({ locale }: { locale: string }) {
             className="fixed inset-0 z-50 bg-[var(--color-bg)]/95 backdrop-blur-2xl lg:hidden"
             role="dialog"
             aria-modal="true"
-            aria-label="Menu de navegação"
+            aria-label={t("menuLabel")}
           >
             <div
               className="flex h-dvh flex-col"
@@ -140,7 +140,7 @@ export function Header({ locale }: { locale: string }) {
                   type="button"
                   onClick={() => setMenuOpen(false)}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-line)] text-[var(--color-fg)] transition-colors duration-300 hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)]"
-                  aria-label="Fechar menu"
+                  aria-label={t("closeMenu")}
                 >
                   <X className="h-4 w-4" />
                 </button>

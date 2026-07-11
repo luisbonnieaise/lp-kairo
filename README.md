@@ -139,7 +139,7 @@ resolvidos em `src/app/api/checkout/route.ts`. Setup completo dos consoles
 
 1. `vercel link` (ou conecte o repo no dashboard)
 2. Defina em **Environment Variables** (ver `.env.example`):
-   - `NEXT_PUBLIC_SITE_URL=https://kairoapp.com`
+   - `NEXT_PUBLIC_SITE_URL=https://thekairo.app`
    - `NEXT_PUBLIC_APP_STORE_URL=...` (link real quando publicado)
    - `NEXT_PUBLIC_PLAY_STORE_URL=...`
    - `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`
@@ -154,7 +154,7 @@ OG image é gerada em edge runtime (`/opengraph-image`); analytics e speed insig
 - [ ] Definir `NEXT_PUBLIC_SITE_URL` em produção
 - [ ] Criar produto + 6 prices no Stripe e preencher `STRIPE_*` na Vercel
 - [ ] Setar `NEXT_PUBLIC_SUPABASE_ANON_KEY` na Vercel e `{{ .Token }}` no template Magic Link
-- [ ] Trocar `metricUsers / metricPractices / metricLetters` por números reais (hoje hardcoded em `Hero.tsx`)
+- [x] Métricas placeholder do hero removidas (jul/2026 — dados fabricados violam metadados da App Store)
 - [ ] Trocar depoimentos placeholder por reais (com consentimento)
 - [ ] Revisar preços em USD/EUR nos arquivos de mensagens (BRL definido: 37,90/299)
 - [x] Conectar Stripe — checkout server-side com identidade Supabase (PROMPTs 7.2/7.3)

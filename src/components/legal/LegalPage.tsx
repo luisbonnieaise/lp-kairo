@@ -2,31 +2,39 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/Container";
 
 export function LegalPage({
+  lang,
+  kicker,
   title,
+  updatedLabel,
   updated,
+  backHome,
   intro,
   children,
   related,
 }: {
+  lang: string;
+  kicker: string;
   title: string;
+  updatedLabel: string;
   updated: string;
+  backHome: string;
   intro: React.ReactNode;
   children: React.ReactNode;
   related: { href: "/termos" | "/privacidade"; label: string };
 }) {
   return (
-    <article lang="pt-BR" className="relative pt-32 pb-24 sm:pt-40 sm:pb-32">
+    <article lang={lang} className="relative pt-32 pb-24 sm:pt-40 sm:pb-32">
       <Container>
         <div className="mx-auto max-w-2xl">
           <header className="border-b border-[var(--color-line)] pb-8">
             <p className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--color-accent)]">
-              Kairo · Legal
+              {kicker}
             </p>
             <h1 className="mt-4 font-serif text-3xl leading-[1.1] tracking-[-0.01em] sm:text-4xl">
               {title}
             </h1>
             <p className="mt-4 text-sm text-[var(--color-fg-soft)]">
-              Última atualização: {updated}
+              {updatedLabel} {updated}
             </p>
             <div className="mt-6 space-y-2 leading-relaxed text-[var(--color-fg-soft)]">
               {intro}
@@ -40,7 +48,7 @@ export function LegalPage({
               href="/"
               className="text-[var(--color-fg-soft)] underline-offset-4 transition-colors duration-300 hover:text-[var(--color-fg)] hover:underline"
             >
-              Voltar ao início
+              {backHome}
             </Link>
             <Link
               href={related.href}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
@@ -26,6 +26,7 @@ export function LangSwitcher({
   align?: Align;
 }) {
   const locale = useLocale() as Locale;
+  const t = useTranslations("nav");
   const router = useRouter();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -65,7 +66,7 @@ export function LangSwitcher({
         )}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={`Idioma: ${LANGS[locale].native}`}
+        aria-label={`${t("language")}: ${LANGS[locale].native}`}
       >
         <span aria-hidden className="text-[var(--color-accent)]">◯</span>
         {LANGS[locale].label}

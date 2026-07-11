@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git --no-pager diff --cached --stat)",
+      "Bash(git --no-pager log --oneline -1)",
+      "Bash(git restore *)",
+      "Bash(git --no-pager show --stat HEAD)"
+    ]
+  }
+}
