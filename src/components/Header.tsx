@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { LangSwitcher } from "./LangSwitcher";
 import { cn, siteConfig } from "@/lib/utils";
+import { routing } from "@/i18n/routing";
 
 const ANCHORS = [
   { key: "mentor", href: "#mentor" },
@@ -22,6 +23,9 @@ export function Header({ locale }: { locale: string }) {
   const t = useTranslations("nav");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  // Âncoras de seção apontam para a home, para funcionarem também em
+  // /termos, /privacidade e /suporte (na home é só um salto de âncora).
+  const home = locale === routing.defaultLocale ? "/" : `/${locale}`;
 
   useEffect(() => {
     function onScroll() {
@@ -80,7 +84,7 @@ export function Header({ locale }: { locale: string }) {
               {ANCHORS.map((a) => (
                 <a
                   key={a.key}
-                  href={a.href}
+                  href={`${home}${a.href}`}
                   className="group relative text-[13px] font-medium text-[var(--color-fg-soft)] transition-colors duration-300 hover:text-[var(--color-fg)]"
                 >
                   {t(a.key)}
@@ -150,7 +154,7 @@ export function Header({ locale }: { locale: string }) {
                 {ANCHORS.map((a, i) => (
                   <motion.a
                     key={a.key}
-                    href={a.href}
+                    href={`${home}${a.href}`}
                     onClick={() => setMenuOpen(false)}
                     initial={{ opacity: 0, x: -16 }}
                     animate={{ opacity: 1, x: 0 }}

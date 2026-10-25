@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 
-// Conteúdo legal vive nos messages/*.json como blocos estruturados (i18n).
+// Conteúdo legal (e o guia de /suporte) vive nos messages/*.json como blocos
+// estruturados (i18n).
 // Este renderer transforma esses blocos no markup que o `.prose-legal`
 // (globals.css) estiliza. O texto suporta um markup inline mínimo:
 //   **negrito**            → <strong>
@@ -11,6 +12,7 @@ export type LegalBlock =
   | { type: "h2"; text: string }
   | { type: "p"; text: string }
   | { type: "ul"; items: string[] }
+  | { type: "ol"; items: string[] }
   | { type: "blockquote"; text: string }
   | { type: "table"; head: string[]; rows: string[][] };
 
@@ -80,6 +82,14 @@ export function LegalBlocks({ blocks }: { blocks: LegalBlock[] }) {
                   <li key={j}>{renderInline(item, `u${i}-${j}`)}</li>
                 ))}
               </ul>
+            );
+          case "ol":
+            return (
+              <ol key={i}>
+                {block.items.map((item, j) => (
+                  <li key={j}>{renderInline(item, `o${i}-${j}`)}</li>
+                ))}
+              </ol>
             );
           case "blockquote":
             return (

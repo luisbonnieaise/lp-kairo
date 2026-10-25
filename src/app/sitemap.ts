@@ -10,6 +10,7 @@ function localeBase(locale: string): string {
 
 const PAGES: { path: string; priority: number }[] = [
   { path: "", priority: 1.0 },
+  { path: "/suporte", priority: 0.6 },
   { path: "/termos", priority: 0.4 },
   { path: "/privacidade", priority: 0.4 },
 ];

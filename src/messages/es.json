@@ -127,7 +127,7 @@
   "silencio": {
     "kicker": "MODO SILENCIO",
     "title": "Cuatro formas de pausa.",
-    "subtitle": "Cuando crece el ruido, Kairo apaga el mundo por ti — activa No Molestar y sostiene el espacio.",
+    "subtitle": "Cuando crece el ruido, Kairo sostiene el espacio — sin contador en pantalla, con lluvia, viento o bambú de fondo, y ningún aviso de Kairo hasta que vuelvas.",
     "items": [
       { "title": "Foco profundo", "body": "Para trabajar sin distracciones." },
       { "title": "Meditación", "body": "Sentarse en silencio. Solo presencia." },
@@ -146,13 +146,13 @@
       },
       {
         "n": "02",
-        "title": "Recibes tu primera práctica.",
-        "body": "Cinco minutos de silencio al despertar. Durante siete días. Simple — pero suficiente para empezar."
+        "title": "Eliges tus prácticas.",
+        "body": "En el Dôjo, hasta cinco — cinco minutos de silencio, una caminata, una lectura. Simple — pero suficiente para empezar."
       },
       {
         "n": "03",
         "title": "Conversas con el Mentor.",
-        "body": "Cuando lo necesites. Sobre lo que necesites. Él escucha lo que escribiste en tus reflexiones y la carta de la semana."
+        "body": "Cuando lo necesites. Sobre lo que necesites — por texto o por voz. Sabe quién quieres llegar a ser y responde sin prisa."
       },
       {
         "n": "04",
@@ -276,6 +276,7 @@
       "premium": "Suscripción",
       "sobre": "Sobre",
       "blog": "Blog",
+      "suporte": "Soporte",
       "contato": "Contacto",
       "termos": "Términos de uso",
       "privacidade": "Privacidad",
@@ -438,6 +439,409 @@
         { "type": "p", "text": "Podemos actualizar esta Política. Los cambios relevantes se comunicarán en la app o por correo. La fecha en la parte superior indica la última revisión." },
         { "type": "h2", "text": "12. Contacto" },
         { "type": "p", "text": "Dudas o solicitudes sobre privacidad: **[contact@thekairo.app](mailto:contact@thekairo.app)**." }
+      ]
+    }
+  },
+  "suporte": {
+    "metaTitle": "Soporte y guía de la app · Kairo",
+    "metaDescription": "Vídeo de la app en funcionamiento, guía completa de Kairo, solución de problemas, eliminación de cuenta y contacto con soporte.",
+    "kicker": "Kairo · Soporte",
+    "title": "¿Cómo podemos ayudarte?",
+    "intro": "Mira la app en funcionamiento, aprende cada parte de Kairo con calma y encuentra respuestas a los problemas más comunes. Si aún lo necesitas, escríbenos.",
+    "atalhosLabel": "Accesos rápidos de soporte",
+    "atalhos": {
+      "video": { "title": "Ver la app en acción", "body": "Un vídeo corto de Kairo funcionando." },
+      "guia": { "title": "Guía de la app", "body": "Cada pantalla, paso a paso." },
+      "problemas": { "title": "Resolver un problema", "body": "Cuenta, suscripción, avisos y sonido." },
+      "contato": { "title": "Escríbenos", "body": "Contacta con soporte." }
+    },
+    "video": {
+      "kicker": "EN ACCIÓN",
+      "title": "Mira Kairo en funcionamiento.",
+      "body": "Una grabación real de la pantalla de un móvil Android: un recorrido rápido por las pestañas y, después, Relájate y Duerme — el sonido empieza cuando lo tocas, sigue con la pantalla bloqueada y muestra la notificación de reproducción mientras suena.",
+      "capitulosLabel": "En este vídeo",
+      "capitulos": [
+        "Un recorrido por las pestañas: Inicio, Mentor, Dojo, Jardín y Biblioteca.",
+        "En Inicio, toca Relájate y Duerme, elige Lluvia y 30 minutos — el sonido empieza.",
+        "En la pantalla de inicio del móvil, la notificación “Relájate y Duerme — Sonando para tu descanso.” queda en la barra.",
+        "Con la pantalla bloqueada, el sonido sigue sonando.",
+        "De vuelta en Kairo desde la notificación, toca Terminar: el sonido se detiene y la notificación desaparece."
+      ],
+      "aria": "Vídeo de demostración de la app Kairo",
+      "abrir": "Abrir el vídeo a pantalla completa",
+      "emBreve": "El vídeo de demostración de la app se publicará aquí pronto."
+    },
+    "guia": {
+      "kicker": "GUÍA DE LA APP",
+      "title": "Todo lo que hace Kairo — y cómo usarlo.",
+      "intro": "Un paso a paso de cada parte de la app, en el orden en que la encuentras. Los nombres en negrita son los mismos que aparecen en pantalla.",
+      "indice": "En esta guía",
+      "secoes": [
+        {
+          "id": "primeiros-passos",
+          "tag": "PRIMEROS PASOS",
+          "title": "Empieza aquí",
+          "lead": "De la descarga al primer día: idioma, cuenta y las cinco preguntas que te presentan al Mentor.",
+          "blocks": [
+            { "type": "ol", "items": [
+              "Descarga Kairo en la **App Store** (iPhone) o en **Google Play** (Android) y abre la app.",
+              "Elige el idioma — Português, English, Español o Deutsch — y toca la flecha. El idioma del móvil ya viene marcado.",
+              "En la pantalla de apertura, desliza para continuar.",
+              "Toca **Comenzar** y crea tu cuenta con correo y contraseña. La contraseña necesita al menos 8 caracteres, con letras y números. ¿Ya tienes cuenta? Toca **Ya tengo una cuenta**.",
+              "Responde a las cinco preguntas: cómo podemos llamarte, quién quieres llegar a ser, qué es lo que más te saca de tu eje, qué área de tu vida reordenar primero y a qué ritmo evolucionar. Ayudan al Mentor a conocerte y puedes editarlas en tu Perfil.",
+              "Permite las notificaciones si quieres recibir el recordatorio diario, las preguntas del Jardín y el aviso de la carta del domingo.",
+              "Elige un plan para entrar — consulta [Suscripción y prueba gratis](#assinatura)."
+            ] },
+            { "type": "p", "text": "La primera vez que visitas cada pantalla, un breve tutorial explica lo que hace. Para volver a verlo, abre **Perfil → Tutoriales**." },
+            { "type": "blockquote", "text": "Kairo necesita **conexión a internet** para iniciar sesión, hablar con el Mentor y guardar tus registros. Los sonidos del Modo Silencio y de Relájate y Duerme vienen dentro de la app." }
+          ]
+        },
+        {
+          "id": "assinatura",
+          "tag": "SUSCRIPCIÓN",
+          "title": "Suscripción y prueba gratis",
+          "lead": "Kairo es una app de suscripción, con planes mensual y anual. Si nunca te has suscrito, puedes probarla 7 días gratis.",
+          "blocks": [
+            { "type": "p", "text": "Después de iniciar sesión, la pantalla **Comienza tu viaje** muestra los planes **Mensual** y **Anual**, con el precio en la moneda de tu tienda. Toca un plan y confirma en la pantalla de compra de la App Store o de Google Play." },
+            { "type": "ul", "items": [
+              "**Prueba gratis:** las cuentas que nunca se han suscrito ven la etiqueta **7 días gratis** y el botón **Comenzar prueba gratis**. Las condiciones aparecen en la pantalla de la tienda antes de confirmar. Al terminar la prueba, la suscripción se renueva automáticamente hasta que la canceles.",
+              "**Una cuenta, todos los dispositivos:** la suscripción está ligada a tu cuenta de Kairo. Inicia sesión con el mismo correo en iPhone, en Android o en un móvil nuevo y el acceso va contigo.",
+              "**Restaurar compras:** si la app te pide suscribirte de nuevo, toca **Restaurar compras** — en la pantalla de planes o en **Perfil → Kairo Premium**.",
+              "**¿Te suscribiste en la web?** Inicia sesión en la app con el mismo correo de la compra. En Android, si la pantalla de planes sigue apareciendo, toca **Ya pagué en la web**.",
+              "**Estado:** en **Perfil → Kairo Premium** aparecen el estado (**Activo**) y la fecha hasta la que vale el periodo actual."
+            ] },
+            { "type": "p", "text": "**Para cancelar**, usa la tienda en la que te suscribiste. Mantienes el acceso hasta el final del periodo ya pagado — y, para que no te cobren después de la prueba, cancela al menos 24 horas antes de que termine." },
+            { "type": "ul", "items": [
+              "**iPhone:** Ajustes → tu nombre → Suscripciones → Kairo, o [apps.apple.com/account/subscriptions](https://apps.apple.com/account/subscriptions).",
+              "**Android:** Google Play → foto de perfil → Pagos y suscripciones → Suscripciones → Kairo, o [play.google.com/store/account/subscriptions](https://play.google.com/store/account/subscriptions).",
+              "**En la web:** usa el enlace de gestión del correo del recibo o escribe a [contact@thekairo.app](mailto:contact@thekairo.app)."
+            ] },
+            { "type": "blockquote", "text": "Eliminar la app o la cuenta **no cancela** la suscripción. Cancélala también en la tienda para que no te vuelvan a cobrar." }
+          ]
+        },
+        {
+          "id": "inicio",
+          "tag": "INICIO",
+          "title": "La pantalla Inicio",
+          "lead": "La entrada de tu día: saludo, frase del día, prácticas de hoy y los accesos para hacer una pausa.",
+          "blocks": [
+            { "type": "p", "text": "La barra inferior tiene cinco pestañas: **Inicio**, **Mentor**, **Dojo**, **Jardín** y **Biblioteca**. En Inicio encuentras, de arriba abajo:" },
+            { "type": "ul", "items": [
+              "**Tu foto o inicial**, en la esquina superior izquierda — tócala para abrir tu **Perfil**.",
+              "**El saludo y la frase del día**, que cambia a medianoche.",
+              "**Prácticas de Hoy**, con cuántas has hecho y la lista de tus prácticas activas.",
+              "Los accesos al **Modo Silencio** y a **Relájate y Duerme**."
+            ] },
+            { "type": "p", "text": "**Marcar una práctica:** tócala para marcarla como hecha hoy; vuelve a tocarla para deshacer. Solo se puede marcar el día de hoy." },
+            { "type": "p", "text": "Desliza la pantalla hacia abajo para actualizar — por ejemplo, después de añadir una práctica en el Dojo. Un punto rojo en **Jardín** indica que la pregunta del momento te espera; en **Biblioteca**, que hay una carta nueva." }
+          ]
+        },
+        {
+          "id": "mentor",
+          "tag": "MENTOR",
+          "title": "Hablar con el Mentor",
+          "lead": "Un interlocutor sereno, por texto o por voz. Conoce las respuestas de tu perfil y responde siempre en el idioma de la app.",
+          "blocks": [
+            { "type": "ol", "items": [
+              "Abre la pestaña **Mentor**, escribe en el campo **Escribe...** y toca la flecha para enviar.",
+              "Con el primer mensaje, Kairo explica cómo usa la inteligencia artificial y te pide tu consentimiento. Toca **Aceptar y continuar** para seguir — con **Ahora no**, no se envía nada.",
+              "Mientras el Mentor piensa, aparece un círculo en la pantalla. La respuesta llega enseguida."
+            ] },
+            { "type": "p", "text": "**Mensaje de voz:** con el campo vacío, toca el micrófono y habla — de 1 segundo a 2 minutos (a los 2 minutos se envía solo). Toca la flecha para enviar o la **✕** para descartar. El audio se transcribe, el texto aparece debajo y el Mentor responde a la transcripción. La primera vez, el móvil pide acceso al micrófono." },
+            { "type": "p", "text": "**Conversaciones anteriores:** cada vez que abres la app, el Mentor empieza con la pantalla limpia. Desliza la conversación hacia abajo para cargar los mensajes anteriores." },
+            { "type": "p", "text": "**Qué sabe el Mentor de ti:** tu nombre, las respuestas de tu perfil (quién quieres llegar a ser, qué te saca de tu eje, área y ritmo) y la conversación que está en pantalla. Las respuestas son breves y sin prisa; tras algunos intercambios, cierra con una síntesis y una o dos acciones para las próximas 24 horas." },
+            { "type": "p", "text": "**Denunciar una respuesta:** mantén pulsada la respuesta del Mentor y elige el motivo — **Ofensivo o inapropiado**, **Peligroso o dañino** u **Otro motivo**. El texto llega a nuestro equipo para su revisión." },
+            { "type": "blockquote", "text": "El Mentor es una herramienta de reflexión generada por IA y **no sustituye** la terapia, la atención médica ni la ayuda de emergencia. Si estás en un sufrimiento intenso o en riesgo, busca ayuda ahora: contacta con los **servicios de emergencia locales** o con una línea de crisis. En Brasil, el CVV atiende en el **188** (24 h) y el SAMU en el **192**." }
+          ]
+        },
+        {
+          "id": "dojo",
+          "tag": "DOJO",
+          "title": "Prácticas en el Dojo",
+          "lead": "El lugar de tus prácticas diarias. Como máximo cinco — porque más que eso es dispersión.",
+          "blocks": [
+            { "type": "ol", "items": [
+              "Abre la pestaña **Dojo** y toca **Elige una práctica**.",
+              "Elige una categoría — **Mente**, **Cuerpo**, **Disciplina**, **Relaciones** o **Trabajo** — y toca una sugerencia para añadirla.",
+              "¿Prefieres crear la tuya? Al final de cada categoría, toca **Añadir práctica personalizada**, ponle un nombre y, si quieres, una duración (por ejemplo, 10 min)."
+            ] },
+            { "type": "ul", "items": [
+              "**Límite de cinco:** con cinco prácticas activas, Kairo te pide quitar una antes de añadir otra.",
+              "**Marcar como hecha:** en **Inicio**, en la lista Prácticas de Hoy.",
+              "**Últimos 7 días:** cada práctica muestra los últimos siete días, terminando hoy; el punto relleno marca un día hecho.",
+              "**Quitar:** toca la **✕** de la práctica y confirma con **Eliminar**. También se borra su historial, y no se puede deshacer."
+            ] },
+            { "type": "p", "text": "La duración es solo una referencia: el Dojo no cronometra ni envía recordatorios por práctica." }
+          ]
+        },
+        {
+          "id": "jardim",
+          "tag": "JARDÍN",
+          "title": "Reflexiones en el Jardín",
+          "lead": "Tres preguntas al día — mañana, tarde y noche. Escribes sin prisa, a tu ritmo.",
+          "blocks": [
+            { "type": "p", "text": "La pregunta cambia según la hora de tu móvil:" },
+            { "type": "ul", "items": [
+              "**Mañana:** de 8h a 12:59.",
+              "**Tarde:** de 13h a 19:59.",
+              "**Noche:** de 20h a 7:59 del día siguiente."
+            ] },
+            { "type": "ol", "items": [
+              "Abre la pestaña **Jardín** y toca **Escribir**.",
+              "Escribe tu respuesta y toca **Guardar**. La **✕** cierra sin guardar.",
+              "Una vez respondida, la pregunta aparece como **Ya respondida** — la siguiente llega en el próximo momento del día."
+            ] },
+            { "type": "p", "text": "Tus respuestas quedan en **Reflexiones anteriores**, de la más reciente a la más antigua. Las reflexiones de la semana también ayudan al Mentor a escribir tu carta del domingo." },
+            { "type": "p", "text": "**Avisos del Jardín:** Kairo puede avisarte a las 8h, 13h y 20h. Actívalos o desactívalos en **Perfil → Notificaciones del Jardín**." }
+          ]
+        },
+        {
+          "id": "biblioteca",
+          "tag": "BIBLIOTECA",
+          "title": "Biblioteca y carta semanal",
+          "lead": "Tu estudio de ti mismo: la carta del Mentor sobre tu semana y los números de tu ritmo.",
+          "blocks": [
+            { "type": "p", "text": "Cada domingo, a las 21h, Kairo te avisa de que tu carta ha llegado. Al abrir la app, el Mentor escribe la carta de la semana — de lunes a domingo — a partir de tus prácticas, de las reflexiones del Jardín y de tu perfil. Tarda unos segundos." },
+            { "type": "ol", "items": [
+              "Abre la pestaña **Biblioteca**. Una carta nueva aparece con la etiqueta **Nueva**.",
+              "Toca **Leer carta completa**. La carta tiene cuatro partes: **Observaciones**, **Patrones**, **Logros silenciosos** y **Para la próxima semana**.",
+              "Las cartas de otras semanas quedan en **Cartas anteriores**."
+            ] },
+            { "type": "ul", "items": [
+              "**Cuándo se escribe la carta:** al abrir la app entre el domingo a las 21h y el viernes. Las cuentas con menos de 24 horas aún no reciben carta.",
+              "**¿Todavía no aparece?** Desliza la pantalla de la Biblioteca hacia abajo para actualizar.",
+              "**Idioma:** la carta se escribe en el idioma de la app en el momento en que se genera.",
+              "**Denunciar una carta:** al final, toca **Denunciar esta carta**."
+            ] },
+            { "type": "p", "text": "Debajo de las cartas están los números de tu ritmo: **Esta semana** (prácticas cumplidas en los últimos 7 días), **Secuencias** (días seguidos de cada práctica, hasta 7) y **Totales** (reflexiones escritas, conversaciones con el Mentor y días en Kairo)." }
+          ]
+        },
+        {
+          "id": "silencio",
+          "tag": "MODO SILENCIO",
+          "title": "Modo Silencio",
+          "lead": "Cuatro formas de pausa, sin contador en pantalla.",
+          "blocks": [
+            { "type": "ol", "items": [
+              "En **Inicio**, toca **Modo Silencio**.",
+              "Elige la variante: **Foco profundo** o **Meditación** (5, 15, 30 o 60 minutos), **Pausa estratégica** (10 minutos con la pregunta “¿Qué importa más ahora?”) o **Reset emocional** (4 minutos de respiración guiada — inspira y espira con el círculo).",
+              "Elige el sonido ambiente — **Silencio**, **Lluvia**, **Viento** o **Bambú**. La sesión empieza al momento."
+            ] },
+            { "type": "p", "text": "Para terminar antes, toca **Terminar** o mantén pulsada la pantalla. Al final, el móvil vibra y Kairo muestra cuánto tiempo estuviste." },
+            { "type": "p", "text": "**Notificaciones:** durante la sesión, los avisos de Kairo quedan en pausa. Para silenciar también los mensajes y llamadas de otras apps, activa **No molestar** (Android) o un modo de **Concentración** (iPhone) antes de empezar." },
+            { "type": "p", "text": "**En iPhone**, el sonido ambiente sigue el interruptor de tono/silencio y se detiene cuando la pantalla se bloquea. Para dormirte con sonido, usa [Relájate y Duerme](#relaxa-e-durma)." }
+          ]
+        },
+        {
+          "id": "relaxa-e-durma",
+          "tag": "RELÁJATE Y DUERME",
+          "title": "Relájate y Duerme",
+          "lead": "Duérmete con sonido, incluso con la pantalla apagada. El audio se apaga solo, con un fundido suave.",
+          "blocks": [
+            { "type": "ol", "items": [
+              "En **Inicio**, toca **Relájate y Duerme**.",
+              "Elige un sonido en **Ambientes** — Lluvia, Viento, Selva o Bambú — o en **Frecuencias** — 432 Hz, 528 Hz, 396 Hz, 639 Hz o 7.83 Hz.",
+              "En **¿Por cuánto tiempo?**, elige **30 minutos**, **1 hora**, **2 horas** o **Toda la noche** (8 horas). El sonido empieza al momento.",
+              "Puedes bloquear la pantalla: el sonido sigue sonando. En Android, mientras suena, la notificación **Relájate y Duerme — Sonando para tu descanso.** queda en la barra; tócala para volver a la pantalla del sonido.",
+              "Para parar antes, toca **Terminar** o mantén pulsada la pantalla. Al acabar el tiempo, el sonido baja poco a poco y se detiene solo."
+            ] },
+            { "type": "ul", "items": [
+              "El volumen sigue los botones de volumen del móvil.",
+              "Los sonidos vienen dentro de la app — funcionan sin internet.",
+              "Si otra app empieza a reproducir audio, como un reproductor de música, el sonido de Kairo se pausa. Toca **Terminar** y vuelve a empezar."
+            ] }
+          ]
+        },
+        {
+          "id": "perfil",
+          "tag": "PERFIL",
+          "title": "Perfil y ajustes",
+          "lead": "Tus respuestas, idioma, tema y recordatorios — todo editable en cualquier momento.",
+          "blocks": [
+            { "type": "p", "text": "En **Inicio**, toca tu foto o inicial, en la esquina superior izquierda. En tu Perfil encontrarás:" },
+            { "type": "ul", "items": [
+              "**Foto:** tócala para elegir una de la **Galería**, hacer una con la **Cámara** o quitarla.",
+              "**Cuenta:** el correo de la cuenta y **Cambiar contraseña**. Usa al menos 8 caracteres, con letras y números — es la regla que se exige para iniciar sesión.",
+              "**Kairo Premium:** el estado de la suscripción, su vigencia y **Restaurar compras**.",
+              "**Identidad:** tu nombre y tus respuestas iniciales (quién quieres llegar a ser, qué te saca de tu eje, área y ritmo). El Mentor pasa a usar lo que actualices.",
+              "**Tema:** **Claro** u **Oscuro** (el predeterminado). La elección vale para este móvil.",
+              "**Idioma:** Português, English, Español o Deutsch. Cambia al momento — incluidas las respuestas del Mentor y las próximas cartas.",
+              "**Recordatorio diario** y **Notificaciones del Jardín:** consulta [Recordatorios y notificaciones](#notificacoes).",
+              "**Tutoriales:** vuelve a ver la explicación de cada pantalla.",
+              "**Cerrar sesión:** tus datos siguen guardados; solo tienes que volver a entrar con el mismo correo.",
+              "**Eliminar cuenta:** borra la cuenta y todos los datos — consulta [Eliminar tu cuenta](#excluir-conta)."
+            ] },
+            { "type": "p", "text": "En iPhone, también puedes elegir el idioma de Kairo en **Ajustes → Kairo → Idioma**." }
+          ]
+        },
+        {
+          "id": "notificacoes",
+          "tag": "NOTIFICACIONES",
+          "title": "Recordatorios y notificaciones",
+          "lead": "Avisos discretos, a tu hora. Tú decides cuáles quieres recibir.",
+          "blocks": [
+            { "type": "ul", "items": [
+              "**Recordatorio diario:** una frase del Mentor a la hora que elijas — por defecto, las 7h. Cambia la hora o toca **Desactivar recordatorio** en **Perfil → Recordatorio diario**.",
+              "**Preguntas del Jardín:** a las 8h, 13h y 20h. Actívalas o desactívalas en **Perfil → Notificaciones del Jardín**.",
+              "**Carta del domingo:** el domingo a las 21h, para avisarte de que la carta de la semana ha llegado."
+            ] },
+            { "type": "p", "text": "Kairo pide permiso para enviarte notificaciones la primera vez que entras. Si no lo permitiste, activa las notificaciones de Kairo en los ajustes del móvil." },
+            { "type": "p", "text": "**En Android 14 o posterior**, los recordatorios pueden llegar con unos minutos de retraso. Para horas exactas, permite **Alarmas y recordatorios** para Kairo en los ajustes de la app. En Android, cada tipo de aviso también se puede desactivar en los ajustes de notificaciones de Kairo." },
+            { "type": "p", "text": "Durante el Modo Silencio, los avisos de Kairo quedan en pausa." }
+          ]
+        },
+        {
+          "id": "widgets",
+          "tag": "WIDGETS · ANDROID",
+          "title": "Widgets en la pantalla de inicio",
+          "lead": "En Android, Kairo puede estar en la pantalla de inicio del móvil: la frase del día y un resumen de tu ritmo.",
+          "blocks": [
+            { "type": "ol", "items": [
+              "Mantén pulsado un espacio vacío de la pantalla de inicio de Android y toca **Widgets**.",
+              "Busca **Kairo** y arrastra el widget a la pantalla."
+            ] },
+            { "type": "ul", "items": [
+              "**Pequeño (2×2):** la frase del día.",
+              "**Grande (4×4):** la frase del día, tu próxima práctica del día y tu constancia — un punto por cada día seguido con al menos una práctica hecha."
+            ] },
+            { "type": "p", "text": "El widget se actualiza cuando usas la app — por ejemplo, al marcar una práctica. Al tocarlo se abre Kairo. Por ahora, los widgets solo están disponibles en Android." }
+          ]
+        }
+      ]
+    },
+    "exclusao": {
+      "kicker": "TU CUENTA",
+      "title": "Eliminar tu cuenta",
+      "lead": "Puedes eliminar tu cuenta de Kairo y todos los datos vinculados a ella cuando quieras — desde la app o por correo, sin necesidad de la app.",
+      "cta": "Pedir la eliminación por correo",
+      "assunto": "Eliminar mi cuenta de Kairo",
+      "corpo": "¡Hola! Quiero eliminar mi cuenta de Kairo y todos los datos vinculados a ella.\n\nCorreo de la cuenta: ",
+      "blocks": [
+        { "type": "p", "text": "**Desde la app** — la eliminación es inmediata:" },
+        { "type": "ol", "items": [
+          "En **Inicio**, toca tu foto o inicial, en la esquina superior izquierda, para abrir tu **Perfil**.",
+          "Desplázate hasta el final y toca **Eliminar cuenta**.",
+          "Confirma con **Eliminar definitivamente**."
+        ] },
+        { "type": "p", "text": "**Por correo** — si ya no tienes la app o no puedes abrir tu Perfil: escribe a [contact@thekairo.app](mailto:contact@thekairo.app) desde el correo de tu cuenta, con el asunto “Eliminar mi cuenta”. Confirmamos la solicitud por correo y eliminamos la cuenta del mismo modo." },
+        { "type": "p", "text": "La eliminación es permanente y no se puede deshacer. Borra la cuenta y todos los datos vinculados a ella: perfil y foto, conversaciones con el Mentor (texto y audio), reflexiones del Jardín, prácticas e historial, cartas semanales y el registro de la suscripción." },
+        { "type": "blockquote", "text": "**La suscripción no se cancela con ella.** Si te suscribes por la App Store, Google Play o la web, cancélala también — consulta [cómo cancelar](#assinatura). Solo conservamos lo que exige la ley; más detalles en la [Política de Privacidad](/privacidade)." }
+      ]
+    },
+    "problemas": {
+      "kicker": "PROBLEMAS FRECUENTES",
+      "title": "¿Algo no funciona?",
+      "lead": "Las dudas que más llegan a soporte, con el camino para resolver cada una.",
+      "itens": [
+        {
+          "q": "No recibí el correo de confirmación.",
+          "a": [
+            { "type": "p", "text": "Revisa las carpetas de spam y promociones. Después, en la pantalla **Iniciar sesión**, intenta entrar con tu correo y contraseña: si la cuenta aún no está confirmada, aparece **Reenviar correo de confirmación**." }
+          ]
+        },
+        {
+          "q": "Olvidé mi contraseña.",
+          "a": [
+            { "type": "p", "text": "En la pantalla **Iniciar sesión**, toca **Olvidé mi contraseña**, confirma el correo y toca **Enviar enlace**. Abre el correo en el móvil y sigue el enlace para crear una contraseña nueva — con al menos 8 caracteres, letras y números." },
+            { "type": "p", "text": "Si el correo no llega o el enlace no funciona, [escríbenos](#contato) desde el correo de la cuenta." }
+          ]
+        },
+        {
+          "q": "Ya estoy suscrito, pero la app me pide suscribirme.",
+          "a": [
+            { "type": "ol", "items": [
+              "Comprueba tu conexión a internet.",
+              "Asegúrate de haber iniciado sesión con la misma cuenta — el mismo correo — con la que te suscribiste.",
+              "Toca **Restaurar compras**. Si te suscribiste en la web, en Android toca **Ya pagué en la web**.",
+              "Cierra Kairo por completo y vuelve a abrirlo."
+            ] },
+            { "type": "p", "text": "Si nada de esto funciona, [escríbenos](#contato) e indícanos el correo de la cuenta y la tienda en la que te suscribiste." }
+          ]
+        },
+        {
+          "q": "¿Cómo cancelo la suscripción?",
+          "a": [
+            { "type": "p", "text": "En la tienda en la que te suscribiste — los pasos están en [Suscripción y prueba gratis](#assinatura). Mantienes el acceso hasta el final del periodo ya pagado. Eliminar la app o la cuenta no cancela el cobro." }
+          ]
+        },
+        {
+          "q": "No me llegan las notificaciones.",
+          "a": [
+            { "type": "ul", "items": [
+              "Permite las notificaciones de Kairo en los ajustes del móvil.",
+              "Comprueba que el recordatorio está activo y a la hora correcta en **Perfil → Recordatorio diario** — y que **Notificaciones del Jardín** está activado.",
+              "En Android, quita Kairo del ahorro de batería y, en Android 14 o posterior, permite **Alarmas y recordatorios**.",
+              "Durante el Modo Silencio, los avisos de Kairo quedan en pausa hasta que termina la sesión."
+            ] }
+          ]
+        },
+        {
+          "q": "El Mentor respondió “Algo se perdió en el camino”.",
+          "a": [
+            { "type": "p", "text": "Comprueba la conexión y vuelve a intentarlo en unos instantes. Si el error sigue en una conversación larga, cierra Kairo por completo y vuelve a abrirlo: la conversación empieza de nuevo, y las anteriores vuelven al deslizar la pantalla hacia abajo." }
+          ]
+        },
+        {
+          "q": "No puedo enviar audio al Mentor.",
+          "a": [
+            { "type": "p", "text": "Permite el acceso al micrófono para Kairo en los ajustes del móvil. Graba de 1 segundo a 2 minutos, hablando cerca del micrófono. La transcripción necesita internet — si falla, vuelve a grabar." }
+          ]
+        },
+        {
+          "q": "Mi carta del domingo no apareció.",
+          "a": [
+            { "type": "p", "text": "La carta de la semana se escribe cuando abres Kairo entre el domingo a las 21h y el viernes — el aviso del domingo solo te recuerda que la abras. Ve a la **Biblioteca** y desliza la pantalla hacia abajo para actualizar. La carta necesita internet para escribirse, y las cuentas con menos de 24 horas aún no reciben carta." }
+          ]
+        },
+        {
+          "q": "El sonido de Relájate y Duerme se detuvo.",
+          "a": [
+            { "type": "p", "text": "Se detiene solo al acabar el tiempo elegido y se pausa cuando otra app empieza a reproducir audio. En Android, también se detiene si cierras Kairo desde la pantalla de apps recientes. Si se detiene antes con la pantalla apagada, deja el uso de batería de Kairo en **Sin restricciones** en los ajustes de la app." }
+          ]
+        },
+        {
+          "q": "¿El Modo Silencio silencia otras apps?",
+          "a": [
+            { "type": "p", "text": "No. Durante la sesión, Kairo solo pausa sus propios avisos. Para silenciar mensajes y llamadas, activa **No molestar** (Android) o un modo de **Concentración** (iPhone) antes de empezar." }
+          ]
+        },
+        {
+          "q": "No oigo el sonido del Modo Silencio.",
+          "a": [
+            { "type": "p", "text": "Revisa el volumen multimedia del móvil. En iPhone, el sonido ambiente del Modo Silencio sigue el interruptor de tono/silencio y se detiene cuando la pantalla se bloquea: desactiva el modo silencio y, para sesiones largas, aumenta el tiempo de **Bloqueo automático**." }
+          ]
+        },
+        {
+          "q": "¿Cómo cambio el idioma?",
+          "a": [
+            { "type": "p", "text": "En **Perfil → Idioma**. El cambio se aplica al momento, también al Mentor y a las próximas cartas. En iPhone, también en **Ajustes → Kairo → Idioma**." }
+          ]
+        },
+        {
+          "q": "Cambié de móvil. ¿Pierdo mis datos?",
+          "a": [
+            { "type": "p", "text": "No. Prácticas, reflexiones, conversaciones y cartas quedan guardadas en tu cuenta. Instala Kairo en el móvil nuevo e inicia sesión con el mismo correo y contraseña — la suscripción va contigo. Solo el tema y algunas preferencias de avisos se guardan en el dispositivo y puede que tengas que ajustarlos." }
+          ]
+        },
+        {
+          "q": "Las pantallas aparecen vacías.",
+          "a": [
+            { "type": "p", "text": "Sin internet, Kairo muestra lo que ya había cargado — o pantallas vacías, la primera vez en un dispositivo. Comprueba la conexión y desliza la pantalla hacia abajo para actualizar. Tus datos siguen guardados en tu cuenta." }
+          ]
+        }
+      ]
+    },
+    "contato": {
+      "kicker": "CONTACTO",
+      "title": "¿Aún necesitas ayuda?",
+      "body": "Escríbenos. Con algunos detalles, podemos ayudarte más rápido.",
+      "assunto": "Soporte Kairo",
+      "incluaLabel": "Qué incluir en el mensaje",
+      "inclua": [
+        "El correo de tu cuenta de Kairo",
+        "Modelo del móvil y versión del sistema",
+        "Qué pasó y en qué pantalla",
+        "Una captura de pantalla, si puedes"
       ]
     }
   }

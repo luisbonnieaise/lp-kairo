@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import { LangSwitcher } from "./LangSwitcher";
 import { AppStoreButtons } from "./AppStoreButtons";
 import { Container } from "./Container";
+import { routing } from "@/i18n/routing";
 
 const COLS = [
   {
@@ -22,6 +23,7 @@ const COLS = [
     items: [
       { key: "sobre", href: "#" },
       { key: "blog", href: "#" },
+      { key: "suporte", href: "/suporte", internal: true },
       { key: "contato", href: "mailto:contact@thekairo.app" },
     ],
   },
@@ -37,6 +39,9 @@ const COLS = [
 export function Footer({ locale }: { locale: string }) {
   const t = useTranslations("footer");
   const year = new Date().getFullYear();
+  // Âncoras de seção (#mentor…) apontam para a home: fora dela (termos,
+  // privacidade, suporte) um "#mentor" puro não leva a lugar nenhum.
+  const home = locale === routing.defaultLocale ? "/" : `/${locale}`;
 
   return (
     <footer
@@ -73,7 +78,14 @@ export function Footer({ locale }: { locale: string }) {
                             {t(`links.${item.key}`)}
                           </Link>
                         ) : (
-                          <a href={item.href} className={linkClass}>
+                          <a
+                            href={
+                              item.href.startsWith("#") && item.href !== "#"
+                                ? `${home}${item.href}`
+                                : item.href
+                            }
+                            className={linkClass}
+                          >
                             {t(`links.${item.key}`)}
                           </a>
                         )}

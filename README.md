@@ -50,6 +50,7 @@ src/
 │     ├─ layout.tsx           # provider next-intl + JSON-LD
 │     ├─ page.tsx             # composição das seções
 │     ├─ sucesso/             # retorno do checkout (noindex)
+│     ├─ suporte/             # vídeo do app + guia + exclusão de conta + contato
 │     ├─ termos/ · privacidade/
 │     └─ not-found.tsx
 ├─ components/
@@ -148,6 +149,21 @@ resolvidos em `src/app/api/checkout/route.ts`. Setup completo dos consoles
 
 OG image é gerada em edge runtime (`/opengraph-image`); analytics e speed insights ligam automaticamente.
 
+## Suporte (`/suporte`)
+
+Central de ajuda: vídeo do app, guia completo (12 seções), exclusão de conta,
+problemas comuns e contato. Todo o texto vive no namespace `suporte` dos
+messages (blocos no mesmo formato das páginas legais) e descreve o
+comportamento real do app `kairos` — ao mudar o app, revise o guia.
+
+- **Vídeo:** coloque o arquivo em `public/videos/kairo-demo.mp4` (H.264,
+  vertical, com `+faststart`) e, se quiser, um poster em
+  `public/videos/kairo-demo.jpg`. A página confere no build se o arquivo
+  existe; sem ele, mostra um aviso de "em breve" no lugar do player.
+- **Âncoras usadas fora do site** (não renomear): `#video` (declaração de
+  serviço em primeiro plano no Play Console) e `#excluir-conta` (URL de
+  exclusão de conta da Segurança dos dados).
+
 ## TODO antes do go-live
 
 - [ ] Substituir `siteConfig.appStoreUrl` / `playStoreUrl` em `src/lib/utils.ts` ou via env
@@ -159,3 +175,5 @@ OG image é gerada em edge runtime (`/opengraph-image`); analytics e speed insig
 - [ ] Revisar preços em USD/EUR nos arquivos de mensagens (BRL definido: 37,90/299)
 - [x] Conectar Stripe — checkout server-side com identidade Supabase (PROMPTs 7.2/7.3)
 - [x] Páginas de Termos / Privacidade no ar (`/termos`, `/privacidade`)
+- [x] Página de suporte (`/suporte`) com guia do app nos 4 idiomas
+- [ ] Gravar o vídeo do app e publicar em `public/videos/kairo-demo.mp4`
