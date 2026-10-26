@@ -157,9 +157,12 @@ messages (blocos no mesmo formato das páginas legais) e descreve o
 comportamento real do app `kairos` — ao mudar o app, revise o guia.
 
 - **Vídeo:** coloque o arquivo em `public/videos/kairo-demo.mp4` (H.264,
-  vertical, com `+faststart`) e, se quiser, um poster em
+  720x1536, com `+faststart`) e, se quiser, um poster em
   `public/videos/kairo-demo.jpg`. A página confere no build se o arquivo
   existe; sem ele, mostra um aviso de "em breve" no lugar do player.
+  O player usa a proporção 720x1536. A gravação do Android (1080x2400) tem
+  uma faixa preta no topo, que sai no corte:
+  `ffmpeg -i gravacao.mp4 -vf "crop=1080:2304:0:96,scale=720:-2" -c:v libx264 -crf 23 -pix_fmt yuv420p -c:a aac -movflags +faststart kairo-demo.mp4`.
 - **Âncoras usadas fora do site** (não renomear): `#video` (declaração de
   serviço em primeiro plano no Play Console) e `#excluir-conta` (URL de
   exclusão de conta da Segurança dos dados).

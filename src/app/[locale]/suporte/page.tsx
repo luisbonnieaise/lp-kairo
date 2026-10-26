@@ -203,7 +203,8 @@ export default async function SuportePage({ params }: { params: Params }) {
               <div className="rounded-[40px] border border-[var(--color-line)] bg-[var(--color-bg)] p-2.5 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)]">
                 {temVideo ? (
                   <video
-                    className="block aspect-[9/19.5] w-full rounded-[30px] bg-black object-contain"
+                    // Proporção = dimensões do arquivo (720x1536): ao trocar o vídeo, mantenha-as.
+                    className="block aspect-[720/1536] w-full rounded-[30px] bg-black object-contain"
                     controls
                     playsInline
                     preload="metadata"
