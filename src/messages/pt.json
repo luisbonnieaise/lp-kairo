@@ -456,14 +456,15 @@
     "video": {
       "kicker": "EM AÇÃO",
       "title": "Veja o Kairo funcionando.",
-      "body": "Uma gravação real da tela de um celular Android: um passeio rápido pelas abas e, depois, o Relaxa e Durma — o som começa quando você toca, continua com a tela bloqueada e mostra a notificação de reprodução enquanto toca.",
+      "body": "Uma gravação real da tela de um celular Android, com o app em inglês: o Modo Silêncio, o Relaxa e Durma e, por fim, um passeio pelas abas. No Relaxa e Durma, o som começa quando você toca, continua fora do app e com a tela bloqueada, e a notificação de reprodução fica na barra enquanto ele toca.",
       "capitulosLabel": "Neste vídeo",
       "capitulos": [
-        "Um passeio pelas abas: Início, Mentor, Dôjo, Jardim e Biblioteca.",
+        "No Modo Silêncio, comece uma pausa de Foco profundo e toque em Encerrar.",
         "No Início, toque em Relaxa e Durma, escolha Chuva e 30 minutos — o som começa.",
-        "Na tela inicial do celular, a notificação “Relaxa e Durma — Tocando para o seu sono.” fica na barra.",
-        "Com a tela bloqueada, o som continua tocando.",
-        "De volta ao Kairo pela notificação, toque em Encerrar: o som para e a notificação some."
+        "Vá para a tela inicial do celular: o som continua, e a notificação “Relaxa e Durma — Tocando para o seu sono.” aparece na barra de notificações.",
+        "De volta ao Kairo, bloqueie a tela: o som continua tocando.",
+        "Desbloqueie e toque em Encerrar: o som para e a notificação some.",
+        "Um passeio pelas outras abas: Mentor, Dôjo, Jardim e Biblioteca."
       ],
       "aria": "Vídeo de demonstração do app Kairo",
       "abrir": "Abrir o vídeo em tela cheia",

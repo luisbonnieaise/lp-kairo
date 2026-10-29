@@ -458,14 +458,15 @@
     "video": {
       "kicker": "IN AKTION",
       "title": "So funktioniert Kairo.",
-      "body": "Eine echte Bildschirmaufnahme von einem Android-Handy: ein kurzer Rundgang durch die Tabs, dann Entspannen & Schlafen — der Ton startet, wenn du ihn antippst, spielt bei gesperrtem Bildschirm weiter und zeigt währenddessen eine Wiedergabe-Benachrichtigung.",
+      "body": "Eine echte Bildschirmaufnahme von einem Android-Handy, mit der App auf Englisch: der Stille-Modus, Entspannen & Schlafen und zum Schluss ein Rundgang durch die Tabs. Bei Entspannen & Schlafen startet der Ton, wenn du ihn antippst, spielt außerhalb der App und bei gesperrtem Bildschirm weiter und zeigt währenddessen eine Wiedergabe-Benachrichtigung.",
       "capitulosLabel": "In diesem Video",
       "capitulos": [
-        "Ein Rundgang durch die Tabs: Start, Mentor, Dojo, Garten und Bibliothek.",
+        "Im Stille-Modus startest du eine Pause mit Tiefer Fokus und tippst auf Beenden.",
         "Auf Start tippst du auf Entspannen & Schlafen, wählst Regen und 30 Minuten — der Ton startet.",
-        "Auf dem Startbildschirm des Handys bleibt die Benachrichtigung „Entspannen & Schlafen — Klingt für deinen Schlaf.“ in der Leiste.",
-        "Bei gesperrtem Bildschirm spielt der Ton weiter.",
-        "Über die Benachrichtigung zurück in Kairo, tippst du auf Beenden: Der Ton stoppt und die Benachrichtigung verschwindet."
+        "Auf dem Startbildschirm des Handys spielt der Ton weiter, und die Benachrichtigung „Entspannen & Schlafen — Klingt für deinen Schlaf.“ erscheint in der Benachrichtigungsleiste.",
+        "Zurück in Kairo sperrst du den Bildschirm: Der Ton spielt weiter.",
+        "Nach dem Entsperren tippst du auf Beenden: Der Ton stoppt und die Benachrichtigung verschwindet.",
+        "Ein Rundgang durch die übrigen Tabs: Mentor, Dojo, Garten und Bibliothek."
       ],
       "aria": "Demo-Video der Kairo-App",
       "abrir": "Video im Vollbild öffnen",

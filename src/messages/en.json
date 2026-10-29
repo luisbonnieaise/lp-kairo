@@ -458,14 +458,15 @@
     "video": {
       "kicker": "IN ACTION",
       "title": "See Kairo at work.",
-      "body": "A real screen recording from an Android phone: a quick tour of the tabs, then Relax & Sleep — the sound starts when you tap it, keeps playing with the screen locked and shows a playback notification while it plays.",
+      "body": "A real screen recording from an Android phone: Silent Mode, Relax & Sleep and, to finish, a tour of the tabs. In Relax & Sleep, the sound starts when you tap it, keeps playing outside the app and with the screen locked, and shows a playback notification while it plays.",
       "capitulosLabel": "In this video",
       "capitulos": [
-        "A tour of the tabs: Home, Mentor, Dojo, Garden and Library.",
+        "In Silent Mode, start a Deep focus pause, then tap End.",
         "On Home, tap Relax & Sleep, pick Rain and 30 minutes — the sound starts.",
-        "On the phone’s home screen, the “Relax & Sleep — Playing for your sleep.” notification stays in the status bar.",
-        "With the screen locked, the sound keeps playing.",
-        "Back in Kairo through the notification, tap End: the sound stops and the notification goes away."
+        "Go to the phone’s home screen: the sound keeps playing, and the “Relax & Sleep — Playing for your sleep.” notification shows up in the notification shade.",
+        "Back in Kairo, lock the screen: the sound keeps playing.",
+        "Unlock and tap End: the sound stops and the notification goes away.",
+        "A tour of the other tabs: Mentor, Dojo, Garden and Library."
       ],
       "aria": "Demo video of the Kairo app",
       "abrir": "Open the video in full screen",

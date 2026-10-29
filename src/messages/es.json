@@ -458,14 +458,15 @@
     "video": {
       "kicker": "EN ACCIÓN",
       "title": "Mira Kairo en funcionamiento.",
-      "body": "Una grabación real de la pantalla de un móvil Android: un recorrido rápido por las pestañas y, después, Relájate y Duerme — el sonido empieza cuando lo tocas, sigue con la pantalla bloqueada y muestra la notificación de reproducción mientras suena.",
+      "body": "Una grabación real de la pantalla de un móvil Android, con la app en inglés: el Modo Silencio, Relájate y Duerme y, para terminar, un recorrido por las pestañas. En Relájate y Duerme, el sonido empieza cuando lo tocas, sigue fuera de la app y con la pantalla bloqueada, y muestra la notificación de reproducción mientras suena.",
       "capitulosLabel": "En este vídeo",
       "capitulos": [
-        "Un recorrido por las pestañas: Inicio, Mentor, Dojo, Jardín y Biblioteca.",
+        "En el Modo Silencio, empieza una pausa de Foco profundo y toca Terminar.",
         "En Inicio, toca Relájate y Duerme, elige Lluvia y 30 minutos — el sonido empieza.",
-        "En la pantalla de inicio del móvil, la notificación “Relájate y Duerme — Sonando para tu descanso.” queda en la barra.",
-        "Con la pantalla bloqueada, el sonido sigue sonando.",
-        "De vuelta en Kairo desde la notificación, toca Terminar: el sonido se detiene y la notificación desaparece."
+        "Ve a la pantalla de inicio del móvil: el sonido sigue, y la notificación “Relájate y Duerme — Sonando para tu descanso.” aparece en la barra de notificaciones.",
+        "De vuelta en Kairo, bloquea la pantalla: el sonido sigue sonando.",
+        "Desbloquea y toca Terminar: el sonido se detiene y la notificación desaparece.",
+        "Un recorrido por las demás pestañas: Mentor, Dojo, Jardín y Biblioteca."
       ],
       "aria": "Vídeo de demostración de la app Kairo",
       "abrir": "Abrir el vídeo a pantalla completa",

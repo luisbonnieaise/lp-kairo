@@ -179,4 +179,4 @@ comportamento real do app `kairos` — ao mudar o app, revise o guia.
 - [x] Conectar Stripe — checkout server-side com identidade Supabase (PROMPTs 7.2/7.3)
 - [x] Páginas de Termos / Privacidade no ar (`/termos`, `/privacidade`)
 - [x] Página de suporte (`/suporte`) com guia do app nos 4 idiomas
-- [ ] Gravar o vídeo do app e publicar em `public/videos/kairo-demo.mp4`
+- [x] Gravar o vídeo do app e publicar em `public/videos/kairo-demo.mp4`
